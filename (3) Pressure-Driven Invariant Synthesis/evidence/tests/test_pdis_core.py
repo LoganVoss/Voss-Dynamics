@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import replace
 from pathlib import Path
+import zipfile
 
 import numpy as np
 
@@ -103,9 +104,29 @@ def test_feature_extraction_is_deterministic() -> None:
     assert canonical_features(values) == canonical_features(values)
 
 
-def test_real_loader_reads_only_declared_test_member() -> None:
-    root = Path(__file__).resolve().parents[2]
-    archive = root / "evidence" / "data" / "raw" / "ECGFiveDays.zip"
+def test_real_loader_reads_only_declared_test_member(tmp_path: Path) -> None:
+    archive = tmp_path / "ECGFiveDays.zip"
+    test_rows = [
+        "0.0,0.1,0.2,0.3:1",
+        "0.1,0.2,0.3,0.4:1",
+        "0.2,0.3,0.4,0.5:1",
+        "1.0,0.9,0.8,0.7:2",
+        "0.9,0.8,0.7,0.6:2",
+        "0.8,0.7,0.6,0.5:2",
+    ]
+    test_member = "\n".join(
+        [
+            "@problemName ECGFiveDays",
+            "@timestamps false",
+            "@univariate true",
+            "@classLabel true 1 2",
+            "@data",
+            *test_rows,
+        ]
+    )
+    with zipfile.ZipFile(archive, "w") as handle:
+        handle.writestr("ECGFiveDays_TRAIN.ts", "this member must never be parsed")
+        handle.writestr("ECGFiveDays_TEST.ts", test_member)
     records = sealed_ucr_domain("ECGFiveDays", archive, per_class=3, seed=9)
     assert len(records) == 6
     assert all(item.domain == "ecgfivedays" for item in records)
