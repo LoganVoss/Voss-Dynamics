@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite the preferred manuscript citation and the exact repository revision used."
+title: "The Principle of Full Invertibility"
+type: software
+authors:
+  - family-names: "Voss"
+    given-names: "Logan"
+version: 1.0.0
+date-released: 2026-08-22
+abstract: >-
+  A provenance calculus that separates distinction loss under dynamical
+  evolution, observation, numerical representation, inverse selection, and
+  boundary operations, with exact theorems and reproducible model
+  computations.
+keywords:
+  - invertibility
+  - information
+  - dynamical systems
+  - observability
+  - reconstruction
+  - distinction provenance
+preferred-citation:
+  type: unpublished
+  title: "The Principle of Full Invertibility"
+  authors:
+    - family-names: "Voss"
+      given-names: "Logan"
+  year: 2026

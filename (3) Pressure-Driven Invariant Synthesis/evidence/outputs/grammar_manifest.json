@@ -1,0 +1,1914 @@
+{
+  "base_names": [
+    "radial_lag1",
+    "path_tortuosity"
+  ],
+  "collision_threshold": 0.22,
+  "maximum_rounds": 3,
+  "minimum_audit_auc": 0.75,
+  "minimum_audit_reduction": 0.15,
+  "minimum_selection_auc": 0.7,
+  "nuisance_group": "translation x positive global scale x orthogonal channel action",
+  "program_count": 271,
+  "programs": [
+    {
+      "complexity": 1,
+      "left": "covariance_entropy",
+      "name": "covariance_entropy",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "h0_max_persistence",
+      "name": "h0_max_persistence",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "h0_persistence_entropy",
+      "name": "h0_persistence_entropy",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "h0_total_persistence",
+      "name": "h0_total_persistence",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "h1_feature_count",
+      "name": "h1_feature_count",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "h1_max_persistence",
+      "name": "h1_max_persistence",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "h1_total_persistence",
+      "name": "h1_total_persistence",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "increment_cv",
+      "name": "increment_cv",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "radial_permutation_entropy",
+      "name": "radial_permutation_entropy",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "radial_spectral_entropy",
+      "name": "radial_spectral_entropy",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "radial_turning_rate",
+      "name": "radial_turning_rate",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "recurrence_degree_cv",
+      "name": "recurrence_degree_cv",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "recurrence_lambda2",
+      "name": "recurrence_lambda2",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "recurrence_lambda3",
+      "name": "recurrence_lambda3",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "recurrence_spectral_entropy",
+      "name": "recurrence_spectral_entropy",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 1,
+      "left": "recurrence_transitivity",
+      "name": "recurrence_transitivity",
+      "operation": "primitive",
+      "right": null
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,h0_max_persistence)",
+      "operation": "normalized_difference",
+      "right": "h0_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,h0_max_persistence)",
+      "operation": "log_ratio",
+      "right": "h0_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,h0_persistence_entropy)",
+      "operation": "normalized_difference",
+      "right": "h0_persistence_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,h0_persistence_entropy)",
+      "operation": "log_ratio",
+      "right": "h0_persistence_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,h0_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,h0_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,h1_feature_count)",
+      "operation": "normalized_difference",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,h1_feature_count)",
+      "operation": "log_ratio",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,h1_max_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,h1_max_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,h1_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,h1_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "normalized_difference(covariance_entropy,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "log_ratio(covariance_entropy,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,h0_persistence_entropy)",
+      "operation": "normalized_difference",
+      "right": "h0_persistence_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,h0_persistence_entropy)",
+      "operation": "log_ratio",
+      "right": "h0_persistence_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,h0_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,h0_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,h1_feature_count)",
+      "operation": "normalized_difference",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,h1_feature_count)",
+      "operation": "log_ratio",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,h1_max_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,h1_max_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,h1_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,h1_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "normalized_difference(h0_max_persistence,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "log_ratio(h0_max_persistence,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,h0_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,h0_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,h1_feature_count)",
+      "operation": "normalized_difference",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,h1_feature_count)",
+      "operation": "log_ratio",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,h1_max_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,h1_max_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,h1_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,h1_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "normalized_difference(h0_persistence_entropy,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "log_ratio(h0_persistence_entropy,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,h1_feature_count)",
+      "operation": "normalized_difference",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,h1_feature_count)",
+      "operation": "log_ratio",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,h1_max_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,h1_max_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,h1_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,h1_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "normalized_difference(h0_total_persistence,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "log_ratio(h0_total_persistence,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,h1_max_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,h1_max_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,h1_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,h1_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "normalized_difference(h1_feature_count,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "log_ratio(h1_feature_count,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,h1_total_persistence)",
+      "operation": "normalized_difference",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,h1_total_persistence)",
+      "operation": "log_ratio",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "normalized_difference(h1_max_persistence,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "log_ratio(h1_max_persistence,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,increment_cv)",
+      "operation": "normalized_difference",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,increment_cv)",
+      "operation": "log_ratio",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "normalized_difference(h1_total_persistence,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "log_ratio(h1_total_persistence,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,radial_permutation_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "normalized_difference(increment_cv,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "log_ratio(increment_cv,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,radial_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,radial_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "normalized_difference(radial_permutation_entropy,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "log_ratio(radial_permutation_entropy,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "normalized_difference(radial_spectral_entropy,radial_turning_rate)",
+      "operation": "normalized_difference",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "log_ratio(radial_spectral_entropy,radial_turning_rate)",
+      "operation": "log_ratio",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "normalized_difference(radial_spectral_entropy,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "log_ratio(radial_spectral_entropy,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "normalized_difference(radial_spectral_entropy,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "log_ratio(radial_spectral_entropy,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "normalized_difference(radial_spectral_entropy,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "log_ratio(radial_spectral_entropy,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "normalized_difference(radial_spectral_entropy,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "log_ratio(radial_spectral_entropy,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "normalized_difference(radial_spectral_entropy,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "log_ratio(radial_spectral_entropy,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "normalized_difference(radial_turning_rate,recurrence_degree_cv)",
+      "operation": "normalized_difference",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "log_ratio(radial_turning_rate,recurrence_degree_cv)",
+      "operation": "log_ratio",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "normalized_difference(radial_turning_rate,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "log_ratio(radial_turning_rate,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "normalized_difference(radial_turning_rate,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "log_ratio(radial_turning_rate,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "normalized_difference(radial_turning_rate,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "log_ratio(radial_turning_rate,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "normalized_difference(radial_turning_rate,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "log_ratio(radial_turning_rate,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "normalized_difference(recurrence_degree_cv,recurrence_lambda2)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "log_ratio(recurrence_degree_cv,recurrence_lambda2)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "normalized_difference(recurrence_degree_cv,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "log_ratio(recurrence_degree_cv,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "normalized_difference(recurrence_degree_cv,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "log_ratio(recurrence_degree_cv,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "normalized_difference(recurrence_degree_cv,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "log_ratio(recurrence_degree_cv,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "normalized_difference(recurrence_lambda2,recurrence_lambda3)",
+      "operation": "normalized_difference",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "log_ratio(recurrence_lambda2,recurrence_lambda3)",
+      "operation": "log_ratio",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "normalized_difference(recurrence_lambda2,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "log_ratio(recurrence_lambda2,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "normalized_difference(recurrence_lambda2,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "log_ratio(recurrence_lambda2,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda3",
+      "name": "normalized_difference(recurrence_lambda3,recurrence_spectral_entropy)",
+      "operation": "normalized_difference",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda3",
+      "name": "log_ratio(recurrence_lambda3,recurrence_spectral_entropy)",
+      "operation": "log_ratio",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda3",
+      "name": "normalized_difference(recurrence_lambda3,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda3",
+      "name": "log_ratio(recurrence_lambda3,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_spectral_entropy",
+      "name": "normalized_difference(recurrence_spectral_entropy,recurrence_transitivity)",
+      "operation": "normalized_difference",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_spectral_entropy",
+      "name": "log_ratio(recurrence_spectral_entropy,recurrence_transitivity)",
+      "operation": "log_ratio",
+      "right": "recurrence_transitivity"
+    },
+    {
+      "complexity": 3,
+      "left": "covariance_entropy",
+      "name": "signed_geometric_mean(covariance_entropy,h0_max_persistence)",
+      "operation": "signed_geometric_mean",
+      "right": "h0_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_max_persistence",
+      "name": "signed_geometric_mean(h0_max_persistence,h0_persistence_entropy)",
+      "operation": "signed_geometric_mean",
+      "right": "h0_persistence_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_persistence_entropy",
+      "name": "signed_geometric_mean(h0_persistence_entropy,h0_total_persistence)",
+      "operation": "signed_geometric_mean",
+      "right": "h0_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h0_total_persistence",
+      "name": "signed_geometric_mean(h0_total_persistence,h1_feature_count)",
+      "operation": "signed_geometric_mean",
+      "right": "h1_feature_count"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_feature_count",
+      "name": "signed_geometric_mean(h1_feature_count,h1_max_persistence)",
+      "operation": "signed_geometric_mean",
+      "right": "h1_max_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_max_persistence",
+      "name": "signed_geometric_mean(h1_max_persistence,h1_total_persistence)",
+      "operation": "signed_geometric_mean",
+      "right": "h1_total_persistence"
+    },
+    {
+      "complexity": 3,
+      "left": "h1_total_persistence",
+      "name": "signed_geometric_mean(h1_total_persistence,increment_cv)",
+      "operation": "signed_geometric_mean",
+      "right": "increment_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "increment_cv",
+      "name": "signed_geometric_mean(increment_cv,radial_permutation_entropy)",
+      "operation": "signed_geometric_mean",
+      "right": "radial_permutation_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_permutation_entropy",
+      "name": "signed_geometric_mean(radial_permutation_entropy,radial_spectral_entropy)",
+      "operation": "signed_geometric_mean",
+      "right": "radial_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_spectral_entropy",
+      "name": "signed_geometric_mean(radial_spectral_entropy,radial_turning_rate)",
+      "operation": "signed_geometric_mean",
+      "right": "radial_turning_rate"
+    },
+    {
+      "complexity": 3,
+      "left": "radial_turning_rate",
+      "name": "signed_geometric_mean(radial_turning_rate,recurrence_degree_cv)",
+      "operation": "signed_geometric_mean",
+      "right": "recurrence_degree_cv"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_degree_cv",
+      "name": "signed_geometric_mean(recurrence_degree_cv,recurrence_lambda2)",
+      "operation": "signed_geometric_mean",
+      "right": "recurrence_lambda2"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda2",
+      "name": "signed_geometric_mean(recurrence_lambda2,recurrence_lambda3)",
+      "operation": "signed_geometric_mean",
+      "right": "recurrence_lambda3"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_lambda3",
+      "name": "signed_geometric_mean(recurrence_lambda3,recurrence_spectral_entropy)",
+      "operation": "signed_geometric_mean",
+      "right": "recurrence_spectral_entropy"
+    },
+    {
+      "complexity": 3,
+      "left": "recurrence_spectral_entropy",
+      "name": "signed_geometric_mean(recurrence_spectral_entropy,recurrence_transitivity)",
+      "operation": "signed_geometric_mean",
+      "right": "recurrence_transitivity"
+    }
+  ],
+  "seed": 20260822,
+  "status": "internal_freeze_not_externally_timestamped"
+}

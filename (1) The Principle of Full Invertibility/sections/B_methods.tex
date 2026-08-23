@@ -1,0 +1,211 @@
+\section{Model specification and reproducibility}
+\label{app:model-specification}
+
+\subsection{Force implementation}
+
+Let
+\[
+\bm\Delta_{ia}=\bm p_a-\bm r_i,
+\qquad
+\widetilde d_{ia}=\norm{\bm\Delta_{ia}}+\varepsilon,
+\]
+and
+\[
+c_{ia}
+:=
+[0.55+0.45\cos(\theta_i-\theta_a)]
+[0.60+0.40\cos(\phi_i-\phi_a)].
+\]
+The anchor force is
+\[
+\bm F_i^{\rm anchor}
+:=
+\sum_{a=1}^M
+\mathbf 1_{\{r_{\min}<\widetilde d_{ia}<r_{\max}\}}
+\alpha Q_a m_i c_{ia}
+\frac{\bm\Delta_{ia}}{\widetilde d_{ia}}.
+\]
+
+For \(\bm d_{ij}=\bm r_i-\bm r_j\) and
+\(\widetilde d_{ij}=\norm{\bm d_{ij}}+\varepsilon\), the implemented wave-like radial term is
+\[
+\bm F_i^{\rm wave}
+:=
+-\sum_{j\neq i}
+A\left[
+-\frac{\sin(k\widetilde d_{ij}+\phi_j)}
+      {\widetilde d_{ij}^{\,2}}
++\frac{k\cos(k\widetilde d_{ij}+\phi_j)}
+      {\widetilde d_{ij}}
+\right]
+\frac{\bm d_{ij}}{\widetilde d_{ij}}.
+\]
+The pair force is
+\[
+\bm F_i^{\rm pair}
+:=
+\sum_{j\neq i}
+(-\bm d_{ij})
+\left[
+\frac{a_{\rm att}}{\widetilde d_{ij}+s}
+-\frac{a_{\rm rep}}{\widetilde d_{ij}^{\,2}}
+\right].
+\]
+For fixed external centers \(\bm c_\ell\), the optional control force is
+\[
+\bm F_i^{\rm control}
+:=
+\eta_{\rm control}
+\sum_\ell
+\frac{\bm c_\ell-\bm r_i}
+{\norm{\bm c_\ell-\bm r_i}+\varepsilon}.
+\]
+All terms are velocity-independent. The anchor indicator is discontinuous on its shell boundaries; Jacobian claims are restricted to smooth strata.
+
+\subsection{Repository map}
+
+\begin{longtable}{@{}p{0.31\linewidth}p{0.63\linewidth}@{}}
+\toprule
+Path & Role\\
+\midrule
+\endhead
+\sourcecode{engine/psi.py} &
+State classes, force inventory, advances, inverse-branch solvers, and diagnostics.\\
+\sourcecode{engine/observe.py} &
+Anchor-basin clustering, phrase construction, geometric score, and anchor-promotion utility.\\
+\sourcecode{engine/discrete.py} &
+Finite modular map, exact inverse, exhaustive permutation census, and determinant probe.\\
+\sourcecode{experiments/run\_battery.py} &
+Mechanical, information, phrase-fibre, boundary, and ensemble experiments.\\
+\sourcecode{experiments/run\_deeper.py} &
+Long-horizon, phase, wall, quantization, and recursive protocols.\\
+\sourcecode{experiments/run\_omega.py} &
+Two-clock, finite-state, and finite-time separation diagnostics.\\
+\sourcecode{evidence/thesis\_verification.py} &
+Determinant factorization, contraction certification, phase multiroot, controlled reset, fixed-partition entropy, round trips, and wall collision.\\
+\sourcecode{evidence/export\_plot\_data.py} &
+Deterministic conversion from JSON ledgers to manuscript CSV tables.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Reproduction commands}
+
+\begin{verbatim}
+python3 experiments/run_battery.py
+python3 experiments/run_deeper.py
+python3 experiments/run_omega.py
+python3 evidence/thesis_verification.py
+python3 evidence/export_plot_data.py
+tectonic -X compile The_Principle_of_Full_Invertibility.tex \
+  --outdir build
+\end{verbatim}
+
+The final run used Python 3.9.6, NumPy 2.0.2, and Tectonic 0.17.0 on arm64 macOS.
+
+\subsection{State distance}
+
+Define
+\[
+\operatorname{wrap}(u)
+:=
+\operatorname{atan2}(\sin u,\cos u).
+\]
+For states \(A,B\),
+\begin{equation}
+d_{L^2}(A,B)
+:=
+\left[
+\norm{\bm r_A-\bm r_B}_2^2
++\norm{\bm v_A-\bm v_B}_2^2
++\sum_i\operatorname{wrap}(\theta_{A,i}-\theta_{B,i})^2
++\sum_i\operatorname{wrap}(\phi_{A,i}-\phi_{B,i})^2
+\right]^{1/2}.
+\label{eq:state-distance}
+\end{equation}
+
+\subsection{Phase inverse solver}
+
+The fixed-point inverse begins at
+\[
+\bm\phi^{(0)}
+:=
+[\bm\phi^+-\bm\omega\dt]_{2\pi}
+\]
+and iterates
+\[
+\bm\phi^{(k+1)}
+:=
+[
+\bm\phi^+-\bm\omega\dt
+-\beta\dt\bm K(\bm\phi^{(k)};\bm r^+)
+]_{2\pi}
+\]
+for at most 200 iterations. Convergence requires wrapped forward residual
+\[
+\max_i
+\abs{
+\operatorname{wrap}
+[G_{\bm r^+}(\bm\phi^{(k)})-\bm\phi^+]_i
+}
+<10^{-15}.
+\]
+The residual verifies one numerical root. Branch uniqueness is established separately by \(q<1\) or direct branch analysis.
+
+\subsection{Determinant probe}
+
+For \(N=2,3,4\) and five seeds each, the suite:
+\begin{enumerate}
+\item fixes phases away from the branch cut;
+\item advances at \(\gamma=0.982\), \(\beta=0.08\), and \(\dt=0.21\);
+\item forms a central finite-difference Jacobian with step \(2\times10^{-7}\);
+\item computes \(D_\phi G\) analytically;
+\item compares the full determinant with \(\gamma^{2N}\det D_\phi G\).
+\end{enumerate}
+The maximum relative discrepancy is \(2.01\times10^{-8}\).
+
+\subsection{Multiroot construction}
+
+The default \(N=8\), seed-22 field is advanced through step 9. Three Newton initializations converge to three roots of the wrapped phase equation. For each root, \cref{eq:inverse-velocity,eq:inverse-position} reconstructs the complete pre-state, which is advanced once to verify the common target. Alternative pre-states lie \(7.386\) and \(6.738\) from the generating pre-state and return to the target within \(1.50\times10^{-13}\) and \(1.33\times10^{-13}\).
+
+\subsection{Round-trip ensemble}
+
+The endpoint-inversion ensemble uses:
+\begin{itemize}
+\item \(N=8\) tokens and seeds 21--32;
+\item \(\gamma\in\{1,0.982\}\);
+\item \(T\in\{40,80,100,120,160,200\}\);
+\item default \(\beta=0.08\), \(\dt=0.35\);
+\item no walls and no directional drift;
+\item float64 arithmetic.
+\end{itemize}
+Only trajectories with \(q<1\) at every step and maximum wrapped forward phase residual below \(10^{-12}\) enter the displayed summaries. All \(\gamma=1\) trajectories are certified through 200 steps. For \(\gamma=0.982\), 11 are certified through 160 steps and 8 through 200.
+
+\subsection{Phase-transport and reset protocols}
+
+Two tokens are coupled for four steps with translational forces disabled. Coupling is then set exactly to zero for 300 steps. Equal-frequency and unequal-frequency traces are compared with \cref{eq:decoupled-phase}.
+
+For the reset experiment, one phase state is cloned at separations \(0.3,1,3,24\). A no-reset control and a \(\phi_1\leftarrow0\) arm are advanced once. Their partner-phase difference is compared with \cref{eq:reset-response}.
+
+\subsection{Phrase-fibre census}
+
+For each of 160 seeds, 14 tokens advance 90 steps without walls. Clusters are assigned to the nearest anchor within radius \(1.15\); remaining tokens are grouped as \texttt{FREE}. The census stores the phrase and complete-state fingerprint. It measures fibre multiplicity independently of the auxiliary geometric score.
+
+\subsection{Fixed-partition entropy}
+
+The fixed-partition diagnostic declares one set of position and velocity edges with overflow bins and 12 equal circular phase bins before evolution. It computes empirical marginal Shannon entropy per coordinate across 120 ensemble members and reports their sum. The quantity is explicitly a sum of marginals, not a joint entropy.
+
+\subsection{Numerical scope}
+
+\begin{enumerate}
+\item Hard force cutoffs define smooth strata separated by discontinuity surfaces.
+\item A converged root residual verifies one branch, not global uniqueness.
+\item The 200-iteration cap and convergence flag are retained in the ledger.
+\item The finite-time two-orbit separation diagnostic is not a Lyapunov spectrum.
+\item Rounded random-image uniqueness is not used as evidence of injectivity.
+\item Kinetic-energy drift is not used as evidence about a total energy integral.
+\item The supplemental suite imports the same engine and is a self-consistency audit.
+\end{enumerate}
+
+\subsection{Public evidence package}
+
+The public repository contains the manuscript source, executable audit, machine-readable ledgers, exact plot tables, checksums, and reproduction instructions.

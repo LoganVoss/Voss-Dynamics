@@ -1,0 +1,11 @@
+[project]
+name = "voss-dynamics-full-invertibility"
+version = "0.1.0"
+description = "Reproducible computations for The Principle of Full Invertibility"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy==2.0.2",
+]
+
+[tool.uv]
+package = false

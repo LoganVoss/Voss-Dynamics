@@ -1,0 +1,109 @@
+\section{Scope and open theorem program}
+\label{sec:scope}
+
+\subsection{Scope of the present results}
+
+The paper establishes a conditional principle and a model-level audit. Its scope is defined by the following boundaries:
+\begin{enumerate}
+\item The translational inverse is global for \(\gamma\neq0\) and velocity-independent force; the full inverse additionally requires a unique phase branch.
+\item The certificate \(q(\bm r^+)<1\) proves uniqueness for an individual phase update. A nontrivial invariant domain on which it holds for all time remains to be characterized.
+\item Jacobian and differential-entropy identities apply on smooth strata. The finite anchor cutoffs are piecewise smooth.
+\item The phrase readout is a deterministic geometric clustering with an auxiliary score. It is not required to be a complete code.
+\item The round-trip experiment measures end-to-end float64 recovery, not an independently estimated condition number.
+\item The model separates exact-state, observational, and numerical information. A thermodynamic theory would additionally require energy, reservoirs, temperature, and a physical measure.
+\item The equations define a mathematical system. Applying the principle to a physical domain requires an independently justified complete state, calibrated parameters, and prospective tests.
+\end{enumerate}
+These boundaries delimit the theorem without reducing its generality as an audit method.
+
+\subsection{Global phase domain}
+
+The phase Jacobian is an identity minus a signed weighted graph Laplacian. The principal open theorem is to characterize the largest domain on which \(G_{\bm r}\) is globally bijective and invariant under the full advance. Promising routes include:
+\begin{enumerate}
+\item spectral bounds sharper than the \(\ell_\infty\) certificate \(q<1\);
+\item degree-theoretic continuation of the torus map;
+\item explicit branch-bifurcation analysis beyond the two-clock reduction;
+\item invariant minimum-separation estimates for the coupled translational dynamics.
+\end{enumerate}
+
+\subsection{Invertible boundaries}
+
+The clamp in \cref{prop:wall} can be replaced by a distinction-preserving boundary:
+\begin{itemize}
+\item periodic position on a two-torus;
+\item exact specular reflection retaining overshoot;
+\item an enlarged state that records the boundary impulse and traversed distance.
+\end{itemize}
+Each option yields a different but explicitly auditable state space.
+
+\subsection{Continuous-time realization}
+
+A smooth continuous counterpart is
+\begin{subequations}
+\begin{align}
+\dot{\bm r}_i&=\bm v_i,\\
+\dot{\bm v}_i&=-\kappa\bm v_i+m_i^{-1}\bm F_i(\bm r,\bm\theta,\bm\phi),\\
+\dot\phi_i&=\omega_i+\beta\sum_{j\neq i}
+\frac{\sin(\phi_j-\phi_i)}
+{\norm{\bm r_i-\bm r_j}+\varepsilon}.
+\end{align}
+\label{eq:continuous}
+\end{subequations}
+For a globally Lipschitz vector field, uniqueness of solutions gives an invertible finite-time flow wherever solutions exist. Liouville's general formula,
+\[
+\det D\Phi_t(x_0)
+=
+\exp\left(
+\int_0^t\nabla\cdot f(x_s)\,\dd s
+\right),
+\]
+then relates volume contraction to the divergence without identifying trajectories. A smooth taper at the anchor cutoff would place the complete realization inside this theorem.
+
+\subsection{Recovery bounds}
+
+The computed round-trip curves motivate a trajectory-level error theorem. Let
+\[
+\kappa_T(x_t):=\norm{D\Psi^{-T}(x_t)}.
+\]
+A useful bound would expose the velocity multiplier, phase singular values, and force Lipschitz constants:
+\begin{equation}
+\norm{\widehat x_{t-T}-x_{t-T}}
+\le
+C_T\epsilon,
+\qquad
+C_T
+\lesssim
+\prod_{s=0}^{T-1}
+\frac{c_s}
+{\abs{\gamma}\,\sigma_{\min}(D_\phi G_s)}.
+\label{eq:horizon-bound}
+\end{equation}
+Given a tolerance \(\tau\), the largest \(T\) for which \(C_T\epsilon\le\tau\) would provide a certified numerical access horizon.
+
+\subsection{Observability from histories}
+
+The state-sufficiency result invites a delay-coordinate analysis. For a readout \(y_t=h(x_t)\), determine when
+\[
+(y_t,y_{t-\tau},\ldots,y_{t-(m-1)\tau})
+\]
+embeds the reachable set, how large \(m\) must be, and how inverse conditioning scales with noise. This would connect exact-state theory to realistic partial instrumentation.
+
+\subsection{Description-level dynamics}
+
+The closure criterion \cref{prop:closure} should be evaluated directly for the phrase readout and for task-specific alternatives. When closure fails, one can quantify the memory order required for a predictive description. When it holds in both directions, the induced macro-law inherits invertibility even though the readout is many-to-one.
+
+\subsection{Research sequence}
+
+\[
+\boxed{
+\text{phase domain}
+\longrightarrow
+\text{invertible boundary}
+\longrightarrow
+\text{recovery bound}
+\longrightarrow
+\text{history observability}
+\longrightarrow
+\text{domain tests}.
+}
+\]
+This sequence advances the principle from exact one-step structure to certified long-horizon and domain-specific use.

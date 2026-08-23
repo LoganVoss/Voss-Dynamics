@@ -1,0 +1,113 @@
+\section{Implications of distinction provenance}
+\label{sec:implications}
+
+\subsection{A five-question audit}
+
+The framework reduces an information-loss claim to five questions:
+\begin{enumerate}
+\item What is the complete modeled state?
+\item Which map advances it?
+\item Which map describes or records it?
+\item Is the relevant inverse branch unique?
+\item Is that branch recoverable at the available precision?
+\end{enumerate}
+The order matters. A partial record cannot answer a question about complete-state identity until the observation fibre is characterized; a numerical inverse cannot establish uniqueness until branch structure is known.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  stage/.style={rounded corners=1.5pt,draw=fiink,fill=fipale,
+                minimum width=29mm,minimum height=13mm,align=center,font=\small},
+  test/.style={rounded corners=1.5pt,draw=fiblue,fill=white,
+               minimum width=29mm,minimum height=13mm,align=center,font=\small},
+  arr/.style={-{Latex[length=2mm]},line width=0.85pt,color=fiblue},
+  node distance=5mm
+]
+\node[stage] (s1) {\textbf{1. State}\\closure};
+\node[test,right=of s1] (s2) {\textbf{2. Advance}\\injectivity};
+\node[stage,right=of s2] (s3) {\textbf{3. Readout}\\fibres};
+\node[test,right=of s3] (s4) {\textbf{4. Inverse}\\branches};
+\node[stage,right=of s4] (s5) {\textbf{5. Access}\\precision};
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+\draw[arr] (s3) -- (s4);
+\draw[arr] (s4) -- (s5);
+\end{tikzpicture}
+\caption{The distinction-provenance audit. Each stage answers a different identity question.}
+\label{fig:audit}
+\end{figure}
+
+\subsection{Dynamics and information theory}
+
+The determinant theorem separates local volume change from state identity. This is consistent with established invertible dissipative maps \citep{henon1976,hoover1996,gilbert1999}: contraction is a geometric property of an ensemble, while injectivity is a property of point identity. The phase-fold example adds the complementary lesson that nonzero local Jacobians do not settle global branch uniqueness.
+
+The observation map introduces a second, independent information structure. Discrete Shannon entropy is invariant under a finite permutation \citep{shannon1948a,shannon1948b,cover2006}; differential entropy changes by the expected log-Jacobian; coarse entropy depends on a partition; and description fibres determine which complete states a record can distinguish. Treating these as separate quantities gives entropy statements a precise mathematical owner.
+
+\subsection{Causality and records}
+
+Invertibility, time-reversal symmetry, intervention direction, thermodynamic irreversibility, and record order need not coincide. The transition map may admit a unique inverse without possessing a physical time-reversal involution. A recorder may accumulate descriptions in one order even when adjacent complete states determine one another. An autonomous macro-law exists only under the closure criterion \cref{prop:closure}.
+
+This decomposition replaces a single overloaded word with explicit structures:
+\[
+\text{transition orientation},\quad
+\text{retrodictive relation},\quad
+\text{intervention response},\quad
+\text{record order}.
+\]
+Each can be tested without assigning the properties of one to another.
+
+\subsection{Forensic reconstruction}
+
+\Cref{thm:forensic} gives a direct rule for reconstruction. If the reachable observation fibre is a singleton, the evidence identifies one complete present and therefore one history on a bijective domain. If the fibre contains several states, the scientifically correct output is the transported history family \(\mathcal H_k(y)\).
+
+This distinction is immediately applicable to logs, simulations, market records, event traces, and physical measurements. It separates
+\[
+\text{one modeled past}
+\qquad\text{from}\qquad
+\text{one past identified by retained evidence}.
+\]
+The framework therefore supports both exact reconstruction and principled ambiguity reporting.
+
+\subsection{Simulation, telemetry, and digital twins}
+
+In software and scientific computing, the two-map architecture becomes
+\[
+\text{state transition}
+\quad\Vert\quad
+\text{telemetry summarization}.
+\]
+A dashboard collision is not a state collision. Conversely, a dashboard cannot reconstruct state unless its fibre is known to be a singleton on the reachable set. Systems designed for later inversion should:
+\begin{enumerate}
+\item retain every closure variable and controller parameter;
+\item preserve intervention and boundary histories;
+\item checkpoint before round-trip error exceeds the required tolerance;
+\item validate recovery over ensembles rather than one trajectory;
+\item report solver convergence separately from branch uniqueness.
+\end{enumerate}
+
+The float64 study turns these principles into an instrumentation objective: extend the recovery horizon by selecting state coordinates, precision, and checkpoint cadence deliberately.
+
+\subsection{Observation design}
+
+The fibre viewpoint gives every sensor system a measurable target. A readout is adequate for a task when its reachable fibres preserve the distinctions required by that task. This is weaker than demanding a globally injective sensor and stronger than assuming a low-error summary is sufficient.
+
+Delay-coordinate methods provide one path from partial observation to state reconstruction \citep{takens1981,sauer1991}. The relevant question is not whether a single snapshot is complete, but whether a declared history of observations embeds the reachable state set with acceptable conditioning.
+
+\subsection{A transferable scientific method}
+
+The resulting workflow is
+\begin{equation}
+\boxed{
+\text{declare}
+\longrightarrow
+\text{advance}
+\longrightarrow
+\text{observe}
+\longrightarrow
+\text{invert}
+\longrightarrow
+\text{locate}.
+}
+\label{eq:workflow}
+\end{equation}
+Declare the complete state and parameters. Advance by a specified map. Observe through an explicit readout. Invert with branch and precision diagnostics. Locate the first operation that removes or obscures the distinction of interest. This is the principal methodological contribution of the paper.

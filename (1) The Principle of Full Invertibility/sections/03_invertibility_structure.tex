@@ -1,0 +1,286 @@
+\section{Exact inverse structure}
+\label{sec:inverse}
+
+\subsection{Triangular inverse}
+
+\begin{theorem}[Conditional exact inverse]
+\label{thm:inverse}
+Fix a wall-free one-step advance \cref{eq:advance}. If \(\gamma\neq0\) and the phase map \(G_{\bm r^+}\) is bijective at the advanced position, then the complete pre-state is uniquely recovered by
+\begin{subequations}
+\label{eq:inverse}
+\begin{align}
+\bm\phi
+  &=G_{\bm r^+}^{-1}(\bm\phi^+),
+  \label{eq:inverse-phase}\\
+\bm v
+  &=\gamma^{-1}
+  \left[
+  \bm v^+
+  -\dt M^{-1}
+  \bm F(\bm r^+,\bm\theta,\bm\phi)
+  \right],
+  \label{eq:inverse-velocity}\\
+\bm r
+  &=\bm r^+-\bm v\dt,
+  \label{eq:inverse-position}\\
+\bm\theta&=\bm\theta^+.
+\end{align}
+\end{subequations}
+\end{theorem}
+
+\begin{proof}
+The final position is known. Bijectivity of \(G_{\bm r^+}\) determines the old phase. The force is then known because it depends on \((\bm r^+,\bm\theta,\bm\phi)\) and fixed parameters, but not on old velocity. Since \(\gamma\neq0\), \cref{eq:inverse-velocity} determines velocity; the drift then determines position. Direct substitution verifies both compositions.
+\end{proof}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  box/.style={rounded corners=1.5pt,draw=fiink,fill=fipale,
+              minimum width=25mm,minimum height=9mm,align=center},
+  known/.style={rounded corners=1.5pt,draw=fiblue,fill=white,
+                minimum width=27mm,minimum height=9mm,align=center},
+  arr/.style={-{Latex[length=2mm]},line width=0.8pt,color=fiblue},
+  node distance=12mm and 16mm
+]
+\node[box] (rn) {\(\bm r^+\)};
+\node[box,right=of rn] (pn) {\(\bm\phi^+\)};
+\node[box,right=of pn] (vn) {\(\bm v^+\)};
+\node[known,below=of pn] (po) {\(\bm\phi=G_{\bm r^+}^{-1}(\bm\phi^+)\)};
+\node[known,below=of vn] (vo) {\(\bm v=\gamma^{-1}[\bm v^+-\dt M^{-1}\bm F]\)};
+\node[known,below=of rn] (ro) {\(\bm r=\bm r^+-\bm v\dt\)};
+\draw[arr] (rn) -- (po);
+\draw[arr] (pn) -- (po);
+\draw[arr] (po) -- (vo);
+\draw[arr] (rn) -- (vo);
+\draw[arr] (vn) -- (vo);
+\draw[arr] (vo) -- (ro);
+\draw[arr] (rn) -- (ro);
+\end{tikzpicture}
+\caption{The inverse is triangular: phase branch first, then force and velocity, then position.}
+\label{fig:inverse-dag}
+\end{figure}
+
+The mechanical sector is therefore globally algebraic for every velocity-independent force when \(\gamma\neq0\). All branch structure enters through the phase map.
+
+\subsection{Full determinant factorization}
+
+\begin{theorem}[Full Jacobian]
+\label{thm:determinant}
+At every smooth point of the wall-free map with static \(\bm\theta\),
+\begin{equation}
+\boxed{
+\det D\Psi
+=
+\gamma^{2N}
+\det D_{\bm\phi}G_{\bm r^+}(\bm\phi).
+}
+\label{eq:determinant}
+\end{equation}
+The determinant is independent of positional and phase derivatives of the force.
+\end{theorem}
+
+\begin{proof}
+First change coordinates from \((\bm r,\bm v,\bm\phi)\) to
+\((\bm r^+=\bm r+\dt\bm v,\bm v,\bm\phi)\); this block-triangular map has determinant one. In these coordinates, the remaining Jacobian is
+\[
+\begin{pmatrix}
+I & 0 & 0\\
+\ast & \gamma I & \dt M^{-1}D_\phi\bm F\\
+\ast & 0 & D_\phi G_{\bm r^+}
+\end{pmatrix}.
+\]
+Multiplying the diagonal block determinants yields \cref{eq:determinant}.
+\end{proof}
+
+\begin{corollary}[Local singularity channels]
+The smooth full map is locally invertible exactly where
+\[
+\gamma\neq0
+\qquad\text{and}\qquad
+\det D_\phi G_{\bm r^+}\neq0.
+\]
+Force curvature cannot create a local singularity in this update ordering.
+\end{corollary}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.68\linewidth,
+  height=0.45\linewidth,
+  xlabel={factorized prediction
+    \(\gamma^{2N}\det D_{\phi}G_{\bm r^+}\)},
+  ylabel={finite-difference \(\det D\Psi\)},
+  xmin=0.18,xmax=1.0,
+  ymin=0.18,ymax=1.0,
+  axis lines=left,
+  grid=both,
+  major grid style={draw=firule},
+  minor grid style={draw=firule!45},
+  tick label style={font=\footnotesize},
+  label style={font=\small},
+  legend style={draw=none,fill=none,font=\footnotesize,at={(0.03,0.97)},anchor=north west}
+]
+\addplot[domain=0.18:1.0,figray,dashed,line width=0.8pt] {x};
+\addlegendentry{identity line}
+\addplot[
+  only marks,
+  mark=*,
+  mark size=2.1pt,
+  fiblue
+] table[
+  x=det_factorized,
+  y=det_full,
+  col sep=comma
+] {evidence/determinant_factorization.csv};
+\addlegendentry{15 live-map probes}
+\end{axis}
+\end{tikzpicture}
+\caption{Numerical audit of \cref{eq:determinant}. Maximum relative discrepancy is \(2.1\times10^{-8}\).}
+\label{fig:determinant}
+\figsource{\sourcecode{evidence/thesis\_verification.json}, \texttt{determinant\_factorization}.}
+\end{figure}
+
+\subsection{Phase uniqueness}
+
+The phase Jacobian is
+\begin{equation}
+\begin{aligned}
+(D_\phi G)_{ii}
+&=
+1-\beta\dt
+\sum_{j\neq i}
+\frac{\cos(\phi_j-\phi_i)}
+     {\widetilde d_{ij}^{+}},\\
+(D_\phi G)_{ij}
+&=
+\beta\dt
+\frac{\cos(\phi_j-\phi_i)}
+     {\widetilde d_{ij}^{+}},
+\qquad i\neq j,
+\end{aligned}
+\label{eq:phase-jacobian}
+\end{equation}
+where
+\(\widetilde d_{ij}^{+}=\norm{\bm r_i^+-\bm r_j^+}+\varepsilon\).
+
+\begin{theorem}[Configuration-dependent contraction certificate]
+\label{thm:phase-certificate}
+Define
+\begin{equation}
+q(\bm r^+)
+:=
+2\abs{\beta}\dt
+\max_i\sum_{j\neq i}
+\frac{1}{\widetilde d_{ij}^{+}}.
+\label{eq:q}
+\end{equation}
+If \(q(\bm r^+)<1\), then the inverse phase iteration is a contraction in the \(\ell_\infty\) norm on a consistent torus lift. The phase preimage is unique in that lift, fixed-point inversion converges geometrically, and \(G_{\bm r^+}\) has lower bi-Lipschitz bound \(1-q\).
+\end{theorem}
+
+The certificate is configuration-dependent. It supplies an operational gate for every trajectory used in the round-trip study.
+
+\subsection{Global branch geometry}
+
+For two tokens at fixed softened separation \(D\), let
+\[
+\delta=\phi_1-\phi_2,
+\qquad
+\Delta\omega=\omega_1-\omega_2,
+\qquad
+a=\frac{2\beta\dt}{D}.
+\]
+The exact relative-phase map is
+\begin{equation}
+\boxed{
+\delta^+
+=
+\delta+\Delta\omega\,\dt-a\sin\delta
+\pmod{2\pi}.
+}
+\label{eq:two-clock}
+\end{equation}
+For equal frequencies, its derivative is \(1-a\cos\delta\). The circle map is a diffeomorphism for \(\abs a<1\), a singular monotone homeomorphism at \(\abs a=1\), and noninjective for \(\abs a>1\).
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.72\linewidth,
+  height=0.43\linewidth,
+  xlabel={input phase difference \(\delta\)},
+  ylabel={lifted output \(f_a(\delta)=\delta-a\sin\delta\)},
+  xmin=-3.2,xmax=3.2,
+  ymin=-4.2,ymax=4.2,
+  grid=major,
+  major grid style={draw=firule},
+  tick label style={font=\footnotesize},
+  label style={font=\small},
+  legend style={draw=none,fill=none,font=\footnotesize,at={(0.03,0.97)},anchor=north west}
+]
+\addplot[fiblue,line width=1.2pt,domain=-3.1416:3.1416,samples=180]
+  {x-0.6*sin(deg(x))};
+\addlegendentry{\(a=0.6\): one branch}
+\addplot[fiorange,line width=1.2pt,domain=-3.1416:3.1416,samples=180]
+  {x-1.6*sin(deg(x))};
+\addlegendentry{\(a=1.6\): folded branches}
+\addplot[figray,dashed,domain=-3.1416:3.1416] {x};
+\end{axis}
+\end{tikzpicture}
+\caption{The same phase law contains an injective regime and a folded regime. Distinction provenance locates the transition between them.}
+\label{fig:phase-fold}
+\end{figure}
+
+The live eight-token system reaches the folded regime at default parameters. At seed 22, step 9, one target has \(q=1.338984\) and three refined phase roots. Combining each root with the algebraic mechanical inverse produces three complete pre-states.
+
+\begin{table}[H]
+\centering
+\caption{Three complete pre-states for one target. Every phase Jacobian is locally nonsingular; the distinction is global branch structure.}
+\label{tab:multiroot}
+\small
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+root & \(\det D_\phi G\) &
+distance from generating pre-state &
+forward residual\\
+\midrule
+0 & \(-0.2300\) & \(1.09\times10^{-15}\) & \(0\)\\
+1 & \( 0.4584\) & \(7.386\) & \(1.50\times10^{-13}\)\\
+2 & \( 0.4115\) & \(6.738\) & \(1.33\times10^{-13}\)\\
+\bottomrule
+\end{tabular}
+\figsource{\sourcecode{evidence/thesis\_verification.json}, \texttt{phase\_multiroot\_collision}.}
+\end{table}
+
+This example demonstrates the value of the framework: a nonzero local Jacobian, a convergent inverse solver, and global branch uniqueness are separate questions.
+
+\subsection{Finite analogue}
+
+On \(\Zmod/M\Zmod\), consider
+\begin{equation}
+r^+=r+v\pmod M,
+\qquad
+v^+=g\,v+F(r^+)\pmod M.
+\label{eq:finite-map}
+\end{equation}
+
+\begin{theorem}[Modular unit criterion]
+\label{thm:finite}
+\Cref{eq:finite-map} is a permutation of the \(M^2\) states for every force \(F\) if and only if \(\gcd(g,M)=1\).
+\end{theorem}
+
+\begin{proof}
+If \(g\) is a unit,
+\[
+v=g^{-1}[v^+-F(r^+)]\pmod M,
+\qquad
+r=r^+-v\pmod M.
+\]
+If \(g\) is not a unit, multiplication by \(g\) has a nontrivial kernel, and compensated position--velocity pairs collide.
+\end{proof}
+
+Enumeration gives \(63{,}001/63{,}001\) images for \((M,g)=(251,3)\), while \((M,g)=(16,2)\) yields \(128/256\) images. The theorem provides a complete finite model of the distinction between invertible multiplication and state aggregation.
+
+\begin{remark}[Six independent properties]
+Bijectivity, local nonsingularity, time-reversal symmetry, volume preservation, energy conservation, and stable numerical inversion are distinct properties. The results above identify exactly which of them follow from each assumption.
+\end{remark}

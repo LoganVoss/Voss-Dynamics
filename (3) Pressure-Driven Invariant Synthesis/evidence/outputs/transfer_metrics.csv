@@ -1,0 +1,6 @@
+domain,track,before_collisions,after_collisions,trials,risk_before,risk_after,absolute_reduction,bootstrap_95
+logistic,independent-synthetic-audit,119,0,120,0.9916666666666667,0.0,0.9916666666666667,"[0.975, 1.0]"
+lorenz,independent-synthetic-audit,110,56,120,0.9166666666666666,0.4666666666666667,0.45,"[0.35833333333333334, 0.5333333333333333]"
+kuramoto,independent-synthetic-audit,120,10,120,1.0,0.08333333333333333,0.9166666666666666,"[0.8666666666666667, 0.9666666666666667]"
+ecgfivedays,sealed-real,32,32,32,1.0,1.0,0.0,"[0.0, 0.0]"
+earthquakes,sealed-real,31,23,32,0.96875,0.71875,0.25,"[0.125, 0.40625]"

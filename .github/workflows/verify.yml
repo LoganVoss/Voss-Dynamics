@@ -1,0 +1,54 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  paper-i:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "(1) The Principle of Full Invertibility"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Verify canonical release artifacts
+        run: sha256sum -c evidence/SHA256SUMS.txt
+      - name: Recompute the mathematical verification suite
+        run: |
+          uv sync --frozen
+          uv run python evidence/thesis_verification.py
+
+  paper-ii:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "(2) Emergent Predictive Representation"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen --all-groups
+      - run: uv run pytest -q
+      - run: sha256sum -c evidence/outputs/manifest.sha256
+
+  paper-iii:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "(3) Pressure-Driven Invariant Synthesis"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run pytest -q
+      - run: sha256sum -c evidence/outputs/manifest.sha256

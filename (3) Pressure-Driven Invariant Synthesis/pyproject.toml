@@ -1,0 +1,25 @@
+[project]
+name = "pressure-driven-invariant-synthesis"
+version = "1.0.0"
+description = "Reproducible engine and evidence for collision-guided observability refinement"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "ripser>=0.6.12",
+    "scipy>=1.13",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["evidence/tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.uv]
+package = false

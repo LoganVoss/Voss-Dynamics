@@ -1,0 +1,2585 @@
+{
+  "metadata": {
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "numpy": "2.0.2",
+    "purpose": "verification supplement for The Principle of Full Invertibility"
+  },
+  "determinant_factorization": {
+    "identity": "det D(Psi) = gamma^(2N) det D_phi(G_r)",
+    "rows": [
+      {
+        "n": 2,
+        "seed": 0,
+        "det_full_finite_difference": 0.931864887111263,
+        "det_phase": 1.0020906190207541,
+        "gamma_pow_2n": 0.929920776976,
+        "factorized_prediction": 0.9318648870401405,
+        "relative_error": 7.632281598025362e-11,
+        "phase_contraction_q_bound": 0.016225908853807775,
+        "unused_base_norm": 2.7436379803065942
+      },
+      {
+        "n": 2,
+        "seed": 1,
+        "det_full_finite_difference": 0.9348888618140653,
+        "det_phase": 1.0053424802076125,
+        "gamma_pow_2n": 0.929920776976,
+        "factorized_prediction": 0.9348888603216419,
+        "relative_error": 1.5963645203404654e-09,
+        "phase_contraction_q_bound": 0.04146455955935986,
+        "unused_base_norm": 2.4838408213981804
+      },
+      {
+        "n": 2,
+        "seed": 2,
+        "det_full_finite_difference": 0.9336828336942431,
+        "det_phase": 1.0040455658572993,
+        "gamma_pow_2n": 0.929920776976,
+        "factorized_prediction": 0.9336828327213273,
+        "relative_error": 1.042019531546654e-09,
+        "phase_contraction_q_bound": 0.03139882599888328,
+        "unused_base_norm": 2.640079956486734
+      },
+      {
+        "n": 2,
+        "seed": 3,
+        "det_full_finite_difference": 0.9333650412620726,
+        "det_phase": 1.003703824637109,
+        "gamma_pow_2n": 0.929920776976,
+        "factorized_prediction": 0.9333650404603232,
+        "relative_error": 8.589880806086186e-10,
+        "phase_contraction_q_bound": 0.028746471918416935,
+        "unused_base_norm": 2.761096997148456
+      },
+      {
+        "n": 2,
+        "seed": 4,
+        "det_full_finite_difference": 0.9392477799046184,
+        "det_phase": 1.0100298898028681,
+        "gamma_pow_2n": 0.929920776976,
+        "factorized_prediction": 0.9392477798944667,
+        "relative_error": 1.0808284576097843e-11,
+        "phase_contraction_q_bound": 0.077844923508047,
+        "unused_base_norm": 2.8053686856824736
+      },
+      {
+        "n": 3,
+        "seed": 0,
+        "det_full_finite_difference": 0.859209277362304,
+        "det_phase": 0.958142338225459,
+        "gamma_pow_2n": 0.8967449233366042,
+        "factorized_prediction": 0.859209277637544,
+        "relative_error": 3.203409799135491e-10,
+        "phase_contraction_q_bound": 0.06950246600149408,
+        "unused_base_norm": 2.937531588569158
+      },
+      {
+        "n": 3,
+        "seed": 1,
+        "det_full_finite_difference": 0.8727945783879383,
+        "det_phase": 0.9732919089747645,
+        "gamma_pow_2n": 0.8967449233366042,
+        "factorized_prediction": 0.8727945782977122,
+        "relative_error": 1.0337604185216508e-10,
+        "phase_contraction_q_bound": 0.050529898844773824,
+        "unused_base_norm": 3.1997897061023757
+      },
+      {
+        "n": 3,
+        "seed": 2,
+        "det_full_finite_difference": 0.8571966843352699,
+        "det_phase": 0.9558980066408304,
+        "gamma_pow_2n": 0.8967449233366042,
+        "factorized_prediction": 0.8571966846827441,
+        "relative_error": 4.053611939793151e-10,
+        "phase_contraction_q_bound": 0.07108801443697178,
+        "unused_base_norm": 3.204131820933395
+      },
+      {
+        "n": 3,
+        "seed": 3,
+        "det_full_finite_difference": 0.8669419305863921,
+        "det_phase": 0.9667653628738673,
+        "gamma_pow_2n": 0.8967449233366042,
+        "factorized_prediction": 0.8669419312148104,
+        "relative_error": 7.248678311160624e-10,
+        "phase_contraction_q_bound": 0.06405677101844887,
+        "unused_base_norm": 3.0127938387503206
+      },
+      {
+        "n": 3,
+        "seed": 4,
+        "det_full_finite_difference": 0.849243933346479,
+        "det_phase": 0.9470295415747869,
+        "gamma_pow_2n": 0.8967449233366042,
+        "factorized_prediction": 0.8492439336569817,
+        "relative_error": 3.656225524013934e-10,
+        "phase_contraction_q_bound": 0.08461333054484839,
+        "unused_base_norm": 3.1252606717836
+      },
+      {
+        "n": 4,
+        "seed": 0,
+        "det_full_finite_difference": 0.7086488748288039,
+        "det_phase": 0.8194815869838482,
+        "gamma_pow_2n": 0.8647526514516474,
+        "factorized_prediction": 0.7086488751600866,
+        "relative_error": 4.674849274118071e-10,
+        "phase_contraction_q_bound": 0.25261887520159837,
+        "unused_base_norm": 3.3806861247110938
+      },
+      {
+        "n": 4,
+        "seed": 1,
+        "det_full_finite_difference": 0.7898788141252082,
+        "det_phase": 0.9134158928713109,
+        "gamma_pow_2n": 0.8647526514516474,
+        "factorized_prediction": 0.78987881523854,
+        "relative_error": 1.4094969236264275e-09,
+        "phase_contraction_q_bound": 0.0941771345483438,
+        "unused_base_norm": 3.625133805819524
+      },
+      {
+        "n": 4,
+        "seed": 2,
+        "det_full_finite_difference": 0.7611742814641193,
+        "det_phase": 0.8802219696979117,
+        "gamma_pow_2n": 0.8647526514516474,
+        "factorized_prediction": 0.7611742821622607,
+        "relative_error": 9.171899917184943e-10,
+        "phase_contraction_q_bound": 0.1383472574292716,
+        "unused_base_norm": 3.894841785659449
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "det_full_finite_difference": 0.7678916396755857,
+        "det_phase": 0.8879899227554364,
+        "gamma_pow_2n": 0.8647526514516474,
+        "factorized_prediction": 0.7678916401651071,
+        "relative_error": 6.374876320982113e-10,
+        "phase_contraction_q_bound": 0.11312390569835883,
+        "unused_base_norm": 3.5861093256229575
+      },
+      {
+        "n": 4,
+        "seed": 4,
+        "det_full_finite_difference": 0.2354307092967449,
+        "det_phase": 0.2722520759693399,
+        "gamma_pow_2n": 0.8647526514516474,
+        "factorized_prediction": 0.23543070455770201,
+        "relative_error": 2.0129247326702335e-08,
+        "phase_contraction_q_bound": 0.8763363407035343,
+        "unused_base_norm": 22.013586870111563
+      }
+    ],
+    "max_relative_error": 2.0129247326702335e-08,
+    "interpretation": "The positional force Jacobian and phase-dependence of the force cancel from the determinant factorization. The phase block and gamma are the independent local singularity channels."
+  },
+  "two_clock_law": {
+    "reduced_law": "delta' = delta + Delta_omega*dt - (2*beta*dt/D)*sin(delta) (mod 2pi)",
+    "max_law_residual": 1.5543122344752192e-15,
+    "sample_cases": [
+      {
+        "distance_softened": 30.21047278100035,
+        "beta": 0.3434067069125647,
+        "dt": 0.11894716758259781,
+        "delta_before": -0.06245205039988089,
+        "delta_predicted": -0.0619759963619593,
+        "delta_actual": -0.06197599636195927,
+        "angular_residual": 3.469446951953614e-17
+      },
+      {
+        "distance_softened": 26.531250512570747,
+        "beta": 0.1359476334309808,
+        "dt": 0.3524876825913662,
+        "delta_before": -1.660381799652923,
+        "delta_predicted": -1.658623233028272,
+        "delta_actual": -1.6586232330282726,
+        "angular_residual": 6.661338147750939e-16
+      },
+      {
+        "distance_softened": 36.860167021682315,
+        "beta": 0.4121841379970533,
+        "dt": 0.1642471937950911,
+        "delta_before": 1.9520901226697527,
+        "delta_predicted": 1.9438542464138293,
+        "delta_actual": 1.9438542464138293,
+        "angular_residual": 0.0
+      },
+      {
+        "distance_softened": 24.294135838939283,
+        "beta": 0.507428563781968,
+        "dt": 0.39769771658604747,
+        "delta_before": -1.2026550896945016,
+        "delta_predicted": -1.1969033965662026,
+        "delta_actual": -1.1969033965662028,
+        "angular_residual": 2.220446049250313e-16
+      },
+      {
+        "distance_softened": 16.122114131217582,
+        "beta": 0.2805433889328006,
+        "dt": 0.21185465345516216,
+        "delta_before": 2.259114564568158,
+        "delta_predicted": 2.2605982285396955,
+        "delta_actual": 2.260598228539695,
+        "angular_residual": 4.440892098500626e-16
+      }
+    ],
+    "equal_omega_synchronized_manifold": [
+      {
+        "distance": 0.24,
+        "max_abs_delta": 0.0
+      },
+      {
+        "distance": 1.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "distance": 30.0,
+        "max_abs_delta": 0.0
+      },
+      {
+        "distance": 1000000.0,
+        "max_abs_delta": 0.0
+      }
+    ],
+    "two_clock_global_condition": "For signed a = 2*beta*dt/D with |a| < 1, the lifted delta map is an orientation-preserving circle diffeomorphism. For |a| > 1 it is non-monotone and non-injective. Synchronization is hyperbolically stable for 0 < a < 2, nonhyperbolically stable at a = 2, and unstable for a > 2."
+  },
+  "replicated_information_horizon": {
+    "n_tokens": 8,
+    "seeds": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "rows": [
+      {
+        "gamma": 1.0,
+        "steps": 40,
+        "seeds": 12,
+        "median_l2": 3.0004857021057276e-13,
+        "p10_l2": 7.767846032450489e-14,
+        "p90_l2": 1.5424966293984952e-12,
+        "max_l2": 1.277807648986163e-11,
+        "median_log10_l2": -12.522836201712337,
+        "p10_log10_l2": -13.110209809725324,
+        "p90_log10_l2": -11.811821645260203,
+        "fraction_below_1e6": 1.0,
+        "fraction_below_1e4": 1.0,
+        "certified_seed_count": 12,
+        "certified_seeds": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 3.0004857021057276e-13,
+        "certified_p10_l2": 7.767846032450489e-14,
+        "certified_p90_l2": 1.5424966293984952e-12,
+        "certified_max_l2": 1.277807648986163e-11,
+        "certified_median_log10_l2": -12.522836201712337,
+        "certified_p10_log10_l2": -13.110209809725324,
+        "certified_p90_log10_l2": -11.811821645260203,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 1.3732508917029743e-13,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 1.277807648986163e-11,
+            "max_phase_contraction_q": 0.6333755726303686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.08995101411847e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 23,
+            "l2": 3.2380313228230735e-13,
+            "max_phase_contraction_q": 0.24688424101435386,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 1.4761106839167732e-12,
+            "max_phase_contraction_q": 0.3731881104563199,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 3.034411981880907e-13,
+            "max_phase_contraction_q": 0.23420024049520022,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 7.636921122392121e-14,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 5.100859575692407e-14,
+            "max_phase_contraction_q": 0.2119578692809801,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 2.9665594223305476e-13,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 8.946170222975796e-14,
+            "max_phase_contraction_q": 0.3684367945359876,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 1.5498728455631308e-12,
+            "max_phase_contraction_q": 0.6355644143447122,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.575673587391975e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 1.5528704762638562e-13,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 3.8780164203216086e-13,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.783840404509192e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 1.0,
+        "steps": 80,
+        "seeds": 12,
+        "median_l2": 2.170337853905412e-11,
+        "p10_l2": 4.069695305601011e-12,
+        "p90_l2": 2.944320196558367e-10,
+        "max_l2": 3.206841989634198e-10,
+        "median_log10_l2": -10.670071691694744,
+        "p10_log10_l2": -11.398339792538229,
+        "p90_log10_l2": -9.54456887276783,
+        "fraction_below_1e6": 1.0,
+        "fraction_below_1e4": 1.0,
+        "certified_seed_count": 12,
+        "certified_seeds": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 2.170337853905412e-11,
+        "certified_p10_l2": 4.069695305601011e-12,
+        "certified_p90_l2": 2.944320196558367e-10,
+        "certified_max_l2": 3.206841989634198e-10,
+        "certified_median_log10_l2": -10.670071691694744,
+        "certified_p10_log10_l2": -11.398339792538229,
+        "certified_p90_log10_l2": -9.54456887276783,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 6.7838371894337e-12,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 3.206841989634198e-10,
+            "max_phase_contraction_q": 0.6333755726303686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.43689570931383e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 23,
+            "l2": 1.7948470514356142e-11,
+            "max_phase_contraction_q": 0.3249213767265427,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 4.4306951592132367e-11,
+            "max_phase_contraction_q": 0.3731881104563199,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 1.2231216259312475e-10,
+            "max_phase_contraction_q": 0.39275270250589667,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 3.139247222230929e-12,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 3.768123985175156e-12,
+            "max_phase_contraction_q": 0.2119578692809801,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 3.129251154916083e-11,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 2.5458286563752094e-11,
+            "max_phase_contraction_q": 0.3684367945359876,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 1.0026701691145945e-15,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 3.135564482183602e-10,
+            "max_phase_contraction_q": 0.6355644143447122,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 7.078238202227165e-12,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 1.1129926010636104e-11,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 1.0,
+        "steps": 100,
+        "seeds": 12,
+        "median_l2": 7.70134086804176e-11,
+        "p10_l2": 2.316994219040028e-11,
+        "p90_l2": 7.919310055108853e-10,
+        "max_l2": 2.5409737303339196e-09,
+        "median_log10_l2": -10.114909650008475,
+        "p10_log10_l2": -10.639232388347352,
+        "p90_log10_l2": -9.101348998083997,
+        "fraction_below_1e6": 1.0,
+        "fraction_below_1e4": 1.0,
+        "certified_seed_count": 12,
+        "certified_seeds": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 7.70134086804176e-11,
+        "certified_p10_l2": 2.316994219040028e-11,
+        "certified_p90_l2": 7.919310055108853e-10,
+        "certified_max_l2": 2.5409737303339196e-09,
+        "certified_median_log10_l2": -10.114909650008475,
+        "certified_p10_log10_l2": -10.639232388347352,
+        "certified_p90_log10_l2": -9.101348998083997,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 6.389575334172783e-11,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 7.615483512698501e-10,
+            "max_phase_contraction_q": 0.6333755726303686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 23,
+            "l2": 3.7119916127671037e-11,
+            "max_phase_contraction_q": 0.3249213767265427,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 2.5409737303339196e-09,
+            "max_phase_contraction_q": 0.3731881104563199,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 3.395259247707155e-11,
+            "max_phase_contraction_q": 0.39275270250589667,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 7.067479607850535e-11,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 1.5873070777776288e-11,
+            "max_phase_contraction_q": 0.2119578692809801,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 1.701512427275665e-10,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 1.4870925906923175e-10,
+            "max_phase_contraction_q": 0.3684367945359876,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 7.953068559821114e-10,
+            "max_phase_contraction_q": 0.6355644143447122,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 8.335202128232987e-11,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 2.197186993632569e-11,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 1.0,
+        "steps": 120,
+        "seeds": 12,
+        "median_l2": 7.12171316973698e-10,
+        "p10_l2": 7.128154669774875e-11,
+        "p90_l2": 8.73540339825144e-08,
+        "max_l2": 1.8181609671246736e-07,
+        "median_log10_l2": -9.16727519725978,
+        "p10_log10_l2": -10.158592249216083,
+        "p90_log10_l2": -7.114960424681776,
+        "fraction_below_1e6": 1.0,
+        "fraction_below_1e4": 1.0,
+        "certified_seed_count": 12,
+        "certified_seeds": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 7.12171316973698e-10,
+        "certified_p10_l2": 7.128154669774875e-11,
+        "certified_p90_l2": 8.73540339825144e-08,
+        "certified_max_l2": 1.8181609671246736e-07,
+        "certified_median_log10_l2": -9.16727519725978,
+        "certified_p10_log10_l2": -10.158592249216083,
+        "certified_p90_log10_l2": -7.114960424681776,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 1.3043359625054907e-10,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 9.591395183686546e-08,
+            "max_phase_contraction_q": 0.6333755726303686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 23,
+            "l2": 1.8181609671246736e-07,
+            "max_phase_contraction_q": 0.6406670371197103,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 1.031477329335453e-08,
+            "max_phase_contraction_q": 0.3731881104563199,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 6.470909674743761e-11,
+            "max_phase_contraction_q": 0.39275270250589667,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 1.37363160767096e-10,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 2.8233537671441285e-11,
+            "max_phase_contraction_q": 0.2119578692809801,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 4.326581099834892e-09,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 9.227135532323374e-10,
+            "max_phase_contraction_q": 0.3684367945359876,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 8.862330985393575e-09,
+            "max_phase_contraction_q": 0.6355644143447122,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 3.509639660233642e-10,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.332812300755222e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 5.016290807150588e-10,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 1.0,
+        "steps": 160,
+        "seeds": 12,
+        "median_l2": 5.008990262377802e-08,
+        "p10_l2": 2.6966423120072915e-09,
+        "p90_l2": 3.33008175450729e-06,
+        "max_l2": 5.068344017484146e-06,
+        "median_log10_l2": -7.312500135159895,
+        "p10_log10_l2": -8.586128003734322,
+        "p90_log10_l2": -5.4865357035377125,
+        "fraction_below_1e6": 0.75,
+        "fraction_below_1e4": 1.0,
+        "certified_seed_count": 12,
+        "certified_seeds": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 5.008990262377802e-08,
+        "certified_p10_l2": 2.6966423120072915e-09,
+        "certified_p90_l2": 3.33008175450729e-06,
+        "certified_max_l2": 5.068344017484146e-06,
+        "certified_median_log10_l2": -7.312500135159895,
+        "certified_p10_log10_l2": -8.586128003734322,
+        "certified_p90_log10_l2": -5.4865357035377125,
+        "certified_fraction_below_1e6": 0.75,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 6.175734983848999e-10,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 1.6635426276069806e-06,
+            "max_phase_contraction_q": 0.6333755726303686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.43689570931383e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 23,
+            "l2": 3.5152527686073237e-06,
+            "max_phase_contraction_q": 0.6406670371197103,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 6.182131836194981e-08,
+            "max_phase_contraction_q": 0.3731881104563199,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 1.0304257447302234e-15,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 6.496777401166778e-09,
+            "max_phase_contraction_q": 0.39275270250589667,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 6.190602789968479e-09,
+            "max_phase_contraction_q": 0.6639502347530937,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 2.3859158445224264e-09,
+            "max_phase_contraction_q": 0.2119578692809801,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 9.978833372619054e-07,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 1.6405358810751986e-07,
+            "max_phase_contraction_q": 0.3684367945359876,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 5.068344017484146e-06,
+            "max_phase_contraction_q": 0.6355644143447122,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 3.835848688560622e-08,
+            "max_phase_contraction_q": 0.24816332545239686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 5.493180519371073e-09,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 1.0,
+        "steps": 200,
+        "seeds": 12,
+        "median_l2": 3.0197756142480885e-06,
+        "p10_l2": 1.003647321879681e-08,
+        "p90_l2": 2.208979874815233e-05,
+        "max_l2": 0.0001590788284252068,
+        "median_log10_l2": -5.52192488234313,
+        "p10_log10_l2": -8.062207712293233,
+        "p90_log10_l2": -4.663709080717224,
+        "fraction_below_1e6": 0.4166666666666667,
+        "fraction_below_1e4": 0.9166666666666666,
+        "certified_seed_count": 12,
+        "certified_seeds": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 3.0197756142480885e-06,
+        "certified_p10_l2": 1.003647321879681e-08,
+        "certified_p90_l2": 2.208979874815233e-05,
+        "certified_max_l2": 0.0001590788284252068,
+        "certified_median_log10_l2": -5.52192488234313,
+        "certified_p10_log10_l2": -8.062207712293233,
+        "certified_p90_log10_l2": -4.663709080717224,
+        "certified_fraction_below_1e6": 0.4166666666666667,
+        "certified_fraction_below_1e4": 0.9166666666666666,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 4.835288083743615e-09,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 1.2108369862318114e-15,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 1.1586602900083892e-05,
+            "max_phase_contraction_q": 0.6333755726303686,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 23,
+            "l2": 9.186366322588652e-06,
+            "max_phase_contraction_q": 0.6406670371197103,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 2.325682050904882e-05,
+            "max_phase_contraction_q": 0.65427999204543,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 3.3184573645670023e-08,
+            "max_phase_contraction_q": 0.39275270250589667,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 3.3015973513112585e-06,
+            "max_phase_contraction_q": 0.6639502347530937,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 7.464462060255338e-09,
+            "max_phase_contraction_q": 0.2119578692809801,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 9.419098712852964e-06,
+            "max_phase_contraction_q": 0.31693215080826653,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 8.469470287526292e-07,
+            "max_phase_contraction_q": 0.3684367945359876,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 0.0001590788284252068,
+            "max_phase_contraction_q": 0.6355644143447122,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 2.737953877184919e-06,
+            "max_phase_contraction_q": 0.39355839513066493,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 7.278807849080351e-08,
+            "max_phase_contraction_q": 0.3761211238856634,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.367506770274758e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 0.982,
+        "steps": 40,
+        "seeds": 12,
+        "median_l2": 3.658772501027516e-13,
+        "p10_l2": 1.2766691179701266e-13,
+        "p90_l2": 2.121653928066014e-12,
+        "max_l2": 22.957216872145242,
+        "median_log10_l2": -12.436912873603355,
+        "p10_log10_l2": -12.899347504755013,
+        "p90_log10_l2": -11.673439891253013,
+        "fraction_below_1e6": 0.9166666666666666,
+        "fraction_below_1e4": 0.9166666666666666,
+        "certified_seed_count": 11,
+        "certified_seeds": [
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 3.5350909526124667e-13,
+        "certified_p10_l2": 1.200124162077632e-13,
+        "certified_p90_l2": 1.9785216410844956e-12,
+        "certified_max_l2": 2.137557515508405e-12,
+        "certified_median_log10_l2": -12.451599407974701,
+        "certified_p10_log10_l2": -12.920773820522616,
+        "certified_p90_log10_l2": -11.703659195055685,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 5.009397743122569e-13,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 22.957216872145242,
+            "max_phase_contraction_q": 1.3389843677763031,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 9
+          },
+          {
+            "seed": 23,
+            "l2": 7.729727554891448e-13,
+            "max_phase_contraction_q": 0.24688424101435386,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 2.137557515508405e-12,
+            "max_phase_contraction_q": 0.3712987275961207,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.54097911787244e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 3.5350909526124667e-13,
+            "max_phase_contraction_q": 0.23420024049520022,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 1.200124162077632e-13,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 1.064041764647992e-13,
+            "max_phase_contraction_q": 0.21185490662072762,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 2.01096323939112e-13,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 3.782454049442566e-13,
+            "max_phase_contraction_q": 0.3548862194792393,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 1.9785216410844956e-12,
+            "max_phase_contraction_q": 0.38056819457075947,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 2.7029933483612137e-13,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 1.965573721002578e-13,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 0.982,
+        "steps": 80,
+        "seeds": 12,
+        "median_l2": 1.880401680463871e-10,
+        "p10_l2": 2.6371946625520458e-11,
+        "p90_l2": 3.1646194240208e-08,
+        "max_l2": 22.957216872147423,
+        "median_log10_l2": -9.731614438876207,
+        "p10_log10_l2": -10.580757494983128,
+        "p90_log10_l2": -7.513161979258513,
+        "fraction_below_1e6": 0.9166666666666666,
+        "fraction_below_1e4": 0.9166666666666666,
+        "certified_seed_count": 11,
+        "certified_seeds": [
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 1.5734400306804128e-10,
+        "certified_p10_l2": 2.5481976169793864e-11,
+        "certified_p90_l2": 1.3181415949040634e-08,
+        "certified_max_l2": 3.3697836272559925e-08,
+        "certified_median_log10_l2": -9.80314980492165,
+        "certified_p10_log10_l2": -10.593766894768518,
+        "certified_p90_log10_l2": -7.880037935278775,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 1.3181415949040634e-08,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 22.957216872147423,
+            "max_phase_contraction_q": 1.3389843677763031,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 9
+          },
+          {
+            "seed": 23,
+            "l2": 3.953006661163502e-10,
+            "max_phase_contraction_q": 0.5705011943018855,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 3.3697836272559925e-08,
+            "max_phase_contraction_q": 0.3712987275961207,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 2.1873633302473294e-10,
+            "max_phase_contraction_q": 0.43027690775631905,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 1.5734400306804128e-10,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 2.5481976169793864e-11,
+            "max_phase_contraction_q": 0.21185490662072762,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 9.572596264711532e-11,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 2.2594908147613003e-11,
+            "max_phase_contraction_q": 0.3548862194792393,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 5.235192638202129e-10,
+            "max_phase_contraction_q": 0.38056819457075947,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 4.3320754655866093e-11,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 3.4381680727059785e-11,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 0.982,
+        "steps": 100,
+        "seeds": 12,
+        "median_l2": 2.6432444770606598e-09,
+        "p10_l2": 5.200111827977711e-10,
+        "p90_l2": 2.4041371974900245e-07,
+        "max_l2": 22.957216872149342,
+        "median_log10_l2": -8.588077993394329,
+        "p10_log10_l2": -9.291573599163927,
+        "p90_log10_l2": -6.625256683353233,
+        "fraction_below_1e6": 0.9166666666666666,
+        "fraction_below_1e4": 0.9166666666666666,
+        "certified_seed_count": 11,
+        "certified_seeds": [
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 2.0766156459684777e-09,
+        "certified_p10_l2": 4.823583313373753e-10,
+        "certified_p90_l2": 1.3672053368531032e-07,
+        "certified_max_l2": 2.519351848671904e-07,
+        "certified_median_log10_l2": -8.682643878179219,
+        "certified_p10_log10_l2": -9.316630215900778,
+        "certified_p90_log10_l2": -6.86416625502596,
+        "certified_fraction_below_1e6": 1.0,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 2.519351848671904e-07,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 22.957216872149342,
+            "max_phase_contraction_q": 1.3389843677763031,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 9.124645483638005e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 9
+          },
+          {
+            "seed": 23,
+            "l2": 1.3228097489200196e-07,
+            "max_phase_contraction_q": 0.5705011943018855,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 1.3672053368531032e-07,
+            "max_phase_contraction_q": 0.3712987275961207,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 8.588868459413328e-10,
+            "max_phase_contraction_q": 0.43027690775631905,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 2.0766156459684777e-09,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 9.068971636622943e-10,
+            "max_phase_contraction_q": 0.21185490662072762,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 1.7576246829452727e-09,
+            "max_phase_contraction_q": 0.22958132513838425,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 4.823583313373753e-10,
+            "max_phase_contraction_q": 0.3548862194792393,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 4.986436848033687e-09,
+            "max_phase_contraction_q": 0.38056819457075947,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 3.2098733081528414e-09,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 1.8289737767619165e-10,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 0.982,
+        "steps": 120,
+        "seeds": 12,
+        "median_l2": 1.9838579640562318e-08,
+        "p10_l2": 6.98380857349714e-09,
+        "p90_l2": 3.336832189091441e-06,
+        "max_l2": 22.95721687205528,
+        "median_log10_l2": -7.709334004324879,
+        "p10_log10_l2": -8.157888401304175,
+        "p90_log10_l2": -5.500343999338671,
+        "fraction_below_1e6": 0.8333333333333334,
+        "fraction_below_1e4": 0.9166666666666666,
+        "certified_seed_count": 11,
+        "certified_seeds": [
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 1.63440115601511e-08,
+        "certified_p10_l2": 6.74277014661429e-09,
+        "certified_p90_l2": 9.800635552573834e-07,
+        "certified_max_l2": 3.5986953706285576e-06,
+        "certified_median_log10_l2": -7.78664133919817,
+        "certified_p10_log10_l2": -8.17116164467728,
+        "certified_p90_log10_l2": -6.00874576022322,
+        "certified_fraction_below_1e6": 0.9090909090909091,
+        "certified_fraction_below_1e4": 1.0,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 9.800635552573834e-07,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 22.95721687205528,
+            "max_phase_contraction_q": 1.3389843677763031,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 1.1492543028346347e-15,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 9
+          },
+          {
+            "seed": 23,
+            "l2": 1.3368096964937763e-07,
+            "max_phase_contraction_q": 0.5705011943018855,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 3.5986953706285576e-06,
+            "max_phase_contraction_q": 0.3712987275961207,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 1.2702894495245228e-08,
+            "max_phase_contraction_q": 0.43027690775631905,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 1.63440115601511e-08,
+            "max_phase_contraction_q": 0.3658727235077237,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 1.6143937774742343e-08,
+            "max_phase_contraction_q": 0.21185490662072762,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 2.3333147720973532e-08,
+            "max_phase_contraction_q": 0.22967062240132072,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 6.285820367041753e-09,
+            "max_phase_contraction_q": 0.3548862194792393,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 9.153154415442786e-09,
+            "max_phase_contraction_q": 0.38056819457075947,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 6.500512582931387e-08,
+            "max_phase_contraction_q": 0.21658117833045495,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 6.74277014661429e-09,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 0.982,
+        "steps": 160,
+        "seeds": 12,
+        "median_l2": 5.7733178285966e-06,
+        "p10_l2": 3.434007172719834e-07,
+        "p90_l2": 0.006742401036236357,
+        "max_l2": 22.95721687036877,
+        "median_log10_l2": -5.398592079362813,
+        "p10_log10_l2": -6.480927508753261,
+        "p90_log10_l2": -2.2358108234202634,
+        "fraction_below_1e6": 0.4166666666666667,
+        "fraction_below_1e4": 0.6666666666666666,
+        "certified_seed_count": 11,
+        "certified_seeds": [
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 1.6044842954466313e-06,
+        "certified_p10_l2": 3.04138318481955e-07,
+        "certified_p90_l2": 0.0006429781310921181,
+        "certified_max_l2": 0.007420114692363492,
+        "certified_median_log10_l2": -5.794664529384462,
+        "certified_p10_log10_l2": -6.51692885951095,
+        "certified_p90_log10_l2": -3.1918037980050644,
+        "certified_fraction_below_1e6": 0.45454545454545453,
+        "certified_fraction_below_1e4": 0.7272727272727273,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 0.0006429781310921181,
+            "max_phase_contraction_q": 0.26033259989528756,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 22,
+            "l2": 22.95721687036877,
+            "max_phase_contraction_q": 1.3389843677763031,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 9
+          },
+          {
+            "seed": 23,
+            "l2": 0.000334961958992417,
+            "max_phase_contraction_q": 0.5705011943018855,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 0.007420114692363492,
+            "max_phase_contraction_q": 0.37847083946289245,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 25,
+            "l2": 5.3487010898211245e-08,
+            "max_phase_contraction_q": 0.43027690775631905,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 9.94215136174657e-06,
+            "max_phase_contraction_q": 0.3821440142429652,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 3.04138318481955e-07,
+            "max_phase_contraction_q": 0.26164535193349164,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 1.6044842954466313e-06,
+            "max_phase_contraction_q": 0.2948203170299422,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 29,
+            "l2": 8.467718407172227e-07,
+            "max_phase_contraction_q": 0.3548862194792393,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 8.420502215440413e-07,
+            "max_phase_contraction_q": 0.38056819457075947,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 1.3207040838144465e-05,
+            "max_phase_contraction_q": 0.25470740471122805,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 6.967623063822392e-07,
+            "max_phase_contraction_q": 0.2616983526244021,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.43689570931383e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      },
+      {
+        "gamma": 0.982,
+        "steps": 200,
+        "seeds": 12,
+        "median_l2": 0.01227338191793187,
+        "p10_l2": 0.00013265367143358662,
+        "p90_l2": 15190.258254472219,
+        "max_l2": 52044.30501373385,
+        "median_log10_l2": -1.927876935524117,
+        "p10_log10_l2": -4.293532762145308,
+        "p90_log10_l2": 3.991332975211677,
+        "fraction_below_1e6": 0.0,
+        "fraction_below_1e4": 0.16666666666666666,
+        "certified_seed_count": 8,
+        "certified_seeds": [
+          23,
+          25,
+          26,
+          27,
+          29,
+          30,
+          31,
+          32
+        ],
+        "certified_median_l2": 0.003043607080547693,
+        "certified_p10_l2": 2.8583977989128965e-05,
+        "certified_p90_l2": 1.6895207131653938,
+        "certified_max_l2": 5.595274626919235,
+        "certified_median_log10_l2": -2.5339316012801696,
+        "certified_p10_log10_l2": -4.605966484189616,
+        "certified_p90_log10_l2": -1.039956627193316,
+        "certified_fraction_below_1e6": 0.0,
+        "certified_fraction_below_1e4": 0.25,
+        "samples": [
+          {
+            "seed": 21,
+            "l2": 16869.84062638153,
+            "max_phase_contraction_q": 1.5555032024118396,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 9.159339953157541e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 200
+          },
+          {
+            "seed": 22,
+            "l2": 22.95721615414849,
+            "max_phase_contraction_q": 1.3389843677763031,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 1.169203622808368e-15,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 9
+          },
+          {
+            "seed": 23,
+            "l2": 0.008920585136400464,
+            "max_phase_contraction_q": 0.5705011943018855,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.890457814381136e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 24,
+            "l2": 74.01690728835003,
+            "max_phase_contraction_q": 1.0965856253960335,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 5.936509321413652e-05,
+            "inverse_solver_converged": false,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 173
+          },
+          {
+            "seed": 25,
+            "l2": 1.0002588473100266e-05,
+            "max_phase_contraction_q": 0.43027690775631905,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.367506770274758e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 26,
+            "l2": 0.0038863307317654507,
+            "max_phase_contraction_q": 0.6488167111019656,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 27,
+            "l2": 0.0009976098385861653,
+            "max_phase_contraction_q": 0.3250421669516791,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 28,
+            "l2": 52044.30501373385,
+            "max_phase_contraction_q": 2.742519634328975,
+            "contraction_certified": false,
+            "max_inverse_phase_residual": 0.4945152230349912,
+            "inverse_solver_converged": false,
+            "roundtrip_certified": false,
+            "first_uncertified_step": 195
+          },
+          {
+            "seed": 29,
+            "l2": 3.654743063885555e-05,
+            "max_phase_contraction_q": 0.3548862194792393,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 30,
+            "l2": 0.015626178699463273,
+            "max_phase_contraction_q": 0.6717966816862915,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 31,
+            "l2": 5.595274626919235,
+            "max_phase_contraction_q": 0.8213580974870149,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 8.881784197001252e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          },
+          {
+            "seed": 32,
+            "l2": 0.002200883429329935,
+            "max_phase_contraction_q": 0.6384763967714215,
+            "contraction_certified": true,
+            "max_inverse_phase_residual": 9.992007221626409e-16,
+            "inverse_solver_converged": true,
+            "roundtrip_certified": true,
+            "first_uncertified_step": null
+          }
+        ]
+      }
+    ],
+    "interpretation": "Round-trip summaries include only trajectories with max q < 1 at every step and wrapped forward phase residual below 1e-12. They measure float64 round-trip recovery, not an isolated condition number. Uncertified or unconverged trajectories are reported separately."
+  },
+  "newton_phase_rescue": {
+    "rows": [
+      {
+        "beta": 0.08,
+        "steps": 40,
+        "n": 8,
+        "seed": 22,
+        "fixed_point_l2": 22.957216872145242,
+        "newton_l2": 6.578350745927286e-10,
+        "fixed_point_max_reported_residual": 8.881784197001252e-16,
+        "newton_max_phase_residual": 7.549516567451064e-14,
+        "newton_max_phase_jacobian_condition": 4.04062933312721
+      },
+      {
+        "beta": 0.08,
+        "steps": 200,
+        "n": 8,
+        "seed": 22,
+        "fixed_point_l2": 22.95721615414849,
+        "newton_l2": 0.00014726281870658262,
+        "fixed_point_max_reported_residual": 1.169203622808368e-15,
+        "newton_max_phase_residual": 7.549516567451064e-14,
+        "newton_max_phase_jacobian_condition": 4.040631868493207
+      },
+      {
+        "beta": 0.4,
+        "steps": 30,
+        "n": 10,
+        "seed": 6,
+        "fixed_point_l2": 5.530689424586048e-08,
+        "newton_l2": 3.6391923992165413e-09,
+        "fixed_point_max_reported_residual": 9.992007221626409e-16,
+        "newton_max_phase_residual": 6.361577931102147e-14,
+        "newton_max_phase_jacobian_condition": 3.705908337772778
+      },
+      {
+        "beta": 0.5,
+        "steps": 30,
+        "n": 10,
+        "seed": 6,
+        "fixed_point_l2": 1.863483991595001,
+        "newton_l2": 0.09465133276835493,
+        "fixed_point_max_reported_residual": 1.351084677470027e-08,
+        "newton_max_phase_residual": 5.3290705182007514e-14,
+        "newton_max_phase_jacobian_condition": 16.0820864938482
+      }
+    ],
+    "interpretation": "Newton can recover a locally valid branch when the fixed-point iteration fails. This does not establish global injectivity. For seed 22, Newton recovers the generating branch even though two additional complete preimages exist."
+  },
+  "phase_multiroot_collision": {
+    "seed": 22,
+    "target_step": 9,
+    "q_at_target": 1.3389843677763031,
+    "root_count_constructed": 3,
+    "roots": [
+      {
+        "root": 0,
+        "phi": [
+          4.4052927042715515,
+          6.18484069761562,
+          5.804670085434623,
+          4.780515251116337,
+          4.881651791980588,
+          6.0683185000178215,
+          4.3631349803520445,
+          3.6793560510307075
+        ],
+        "phase_equation_residual": 0.0,
+        "det_phase_jacobian": -0.23004382182628763,
+        "prestate_distance_from_generating": 1.0850442272110004e-15,
+        "forward_collision_residual": 0.0
+      },
+      {
+        "root": 1,
+        "phi": [
+          3.803562707388169,
+          6.1815292625680645,
+          5.80238391726176,
+          4.7796312192456725,
+          4.879961831902548,
+          6.065629464172435,
+          4.973749980180035,
+          3.68133167910061
+        ],
+        "phase_equation_residual": 2.4868995751603507e-14,
+        "det_phase_jacobian": 0.45842321444913275,
+        "prestate_distance_from_generating": 7.386193647443505,
+        "forward_collision_residual": 1.5022578574466218e-13
+      },
+      {
+        "root": 2,
+        "phi": [
+          4.95086515217328,
+          6.181769766716646,
+          5.802542673445025,
+          4.779625756602905,
+          4.880205477176466,
+          6.065830735655165,
+          3.825818574207583,
+          3.6811219258422256
+        ],
+        "phase_equation_residual": 9.681144774731365e-14,
+        "det_phase_jacobian": 0.41148900211918193,
+        "prestate_distance_from_generating": 6.737846322508715,
+        "forward_collision_residual": 1.3330963961230602e-13
+      }
+    ],
+    "pairwise_root_phase_distances": [
+      {
+        "root_i": 0,
+        "root_j": 1,
+        "phase_l2": 0.8572984490996487
+      },
+      {
+        "root_i": 0,
+        "root_j": 2,
+        "phase_l2": 0.7657573786991669
+      },
+      {
+        "root_i": 1,
+        "root_j": 2,
+        "phase_l2": 1.6229755511322566
+      }
+    ],
+    "interpretation": "The unrestricted default map is not globally injective. Each phase root, paired with its algebraically recovered velocity and position, is a distinct complete prestate with the same target."
+  },
+  "finite_entropy_contrast": {
+    "M": 31,
+    "bijective_g": 3,
+    "random_distribution_entropy_before_bits": 9.623384214613594,
+    "random_distribution_entropy_after_bijection_bits": 9.62338421461359,
+    "bijection_entropy_abs_difference_bits": 3.552713678800501e-15,
+    "uniform_entropy_before_g0_bits": 9.908392620773752,
+    "uniform_entropy_after_g0_bits": 4.9541963103868785,
+    "g0_unique_images": 31,
+    "interpretation": "Discrete Shannon entropy is invariant under relabeling by a bijection. The g=0 map aggregates probability masses and lowers the uniform entropy by log2(M) bits."
+  },
+  "fixed_partition_marginal_entropy": {
+    "ensemble": 120,
+    "n_tokens": 6,
+    "position_edges": [
+      "-inf",
+      -20.0,
+      -10.0,
+      -5.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      10.0,
+      20.0,
+      "inf"
+    ],
+    "velocity_edges": [
+      "-inf",
+      -20.0,
+      -10.0,
+      -5.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      20.0,
+      "inf"
+    ],
+    "angle_edges": [
+      0.0,
+      0.5235987755982988,
+      1.0471975511965976,
+      1.5707963267948966,
+      2.0943951023931953,
+      2.617993877991494,
+      3.141592653589793,
+      3.665191429188092,
+      4.1887902047863905,
+      4.71238898038469,
+      5.235987755982988,
+      5.759586531581287,
+      6.283185307179586
+    ],
+    "rows": [
+      {
+        "gamma": 1.0,
+        "t": 0,
+        "position_marginal_sum_bits": 30.638590982441354,
+        "velocity_marginal_sum_bits": 11.864780200826166,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.02917428564173,
+        "full_marginal_sum_bits": 84.62461242242996
+      },
+      {
+        "gamma": 1.0,
+        "t": 10,
+        "position_marginal_sum_bits": 35.65394216780215,
+        "velocity_marginal_sum_bits": 23.996782436583548,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.073746624911216,
+        "full_marginal_sum_bits": 101.81653818281762
+      },
+      {
+        "gamma": 1.0,
+        "t": 30,
+        "position_marginal_sum_bits": 41.18557659147008,
+        "velocity_marginal_sum_bits": 24.194543208809772,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.14490358565363,
+        "full_marginal_sum_bits": 107.6170903394542
+      },
+      {
+        "gamma": 1.0,
+        "t": 80,
+        "position_marginal_sum_bits": 42.849576299510204,
+        "velocity_marginal_sum_bits": 23.811382728780295,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.174778685692697,
+        "full_marginal_sum_bits": 108.92780466750392
+      },
+      {
+        "gamma": 1.0,
+        "t": 150,
+        "position_marginal_sum_bits": 43.76270681867869,
+        "velocity_marginal_sum_bits": 24.391859691079034,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.15635130233775,
+        "full_marginal_sum_bits": 110.4029847656162
+      },
+      {
+        "gamma": 0.982,
+        "t": 0,
+        "position_marginal_sum_bits": 30.638590982441354,
+        "velocity_marginal_sum_bits": 11.864780200826166,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.02917428564173,
+        "full_marginal_sum_bits": 84.62461242242996
+      },
+      {
+        "gamma": 0.982,
+        "t": 10,
+        "position_marginal_sum_bits": 35.53212384782605,
+        "velocity_marginal_sum_bits": 22.8520428023362,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.063227440289527,
+        "full_marginal_sum_bits": 100.5394610439725
+      },
+      {
+        "gamma": 0.982,
+        "t": 30,
+        "position_marginal_sum_bits": 40.12167685208262,
+        "velocity_marginal_sum_bits": 20.96195837604371,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.131974461371062,
+        "full_marginal_sum_bits": 103.3076766430181
+      },
+      {
+        "gamma": 0.982,
+        "t": 80,
+        "position_marginal_sum_bits": 40.406220587018275,
+        "velocity_marginal_sum_bits": 17.661835207866613,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.05007269378809,
+        "full_marginal_sum_bits": 100.21019544219368
+      },
+      {
+        "gamma": 0.982,
+        "t": 150,
+        "position_marginal_sum_bits": 40.17068582477679,
+        "velocity_marginal_sum_bits": 16.815261824715755,
+        "theta_marginal_sum_bits": 21.092066953520714,
+        "phase_marginal_sum_bits": 21.182516469367766,
+        "full_marginal_sum_bits": 99.26053107238103
+      }
+    ],
+    "interpretation": "These are sums of one-dimensional marginal entropies under a fixed observer partition. They are not joint entropies and may rise or fall without complete-state collisions."
+  },
+  "decoupled_clock_memory_and_readout": {
+    "remembered_delta_after_4_lock_steps": -0.019172426930815556,
+    "coupling_after_lock": 0.0,
+    "equal_omega_trace": [
+      {
+        "t": 1,
+        "delta_actual": -0.019172426930815556,
+        "delta_expected": -0.019172426930815556,
+        "angular_residual": 0.0
+      },
+      {
+        "t": 25,
+        "delta_actual": -0.019172426930815778,
+        "delta_expected": -0.019172426930815556,
+        "angular_residual": 2.220446049250313e-16
+      },
+      {
+        "t": 50,
+        "delta_actual": -0.019172426930815778,
+        "delta_expected": -0.019172426930815556,
+        "angular_residual": 2.220446049250313e-16
+      },
+      {
+        "t": 100,
+        "delta_actual": -0.019172426930815778,
+        "delta_expected": -0.019172426930815556,
+        "angular_residual": 2.220446049250313e-16
+      },
+      {
+        "t": 200,
+        "delta_actual": -0.019172426930815334,
+        "delta_expected": -0.019172426930815556,
+        "angular_residual": 2.220446049250313e-16
+      },
+      {
+        "t": 300,
+        "delta_actual": -0.019172426930815334,
+        "delta_expected": -0.019172426930815556,
+        "angular_residual": 2.220446049250313e-16
+      }
+    ],
+    "unequal_omega_trace": [
+      {
+        "t": 1,
+        "delta_actual": -0.03167242693081551,
+        "delta_expected": -0.03167242693081555,
+        "angular_residual": 4.163336342344337e-17
+      },
+      {
+        "t": 25,
+        "delta_actual": -0.3316724269308142,
+        "delta_expected": -0.33167242693081556,
+        "angular_residual": 1.3322676295501878e-15
+      },
+      {
+        "t": 50,
+        "delta_actual": -0.6441724269308149,
+        "delta_expected": -0.6441724269308156,
+        "angular_residual": 6.661338147750939e-16
+      },
+      {
+        "t": 100,
+        "delta_actual": -1.2691724269308238,
+        "delta_expected": -1.2691724269308156,
+        "angular_residual": 8.215650382226158e-15
+      },
+      {
+        "t": 200,
+        "delta_actual": -2.5191724269308033,
+        "delta_expected": -2.5191724269308153,
+        "angular_residual": 1.199040866595169e-14
+      },
+      {
+        "t": 300,
+        "delta_actual": 2.5140128802487784,
+        "delta_expected": 2.5140128802487713,
+        "angular_residual": 7.105427357601002e-15
+      }
+    ],
+    "max_equal_omega_residual": 2.220446049250313e-16,
+    "max_unequal_omega_residual": 1.199040866595169e-14,
+    "controlled_reset_rows": [
+      {
+        "distance": 0.3,
+        "softened_distance": 0.301,
+        "reset_vs_control_effect": 0.3226620869607284,
+        "analytic_prediction": 0.32266208696072846,
+        "absolute_residual": 5.551115123125783e-17
+      },
+      {
+        "distance": 1.0,
+        "softened_distance": 1.001,
+        "reset_vs_control_effect": 0.09702426391126817,
+        "analytic_prediction": 0.097024263911268,
+        "absolute_residual": 1.6653345369377348e-16
+      },
+      {
+        "distance": 3.0,
+        "softened_distance": 3.001,
+        "reset_vs_control_effect": 0.03236297506670427,
+        "analytic_prediction": 0.032362975066704186,
+        "absolute_residual": 8.326672684688674e-17
+      },
+      {
+        "distance": 24.0,
+        "softened_distance": 24.001,
+        "reset_vs_control_effect": 0.004046551734310233,
+        "analytic_prediction": 0.004046551734310206,
+        "absolute_residual": 2.688821387764051e-17
+      }
+    ],
+    "interpretation": "With beta set exactly to zero, equal-frequency phase difference is conserved and unequal-frequency drift follows the exact linear law. Reset effects are measured against an identical no-reset control with only distance changed."
+  },
+  "wall_collision": {
+    "before_l2": 0.20000000000000018,
+    "after_l2": 0.0,
+    "collision": true,
+    "wall": 3.6,
+    "wall_bounce": 0.4,
+    "interpretation": "Clamping all overshoots to the same wall coordinate is many-to-one. Invertibility claims must exclude wall collisions or replace the clamp with an invertible boundary rule."
+  }
+}

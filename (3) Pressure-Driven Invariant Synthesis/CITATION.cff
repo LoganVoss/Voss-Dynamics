@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Please cite the preferred manuscript citation and the exact repository revision used."
+title: "Pressure-Driven Invariant Synthesis"
+type: software
+authors:
+  - family-names: "Voss"
+    given-names: "Logan"
+version: 1.0.0
+date-released: 2026-08-22
+abstract: >-
+  A reproducible implementation of collision-guided, append-only observable
+  synthesis for dynamic representations, with conditional finite-sample
+  theorems, internally frozen synthetic audits, full-pipeline label-null
+  diagnostics, and mixed or null real-domain transfer results. The release
+  makes no prospective-registration or population-injectivity claim.
+keywords:
+  - invariant synthesis
+  - representation learning
+  - observability
+  - dynamical systems
+  - recurrence networks
+  - persistent homology
+  - counterexample-guided synthesis
+preferred-citation:
+  type: unpublished
+  title: "Pressure-Driven Invariant Synthesis"
+  authors:
+    - family-names: "Voss"
+      given-names: "Logan"
+  year: 2026
+

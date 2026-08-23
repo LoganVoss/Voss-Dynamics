@@ -1,0 +1,126 @@
+\section{Description fibres and predictive closure}
+\label{sec:description}
+
+\subsection{A finite phrase readout}
+
+The implemented readout groups tokens by nearby anchors or marks them \texttt{FREE}. Let \(C(x)\) be this deterministic clustering and let \(P(C(x))\) be the resulting phrase. The observation map is
+\begin{equation}
+\Obs(x):=P(C(x)).
+\label{eq:phrase-map}
+\end{equation}
+It retains cluster labels and counts while omitting velocities, directional coordinates, phases, exact positions, and within-cluster identity. An auxiliary geometric score,
+\begin{equation}
+S_{\rm geom}(x)
+=
+S_{\rm name}(C(x))
++S_{\rm resid}(x\mid C(x)),
+\label{eq:geometric-score}
+\end{equation}
+summarizes phrase complexity and positional residual. The score is not needed for the fibre result; the many-to-one structure follows directly from \cref{eq:phrase-map}.
+
+Across 160 independently evolved 14-token states,
+\begin{equation}
+160\ \text{complete states}
+\quad\xrightarrow{\ \Obs\ }\quad
+103\ \text{phrases}.
+\label{eq:phrase-census}
+\end{equation}
+Thirty-one phrases occur more than once. Every one of 68 checked shared-phrase pairs is a pair of distinct complete states, and the largest computed fibre contains eight states.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  micro/.style={circle,fill=fiblue,minimum size=3.3pt,inner sep=0pt},
+  phrase/.style={rounded corners=1.5pt,draw=fiorange,fill=fipaleorange,
+                 minimum width=22mm,minimum height=8mm,font=\small\bfseries},
+  obs/.style={-{Latex[length=2mm]},color=fiorange,line width=0.65pt}
+]
+\node[font=\bfseries\color{fiink}] at (-3.0,2.25)
+  {distinct complete states};
+\node[font=\bfseries\color{fiorange}] at (3.2,2.25)
+  {one phrase};
+\node[phrase] (p) at (3.2,0) {\texttt{FREE:14}};
+\foreach \x/\y/\k in {
+  -4.2/1.35/1,-3.2/1.55/2,-2.1/1.20/3,-4.4/0.25/4,
+  -3.0/0.55/5,-1.9/0.05/6,-4.0/-0.95/7,-2.4/-1.15/8
+} {
+  \node[micro] (m\k) at (\x,\y) {};
+  \draw[obs] (m\k) -- (p);
+}
+\draw[fiink,dashed,rounded corners=8pt]
+  (-4.75,-1.55) rectangle (-1.45,1.9);
+\node[font=\footnotesize,text=figray,align=center] at (-3.1,-1.93)
+  {different positions, velocities,\\directions, phases, and histories};
+\node[font=\footnotesize,text=figray,align=center] at (3.2,-0.85)
+  {one useful description\\with a nontrivial fibre};
+\end{tikzpicture}
+\caption{A computed observation fibre containing eight distinct complete states.}
+\label{fig:phrase-fibre}
+\figsource{\sourcecode{results/battery.json}, \texttt{mdl\_many\_to\_one}.}
+\end{figure}
+
+\subsection{History fibres}
+
+Let \(y=\Obs(x_t)\) be retained final evidence and suppose \(\Psi|_{\A}\) is bijective. The \(k\)-step histories compatible with \(y\) are
+\begin{equation}
+\mathcal H_k(y)
+:=
+\left\{
+\Psi^{-k}(x):
+x\in\Obs^{-1}(y)\cap\A
+\right\}.
+\label{eq:history-fibre}
+\end{equation}
+
+\begin{theorem}[Forensic fibre theorem]
+\label{thm:forensic}
+If \(\Psi|_{\A}\) is bijective, then
+\begin{equation}
+\abs{\mathcal H_k(y)}
+=
+\abs{\Obs^{-1}(y)\cap\A}.
+\label{eq:fibre-cardinality}
+\end{equation}
+Consequently, retained evidence identifies one \(k\)-step history exactly when its reachable observation fibre contains one complete state.
+\end{theorem}
+
+\begin{proof}
+The restriction of \(\Psi^{-k}\) to any subset of \(\A\) is a bijection onto its image and therefore preserves cardinality.
+\end{proof}
+
+The theorem separates a unique underlying predecessor from a uniquely inferable predecessor. Inverse dynamics transports the ambiguity already present in the evidence; it does not remove it.
+
+\subsection{Description-level closure}
+
+A many-to-one readout does not automatically define an autonomous macro-dynamics. The additional requirement is fibre compatibility, the set-level form of exact lumpability or semiconjugacy \citep{lind1995,horstmeyer2016}.
+
+\begin{proposition}[Closure criterion]
+\label{prop:closure}
+Let \(\Obs:\X\to\Y\) be surjective. A deterministic map \(T:\Y\to\Y\) satisfying
+\begin{equation}
+T\circ\Obs=\Obs\circ\Psi
+\label{eq:closure}
+\end{equation}
+exists if and only if
+\begin{equation}
+\Obs(x)=\Obs(x')
+\quad\Longrightarrow\quad
+\Obs(\Psi x)=\Obs(\Psi x').
+\label{eq:fibre-compatibility}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+If \(T\) exists, \cref{eq:fibre-compatibility} follows immediately. Conversely, define \(T(y)=\Obs(\Psi x)\) for any \(x\in\Obs^{-1}(y)\); fibre compatibility makes the value independent of the chosen representative.
+\end{proof}
+
+If fibre compatibility holds for both \(\Psi\) and \(\Psi^{-1}\), the induced macro-map can itself be bijective. If it fails, the reduced process requires hidden coordinates, memory, or stochastic closure, as in projection-operator methods \citep{zwanzig1961,mori1965,chorin2000}. This is the precise bridge from description fibres to effective dynamics.
+
+\subsection{Records and temporal order}
+
+Complete-state retrodictability and record order are separate structures. A bijective transition pairs adjacent complete states in both directions. A recorder, by contrast, selects and stores a sequence
+\[
+y_t=\Obs(x_t),\qquad
+y_{t+1}=\Obs(x_{t+1}),\ldots
+\]
+whose fibres may be nontrivial. Directional records can therefore coexist with distinction-preserving state evolution. Whether those records support a Markovian, reversible, or history-dependent macro-law is decided by \cref{prop:closure}, not by the cardinality of a single fibre alone.

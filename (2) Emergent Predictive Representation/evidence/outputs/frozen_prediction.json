@@ -1,0 +1,33 @@
+{
+  "calibration_angles_rad": [
+    1.0471975511965976,
+    2.0943951023931953,
+    4.1887902047863905
+  ],
+  "candidate_record_law": "dY = a[z + epsilon(1-z^2)sin(Gamma_rel)]dt + dW",
+  "closed_loop_holonomy": "Gamma_rel_plus_minus = minus_plus Omega/2",
+  "epsilon_frozen_from_calibration": 0.019948116875242314,
+  "epsilon_standard_error": 0.0021821789023599237,
+  "frozen_rate_difference": "Delta(Omega) = -2 a epsilon (1-z0^2) cos(Gamma0) sin(Omega/2)",
+  "gamma_rel_offset": 0.0,
+  "implemented_score": "cell-level Gaussian summary log likelihood with propagated calibration covariance; no target refit",
+  "measurement_scale": 1.0,
+  "memoryless_reduced_qubit_null": "epsilon = 0",
+  "not_implemented": [
+    "path likelihood",
+    "process tensor",
+    "qutrit-cavity artifact model",
+    "external timestamped commitment"
+  ],
+  "probe_time": 0.05,
+  "shots_per_orientation_per_angle": 1200000,
+  "status": "pure-state phenomenological record ansatz; no complete instrument and no laboratory confirmation",
+  "synthetic_holdout_angles_rad": [
+    1.5707963267948966,
+    3.141592653589793,
+    4.71238898038469
+  ],
+  "synthetic_protocol_validation_only": true,
+  "version": "VD-Hopf-1",
+  "z0": 0.0
+}

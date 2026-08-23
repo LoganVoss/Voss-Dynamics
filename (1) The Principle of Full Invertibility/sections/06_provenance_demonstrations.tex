@@ -1,0 +1,163 @@
+\section{Distinction provenance in action}
+\label{sec:demonstrations}
+
+\subsection{Four located mechanisms}
+
+The model and evidence package exhibit four distinct outcomes under one common audit.
+
+\begin{table}[H]
+\centering
+\caption{Distinction provenance across the audited model.}
+\label{tab:provenance}
+\small
+\begin{tabularx}{\linewidth}{@{}p{0.20\linewidth}p{0.25\linewidth}X@{}}
+\toprule
+Mechanism & Diagnostic object & Located result\\
+\midrule
+Transition folding &
+Phase preimages of one target &
+Three complete pre-states share one future; the loss occurs in the phase advance.\\
+Boundary clipping &
+Two in-domain overshoots &
+States at distance \(0.2\) become identical under the clamp; the loss occurs at the wall operation.\\
+Observation fibre &
+Anchor-labelled phrase &
+160 states produce 103 phrases; the loss occurs in the readout.\\
+Finite access &
+Endpoint inverse in float64 &
+Recovery error grows with horizon on unique certified branches; the loss is practical access at a chosen tolerance.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+These outcomes are not competing explanations of the same event. The core transition and an optional boundary or controller act in sequence; description and numerical storage are separate representations of the retained complete state:
+\begin{equation}
+\boxed{
+\begin{aligned}
+x&\xrightarrow{\ \Psi_0\ }u\xrightarrow{\ \mathcal B\ }x^+,
+&&\text{core advance and optional boundary},\\
+x^+&\xrightarrow{\ \Obs\ }y,
+&&\text{description branch},\\
+x^+&\xrightarrow{\ \mathcal N\ }\widehat{x}^{+},
+&&\text{stored numerical-state branch}.
+\end{aligned}
+}
+\label{eq:pipeline}
+\end{equation}
+Here \(\mathcal B\) may be the identity when no boundary or controller is present. The provenance question asks for the first map at which a chosen distinction is merged or becomes inaccessible.
+
+\subsection{Boundary clipping as an exact operation}
+
+\begin{proposition}[Wall-clamp collision]
+\label{prop:wall}
+Let one force-free coordinate have wall \(w\), equal velocities \(v>0\), and two in-domain positions \(r_1\neq r_2<w\) satisfying
+\[
+r_1+v\dt>w,
+\qquad
+r_2+v\dt>w.
+\]
+If the boundary rule replaces every overshoot by \(w\) and multiplies both velocities by the same bounce factor, the two states have one image.
+\end{proposition}
+
+\begin{proof}
+The clamp sends both advanced positions to \(w\); equal velocities receive the same update; all other coordinates are equal.
+\end{proof}
+
+The computational construction uses \(w=3.6\), pre-state distance \(0.2\), and produces final distance zero. The proposition gives a precise engineering lesson: an invertible boundary must retain overshoot, for example by periodic wrapping on a torus or exact specular reflection.
+
+\subsection{Relational phase transport}
+
+The two-clock law \cref{eq:two-clock} also yields an exact retained relation. When coupling is switched off after step \(n_0\),
+\begin{equation}
+\delta_n
+=
+\delta_{n_0}
++(n-n_0)\Delta\omega\,\dt
+\pmod{2\pi}.
+\label{eq:decoupled-phase}
+\end{equation}
+Equivalently, the co-rotating coordinate
+\[
+I_n:=\delta_n-n\Delta\omega\,\dt
+\]
+is conserved. Equal frequencies reduce this to conservation of the raw phase difference.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.49\linewidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth,height=0.69\linewidth,
+  xlabel={uncoupled steps},
+  ylabel={\(\abs{\delta}\) (radians)},
+  xmin=0,xmax=305,ymin=0,ymax=3.1,
+  grid=major,major grid style={draw=firule},
+  tick label style={font=\scriptsize},
+  label style={font=\footnotesize},
+  legend style={draw=none,fill=none,font=\scriptsize,
+                at={(0.03,0.97)},anchor=north west}
+]
+\addplot[fiblue,line width=1.2pt,mark=*]
+  table[x=t,y=equal_delta_rad,col sep=comma]
+  {evidence/clock_memory.csv};
+\addlegendentry{\(\omega_1=\omega_2\)}
+\addplot[fiorange,line width=1.2pt,mark=square*]
+  table[x=t,y=unequal_delta_rad,col sep=comma]
+  {evidence/clock_memory.csv};
+\addlegendentry{\(\omega_1\neq\omega_2\)}
+\end{axis}
+\end{tikzpicture}
+\caption{Relative phase.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.49\linewidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth,height=0.69\linewidth,
+  xlabel={uncoupled steps},
+  ylabel={two-clock order parameter \(R\)},
+  xmin=0,xmax=305,ymin=0.2,ymax=1.03,
+  grid=major,major grid style={draw=firule},
+  tick label style={font=\scriptsize},
+  label style={font=\footnotesize},
+  legend style={draw=none,fill=none,font=\scriptsize,
+                at={(0.03,0.05)},anchor=south west}
+]
+\addplot[fiblue,line width=1.2pt,mark=*]
+  table[x=t,y=equal_R,col sep=comma]
+  {evidence/clock_memory.csv};
+\addlegendentry{\(\omega_1=\omega_2\)}
+\addplot[fiorange,line width=1.2pt,mark=square*]
+  table[x=t,y=unequal_R,col sep=comma]
+  {evidence/clock_memory.csv};
+\addlegendentry{\(\omega_1\neq\omega_2\)}
+\end{axis}
+\end{tikzpicture}
+\caption{Coherence.}
+\end{subfigure}
+\caption{After four coupling steps, \(\beta\) is set exactly to zero. Equal-frequency phase difference is retained; unequal-frequency drift follows \cref{eq:decoupled-phase} to floating-point precision.}
+\label{fig:phase-transport}
+\figsource{\sourcecode{evidence/thesis\_verification.json}, \texttt{decoupled\_clock\_memory\_and\_readout}.}
+\end{figure}
+
+\subsection{Controlled local response}
+
+Resetting one phase is an intervention. Clone one phase state into a reset arm and a no-reset control, alter only the separation, and compare the partner after one step. The exact difference is
+\begin{equation}
+\Delta_{\rm reset}\phi_2^+
+=
+\frac{\beta\dt}{\widetilde D}
+\left[
+\sin(\phi_{1,\rm reset}-\phi_2)
+-
+\sin(\phi_{1,\rm control}-\phi_2)
+\right].
+\label{eq:reset-response}
+\end{equation}
+Measured effects are \(0.32266\) radians at distance \(0.3\) and \(0.004047\) radians at distance \(24\), matching the softened \(1/\widetilde D\) ratio. The partner does not change in the same instant; the next advance transmits the controlled response. This supplies a clean example of relational memory, local intervention, and distance-weighted dynamics within one exact phase law.
+
+\subsection{What the demonstrations establish}
+
+The multiroot, wall, phrase, and round-trip experiments form a single positive result: the framework identifies \emph{which operation} owns each loss of distinguishability. This is stronger than labeling every ambiguity ``entropy'' or every failed reconstruction ``irreversibility.'' It produces a typed result that can be carried into other dynamical, observational, and computational systems.

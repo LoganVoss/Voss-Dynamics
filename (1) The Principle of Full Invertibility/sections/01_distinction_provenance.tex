@@ -1,0 +1,148 @@
+\section{Question, principle, and standard of proof}
+\label{sec:principle}
+
+\subsection{The question in two maps}
+
+Let \(\X\) be a declared complete state space. Two maps play different roles:
+\begin{equation}
+  \Psi:\X\to\X,
+  \qquad
+  \Obs:\X\to\Y.
+  \label{eq:two-map}
+\end{equation}
+\(\Psi\) advances the modeled state. \(\Obs\) records, names, bins, or summarizes it. The central discipline of this paper is to keep these maps separate. A collision under \(\Obs\) is an observational identification; a collision under \(\Psi\) is a transition identification. Neither fact determines the other.
+
+In this study the representation map \(\Obs\) is fixed. Whether a distinction inside one fibre changes future predictions, and how the representation should be refined when it does, are separate downstream questions addressed by the later studies in the Voss Dynamics sequence.
+
+\begin{definition}[Complete modeled state]
+A state \(x\in\X\) is \emph{complete relative to the declared model} when it contains every coordinate required to evaluate one advance, while all remaining masses, frequencies, anchors, timestep choices, and control parameters are fixed and known.
+\end{definition}
+
+\begin{definition}[Distinction and provenance]
+A distinction is an ordered pair \(x\neq x'\). Its \emph{provenance} is the sequence of maps through which the pair is followed. A map preserves the distinction when its two images remain unequal.
+\end{definition}
+
+\begin{definition}[Description fibre]
+For \(y\in\Y\), the fibre
+\begin{equation}
+  \Obs^{-1}(y)
+  :=
+  \{x\in\X:\Obs(x)=y\}
+  \label{eq:description-fibre}
+\end{equation}
+is the set of complete states represented by the same description.
+\end{definition}
+
+\begin{principle}[Full invertibility]
+\label{principle:full-invertibility}
+On an admissible domain \(\A\subseteq\X\), a model instantiates the Principle of Full Invertibility when
+\begin{enumerate}
+\item \(\Psi|_{\A}\) is bijective onto \(\A\);
+\item \(\Obs|_{\A}\) is a separate readout and may have nontrivial fibres;
+\item every claim of loss identifies whether the responsible operation is the core advance, a boundary or controller, the readout, or the finite representation.
+\end{enumerate}
+\end{principle}
+
+The word \emph{full} refers to the declared state, not to universal applicability. The principle is a testable property of a specified map on a specified domain. This makes it useful even when a candidate domain contains both injective and folded regions: the same analysis locates the boundary.
+
+\subsection{Distinction provenance}
+
+Four map locations account for the cases studied here:
+\begin{equation}
+\boxed{
+\begin{aligned}
+\Psi_0(x)=\Psi_0(x'),\ x\neq x'
+&\quad &&\text{core transition / inverse branches},\\
+\mathcal B(u)=\mathcal B(u'),\ u\neq u'
+&&&\text{boundary or controller collision},\\
+\Obs(x)=\Obs(x'),\ x\neq x'
+&&&\text{observation collision},\\
+\mathcal N(r)=\mathcal N(r'),\ r\neq r'
+&&&\text{finite-record collision or access limit}.
+\end{aligned}}
+\label{eq:provenance-taxonomy}
+\end{equation}
+Branch multiplicity is the inverse signature of noninjectivity in the core transition, not a separate loss mechanism. The taxonomy converts an undifferentiated statement---``information disappeared''---into four map-specific questions.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=15mm and 24mm,
+  every node/.style={font=\small,align=center},
+  state/.style={circle,draw=fiink,fill=white,minimum size=8mm,line width=0.7pt},
+  desc/.style={rounded corners=1.5pt,draw=fiorange,fill=fipaleorange,
+               minimum width=20mm,minimum height=8mm},
+  arr/.style={-{Latex[length=2mm]},line width=0.85pt,color=fiblue},
+  obs/.style={-{Latex[length=2mm]},line width=0.85pt,color=fiorange}
+]
+\node[state] (a1) at (0,1.2) {\(\scriptstyle x_1\)};
+\node[state] (a2) at (0,0) {\(\scriptstyle x_2\)};
+\node[state] (a3) at (0,-1.2) {\(\scriptstyle x_3\)};
+\node[state] (b1) at (4.3,1.2) {\(\scriptstyle x_1^+\)};
+\node[state] (b2) at (4.3,0) {\(\scriptstyle x_2^+\)};
+\node[state] (b3) at (4.3,-1.2) {\(\scriptstyle x_3^+\)};
+\node[desc] (p1) at (8.3,0.8) {\(y_A\)};
+\node[desc] (p2) at (8.3,-0.8) {\(y_B\)};
+\draw[arr] (a1) -- (b1);
+\draw[arr] (a2) -- (b2);
+\draw[arr] (a3) -- (b3);
+\draw[obs] (b1) -- (p1);
+\draw[obs] (b2) -- (p1);
+\draw[obs] (b3) -- (p2);
+\node[font=\bfseries\color{fiblue}] at (2.15,1.7) {\(\Psi\): advance};
+\node[font=\bfseries\color{fiorange}] at (6.3,1.7) {\(\Obs\): description};
+\node[font=\footnotesize\color{figray},align=center] at (2.15,-2.0)
+  {three state distinctions\\preserved by the advance};
+\node[font=\footnotesize\color{figray},align=center] at (6.3,-2.0)
+  {one distinction removed\\by the description};
+\end{tikzpicture}
+\caption{Two maps, two kinds of identity. The advance and the description are audited independently.}
+\label{fig:two-map}
+\end{figure}
+
+\subsection{Claim discipline}
+
+Three statuses are used throughout:
+\begin{description}[style=nextline]
+\item[\status{PROVED}] A mathematical consequence of explicitly stated assumptions.
+\item[\status{COMPUTED}] An exact symbolic, enumerative, deterministic, or seeded numerical result reproduced by code, with finite-precision protocols and sample counts declared where applicable.
+\item[\status{OPEN}] A theorem, domain characterization, or physical interpretation requiring further work.
+\end{description}
+
+\subsection{Contribution ledger}
+
+\begin{table}[H]
+\centering
+\caption{The paper's central objects and present status.}
+\label{tab:contribution-ledger}
+\small
+\begin{tabularx}{\linewidth}{@{}p{0.19\linewidth}X p{0.23\linewidth}@{}}
+\toprule
+Object & Result & Status\\
+\midrule
+Drift--kick inverse &
+Algebraic recovery of velocity and position once a phase preimage is fixed. &
+\status{PROVED}\\
+Full Jacobian &
+\(\det D\Psi=\gamma^{2N}\det D_\phi G_{\bm r^+}\) on smooth strata. &
+\status{PROVED}\\
+Phase uniqueness &
+Configuration-dependent contraction certificate and exact two-clock fold criterion. &
+\status{PROVED}\\
+Finite analogue &
+Permutation exactly when the modular multiplier is a unit. &
+\status{PROVED}\\
+Description fibres &
+160 complete states map to 103 phrases; every checked shared-phrase pair is distinct. &
+\status{COMPUTED}\\
+Inverse access &
+Float64 round-trip recovery quantified over contraction-certified trajectories. &
+\status{COMPUTED}\\
+Global admissible domain &
+Characterization of a nontrivial invariant domain for the full phase-coupled map. &
+\status{OPEN}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The remainder of the paper develops these objects in the order required by the audit: state and advance, inverse structure, description fibres, finite access, and applications.

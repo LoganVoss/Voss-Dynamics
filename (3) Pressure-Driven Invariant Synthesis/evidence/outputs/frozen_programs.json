@@ -1,0 +1,1444 @@
+{
+  "all_source_domains": {
+    "base_names": [
+      "radial_lag1",
+      "path_tortuosity"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "top_candidates": [
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 0.9090909090909091
+            },
+            "invariance_error": 2.1780017393139324e-14,
+            "mean_reduction": 0.9696969696969697,
+            "minimum_audit_auc": 1.0,
+            "minimum_selection_auc": 1.0,
+            "noise_error_p95": 0.10963194736216586,
+            "program": {
+              "complexity": 3,
+              "left": "increment_cv",
+              "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+              "operation": "log_ratio",
+              "right": "radial_permutation_entropy"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.9273356401384083,
+              "logistic": 0.9965397923875432,
+              "lorenz": 0.8823529411764706
+            },
+            "utility": 1.531329140379648,
+            "worst_domain_reduction": 0.9090909090909091
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 0.9090909090909091
+            },
+            "invariance_error": 1.6074001728762213e-14,
+            "mean_reduction": 0.9696969696969697,
+            "minimum_audit_auc": 1.0,
+            "minimum_selection_auc": 1.0,
+            "noise_error_p95": 0.15488398652545224,
+            "program": {
+              "complexity": 3,
+              "left": "increment_cv",
+              "name": "normalized_difference(increment_cv,radial_turning_rate)",
+              "operation": "normalized_difference",
+              "right": "radial_turning_rate"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.6055363321799307,
+              "logistic": 0.9965397923875432,
+              "lorenz": 0.8823529411764706
+            },
+            "utility": 1.4852814451138385,
+            "worst_domain_reduction": 0.9090909090909091
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 0.9256198347107438,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 0.47933884297520657,
+              "logistic": 1.0,
+              "lorenz": 0.7355371900826446
+            },
+            "invariance_error": 2.4235971925249253e-14,
+            "mean_reduction": 0.7382920110192837,
+            "minimum_audit_auc": 0.9256198347107438,
+            "minimum_selection_auc": 0.7785467128027681,
+            "noise_error_p95": 0.14566704718113554,
+            "program": {
+              "complexity": 3,
+              "left": "increment_cv",
+              "name": "log_ratio(increment_cv,recurrence_degree_cv)",
+              "operation": "log_ratio",
+              "right": "recurrence_degree_cv"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 0.7785467128027681,
+              "logistic": 1.0,
+              "lorenz": 0.9930795847750865
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.2698961937716263,
+              "logistic": 0.9965397923875432,
+              "lorenz": 0.6401384083044983
+            },
+            "utility": 0.8891629034109911,
+            "worst_domain_reduction": 0.47933884297520657
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 0.9586776859504132
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 0.8181818181818181,
+              "logistic": 1.0,
+              "lorenz": 0.44628099173553715
+            },
+            "invariance_error": 3.773404810941306e-14,
+            "mean_reduction": 0.7548209366391184,
+            "minimum_audit_auc": 0.9586776859504132,
+            "minimum_selection_auc": 0.7335640138408305,
+            "noise_error_p95": 0.14790531183164532,
+            "program": {
+              "complexity": 3,
+              "left": "h0_max_persistence",
+              "name": "normalized_difference(h0_max_persistence,increment_cv)",
+              "operation": "normalized_difference",
+              "right": "increment_cv"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 0.9515570934256056,
+              "logistic": 1.0,
+              "lorenz": 0.7335640138408305
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.698961937716263,
+              "logistic": 0.9965397923875432,
+              "lorenz": 0.24567474048442905
+            },
+            "utility": 0.8610634347104364,
+            "worst_domain_reduction": 0.44628099173553715
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 0.9008264462809917,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 0.3801652892561983,
+              "logistic": 1.0,
+              "lorenz": 0.8760330578512396
+            },
+            "invariance_error": 8.524583950806554e-14,
+            "mean_reduction": 0.7520661157024793,
+            "minimum_audit_auc": 0.9008264462809917,
+            "minimum_selection_auc": 0.7681660899653979,
+            "noise_error_p95": 0.1933657128670478,
+            "program": {
+              "complexity": 3,
+              "left": "h0_max_persistence",
+              "name": "log_ratio(h0_max_persistence,radial_turning_rate)",
+              "operation": "log_ratio",
+              "right": "radial_turning_rate"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 0.7681660899653979,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.3460207612456747,
+              "logistic": 0.9411764705882353,
+              "lorenz": 0.8650519031141868
+            },
+            "utility": 0.8031119974456009,
+            "worst_domain_reduction": 0.3801652892561983
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 0.7768595041322314,
+              "logistic": 1.0,
+              "lorenz": 0.1900826446280991
+            },
+            "invariance_error": 1.2131656468127572e-14,
+            "mean_reduction": 0.6556473829201103,
+            "minimum_audit_auc": 1.0,
+            "minimum_selection_auc": 1.0,
+            "noise_error_p95": 0.046198786021865654,
+            "program": {
+              "complexity": 3,
+              "left": "increment_cv",
+              "name": "normalized_difference(increment_cv,radial_permutation_entropy)",
+              "operation": "normalized_difference",
+              "right": "radial_permutation_entropy"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.5294117647058824,
+              "logistic": 0.9965397923875432,
+              "lorenz": 0.23529411764705876
+            },
+            "utility": 0.5645805751330264,
+            "worst_domain_reduction": 0.1900826446280991
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0,
+              "lorenz": 0.9338842975206612
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 0.6694214876033058,
+              "logistic": 0.2727272727272727,
+              "lorenz": 0.30578512396694213
+            },
+            "invariance_error": 5.73880271673474e-15,
+            "mean_reduction": 0.4159779614325069,
+            "minimum_audit_auc": 0.9338842975206612,
+            "minimum_selection_auc": 0.8685121107266436,
+            "noise_error_p95": 0.07863000083893003,
+            "program": {
+              "complexity": 3,
+              "left": "h1_max_persistence",
+              "name": "normalized_difference(h1_max_persistence,recurrence_degree_cv)",
+              "operation": "normalized_difference",
+              "right": "recurrence_degree_cv"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 0.9965397923875432,
+              "logistic": 1.0,
+              "lorenz": 0.8685121107266436
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.7958477508650519,
+              "logistic": 0.23529411764705876,
+              "lorenz": 0.39100346020761245
+            },
+            "utility": 0.5230454426320365,
+            "worst_domain_reduction": 0.2727272727272727
+          },
+          {
+            "audit_orientation_free_auc": {
+              "kuramoto": 0.9338842975206612,
+              "logistic": 1.0,
+              "lorenz": 0.9008264462809917
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 0.2148760330578512,
+              "logistic": 0.9090909090909091,
+              "lorenz": 0.20661157024793386
+            },
+            "invariance_error": 1.438725150109451e-14,
+            "mean_reduction": 0.44352617079889806,
+            "minimum_audit_auc": 0.9008264462809917,
+            "minimum_selection_auc": 0.8615916955017301,
+            "noise_error_p95": 0.16017663563700357,
+            "program": {
+              "complexity": 3,
+              "left": "h1_max_persistence",
+              "name": "log_ratio(h1_max_persistence,recurrence_spectral_entropy)",
+              "operation": "log_ratio",
+              "right": "recurrence_spectral_entropy"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 0.9377162629757786,
+              "logistic": 0.9411764705882353,
+              "lorenz": 0.8615916955017301
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.44636678200692037,
+              "logistic": 0.3529411764705882,
+              "lorenz": 0.2664359861591695
+            },
+            "utility": 0.4655675690709188,
+            "worst_domain_reduction": 0.20661157024793386
+          }
+        ],
+        "winner": {
+          "audit_orientation_free_auc": {
+            "kuramoto": 1.0,
+            "logistic": 1.0,
+            "lorenz": 1.0
+          },
+          "audit_risk_reduction": {
+            "kuramoto": 1.0,
+            "logistic": 1.0,
+            "lorenz": 0.9090909090909091
+          },
+          "invariance_error": 2.1780017393139324e-14,
+          "mean_reduction": 0.9696969696969697,
+          "minimum_audit_auc": 1.0,
+          "minimum_selection_auc": 1.0,
+          "noise_error_p95": 0.10963194736216586,
+          "program": {
+            "complexity": 3,
+            "left": "increment_cv",
+            "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+            "operation": "log_ratio",
+            "right": "radial_permutation_entropy"
+          },
+          "selection_orientation_free_auc": {
+            "kuramoto": 1.0,
+            "logistic": 1.0,
+            "lorenz": 1.0
+          },
+          "selection_risk_reduction": {
+            "kuramoto": 0.9273356401384083,
+            "logistic": 0.9965397923875432,
+            "lorenz": 0.8823529411764706
+          },
+          "utility": 1.531329140379648,
+          "worst_domain_reduction": 0.9090909090909091
+        }
+      }
+    ],
+    "selected": [
+      {
+        "complexity": 3,
+        "left": "increment_cv",
+        "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+        "operation": "log_ratio",
+        "right": "radial_permutation_entropy"
+      }
+    ],
+    "source_after": {
+      "kuramoto": {
+        "collisions": 2,
+        "program_auc": {
+          "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+        },
+        "risk": 0.07142857142857142,
+        "trials": 28,
+        "upper_95": 0.20820471317941197
+      },
+      "logistic": {
+        "collisions": 0,
+        "program_auc": {
+          "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+        },
+        "risk": 0.0,
+        "trials": 28,
+        "upper_95": 0.10146573557272476
+      },
+      "lorenz": {
+        "collisions": 0,
+        "program_auc": {
+          "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+        },
+        "risk": 0.0,
+        "trials": 28,
+        "upper_95": 0.10146573557272476
+      }
+    },
+    "source_before": {
+      "kuramoto": {
+        "collisions": 28,
+        "program_auc": {},
+        "risk": 1.0,
+        "trials": 28,
+        "upper_95": 1.0
+      },
+      "logistic": {
+        "collisions": 28,
+        "program_auc": {},
+        "risk": 1.0,
+        "trials": 28,
+        "upper_95": 1.0
+      },
+      "lorenz": {
+        "collisions": 24,
+        "program_auc": {},
+        "risk": 0.8571428571428571,
+        "trials": 28,
+        "upper_95": 0.9496918277791873
+      }
+    }
+  },
+  "declared_split_manifest_sha256": "6fbdd95995c5c8f0e12b8e5f59cbf4cb464c6928981910ddc39eb0e758346352",
+  "external_timestamp": null,
+  "grammar_manifest_sha256": "f569a8e557b6aae147c1323cdef4550635f394739428ca0b3173932ea516b86c",
+  "outer_folds": {
+    "kuramoto": {
+      "base_names": [
+        "radial_lag1",
+        "path_tortuosity"
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "top_candidates": [
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 1.0,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 2.1780017393139324e-14,
+              "mean_reduction": 0.9545454545454546,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.1197245567716801,
+              "program": {
+                "complexity": 3,
+                "left": "increment_cv",
+                "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+                "operation": "log_ratio",
+                "right": "radial_permutation_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.9965397923875432,
+                "lorenz": 0.8823529411764706
+              },
+              "utility": 1.5227441218629387,
+              "worst_domain_reduction": 0.9090909090909091
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 1.0,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 1.6074001728762213e-14,
+              "mean_reduction": 0.9545454545454546,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.1667092607492325,
+              "program": {
+                "complexity": 3,
+                "left": "increment_cv",
+                "name": "normalized_difference(increment_cv,radial_turning_rate)",
+                "operation": "normalized_difference",
+                "right": "radial_turning_rate"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.9965397923875432,
+                "lorenz": 0.8823529411764706
+              },
+              "utility": 1.5180456514651837,
+              "worst_domain_reduction": 0.9090909090909091
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 1.0,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 3.2493400103922455e-13,
+              "mean_reduction": 0.9545454545454546,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.1482687855259511,
+              "program": {
+                "complexity": 3,
+                "left": "h0_persistence_entropy",
+                "name": "log_ratio(h0_persistence_entropy,radial_permutation_entropy)",
+                "operation": "log_ratio",
+                "right": "radial_permutation_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.9688581314878892,
+                "lorenz": 0.726643598615917
+              },
+              "utility": 1.4965332976034287,
+              "worst_domain_reduction": 0.9090909090909091
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 0.9834710743801653,
+                "lorenz": 0.8925619834710743
+              },
+              "invariance_error": 2.2896612682992235e-13,
+              "mean_reduction": 0.9380165289256198,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9930795847750865,
+              "noise_error_p95": 0.1240188218138461,
+              "program": {
+                "complexity": 3,
+                "left": "h0_persistence_entropy",
+                "name": "normalized_difference(h0_persistence_entropy,radial_turning_rate)",
+                "operation": "normalized_difference",
+                "right": "radial_turning_rate"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 0.9930795847750865,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.9377162629757785,
+                "lorenz": 0.7508650519031141
+              },
+              "utility": 1.4777981235379667,
+              "worst_domain_reduction": 0.8925619834710743
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 1.0,
+                "lorenz": 0.8760330578512396
+              },
+              "invariance_error": 8.524583950806554e-14,
+              "mean_reduction": 0.9380165289256198,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.14328351904267045,
+              "program": {
+                "complexity": 3,
+                "left": "h0_max_persistence",
+                "name": "log_ratio(h0_max_persistence,radial_turning_rate)",
+                "operation": "log_ratio",
+                "right": "radial_turning_rate"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.9411764705882353,
+                "lorenz": 0.8650519031141868
+              },
+              "utility": 1.4764707558769108,
+              "worst_domain_reduction": 0.8760330578512396
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 0.5206611570247934,
+                "lorenz": 0.5950413223140496
+              },
+              "invariance_error": 4.704070593572763e-14,
+              "mean_reduction": 0.5578512396694215,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.07764792598362959,
+              "program": {
+                "complexity": 3,
+                "left": "h0_max_persistence",
+                "name": "normalized_difference(h0_max_persistence,radial_turning_rate)",
+                "operation": "normalized_difference",
+                "right": "radial_turning_rate"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.4256055363321799,
+                "lorenz": 0.7439446366782007
+              },
+              "utility": 0.8716628147109683,
+              "worst_domain_reduction": 0.5206611570247934
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 0.9586776859504132
+              },
+              "audit_risk_reduction": {
+                "logistic": 1.0,
+                "lorenz": 0.44628099173553715
+              },
+              "invariance_error": 3.773404810941306e-14,
+              "mean_reduction": 0.7231404958677685,
+              "minimum_audit_auc": 0.9586776859504132,
+              "minimum_selection_auc": 0.7335640138408305,
+              "noise_error_p95": 0.17494142957829523,
+              "program": {
+                "complexity": 3,
+                "left": "h0_max_persistence",
+                "name": "normalized_difference(h0_max_persistence,increment_cv)",
+                "operation": "normalized_difference",
+                "right": "increment_cv"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 0.7335640138408305
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.9965397923875432,
+                "lorenz": 0.24567474048442905
+              },
+              "utility": 0.8421752499330165,
+              "worst_domain_reduction": 0.44628099173553715
+            },
+            {
+              "audit_orientation_free_auc": {
+                "logistic": 0.9669421487603306,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "logistic": 0.2975206611570248,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 0.0,
+              "mean_reduction": 0.6033057851239669,
+              "minimum_audit_auc": 0.9669421487603306,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.17769543559122192,
+              "program": {
+                "complexity": 3,
+                "left": "radial_turning_rate",
+                "name": "log_ratio(radial_turning_rate,recurrence_degree_cv)",
+                "operation": "log_ratio",
+                "right": "recurrence_degree_cv"
+              },
+              "selection_orientation_free_auc": {
+                "logistic": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "logistic": 0.6608996539792387,
+                "lorenz": 0.8823529411764706
+              },
+              "utility": 0.6957125119757802,
+              "worst_domain_reduction": 0.2975206611570248
+            }
+          ],
+          "winner": {
+            "audit_orientation_free_auc": {
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "logistic": 1.0,
+              "lorenz": 0.9090909090909091
+            },
+            "invariance_error": 2.1780017393139324e-14,
+            "mean_reduction": 0.9545454545454546,
+            "minimum_audit_auc": 1.0,
+            "minimum_selection_auc": 1.0,
+            "noise_error_p95": 0.1197245567716801,
+            "program": {
+              "complexity": 3,
+              "left": "increment_cv",
+              "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+              "operation": "log_ratio",
+              "right": "radial_permutation_entropy"
+            },
+            "selection_orientation_free_auc": {
+              "logistic": 1.0,
+              "lorenz": 1.0
+            },
+            "selection_risk_reduction": {
+              "logistic": 0.9965397923875432,
+              "lorenz": 0.8823529411764706
+            },
+            "utility": 1.5227441218629387,
+            "worst_domain_reduction": 0.9090909090909091
+          }
+        }
+      ],
+      "selected": [
+        {
+          "complexity": 3,
+          "left": "increment_cv",
+          "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+          "operation": "log_ratio",
+          "right": "radial_permutation_entropy"
+        }
+      ],
+      "source_after": {
+        "logistic": {
+          "collisions": 0,
+          "program_auc": {
+            "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+          },
+          "risk": 0.0,
+          "trials": 28,
+          "upper_95": 0.10146573557272476
+        },
+        "lorenz": {
+          "collisions": 0,
+          "program_auc": {
+            "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+          },
+          "risk": 0.0,
+          "trials": 28,
+          "upper_95": 0.10146573557272476
+        }
+      },
+      "source_before": {
+        "logistic": {
+          "collisions": 28,
+          "program_auc": {},
+          "risk": 1.0,
+          "trials": 28,
+          "upper_95": 1.0
+        },
+        "lorenz": {
+          "collisions": 24,
+          "program_auc": {},
+          "risk": 0.8571428571428571,
+          "trials": 28,
+          "upper_95": 0.9496918277791873
+        }
+      }
+    },
+    "logistic": {
+      "base_names": [
+        "radial_lag1",
+        "path_tortuosity"
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "top_candidates": [
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 2.1780017393139324e-14,
+              "mean_reduction": 0.9545454545454546,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.1197245567716801,
+              "program": {
+                "complexity": 3,
+                "left": "increment_cv",
+                "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+                "operation": "log_ratio",
+                "right": "radial_permutation_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.9273356401384083,
+                "lorenz": 0.8823529411764706
+              },
+              "utility": 1.5227441218629387,
+              "worst_domain_reduction": 0.9090909090909091
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 2.005872919534666e-14,
+              "mean_reduction": 0.9545454545454546,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.12398786813889885,
+              "program": {
+                "complexity": 3,
+                "left": "covariance_entropy",
+                "name": "normalized_difference(covariance_entropy,radial_turning_rate)",
+                "operation": "normalized_difference",
+                "right": "radial_turning_rate"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 1.0,
+                "lorenz": 0.8754325259515571
+              },
+              "utility": 1.52127972844248,
+              "worst_domain_reduction": 0.9090909090909091
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "lorenz": 0.9090909090909091
+              },
+              "invariance_error": 1.6074001728762213e-14,
+              "mean_reduction": 0.9545454545454546,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.1667092607492325,
+              "program": {
+                "complexity": 3,
+                "left": "increment_cv",
+                "name": "normalized_difference(increment_cv,radial_turning_rate)",
+                "operation": "normalized_difference",
+                "right": "radial_turning_rate"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.6055363321799307,
+                "lorenz": 0.8823529411764706
+              },
+              "utility": 1.4765231601157027,
+              "worst_domain_reduction": 0.9090909090909091
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 0.71900826446281,
+                "lorenz": 0.8925619834710743
+              },
+              "invariance_error": 0.0,
+              "mean_reduction": 0.8057851239669421,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.13234408952483417,
+              "program": {
+                "complexity": 3,
+                "left": "radial_turning_rate",
+                "name": "normalized_difference(radial_turning_rate,recurrence_degree_cv)",
+                "operation": "normalized_difference",
+                "right": "recurrence_degree_cv"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.4878892733564014,
+                "lorenz": 0.8339100346020761
+              },
+              "utility": 1.197849808497258,
+              "worst_domain_reduction": 0.71900826446281
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 0.9586776859504132
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 0.8181818181818181,
+                "lorenz": 0.44628099173553715
+              },
+              "invariance_error": 3.773404810941306e-14,
+              "mean_reduction": 0.6322314049586777,
+              "minimum_audit_auc": 0.9586776859504132,
+              "minimum_selection_auc": 0.7335640138408305,
+              "noise_error_p95": 0.17494142957829523,
+              "program": {
+                "complexity": 3,
+                "left": "h0_max_persistence",
+                "name": "normalized_difference(h0_max_persistence,increment_cv)",
+                "operation": "normalized_difference",
+                "right": "increment_cv"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 0.9515570934256056,
+                "lorenz": 0.7335640138408305
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.698961937716263,
+                "lorenz": 0.24567474048442905
+              },
+              "utility": 0.7967207044784711,
+              "worst_domain_reduction": 0.44628099173553715
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 0.9338842975206612
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 0.6694214876033058,
+                "lorenz": 0.30578512396694213
+              },
+              "invariance_error": 5.73880271673474e-15,
+              "mean_reduction": 0.48760330578512395,
+              "minimum_audit_auc": 0.9338842975206612,
+              "minimum_selection_auc": 0.8685121107266436,
+              "noise_error_p95": 0.11944066179009541,
+              "program": {
+                "complexity": 3,
+                "left": "h1_max_persistence",
+                "name": "normalized_difference(h1_max_persistence,recurrence_degree_cv)",
+                "operation": "normalized_difference",
+                "right": "recurrence_degree_cv"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 0.9965397923875432,
+                "lorenz": 0.8685121107266436
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.7958477508650519,
+                "lorenz": 0.39100346020761245
+              },
+              "utility": 0.6106403371496528,
+              "worst_domain_reduction": 0.30578512396694213
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 0.8925619834710744,
+                "lorenz": 0.2479338842975206
+              },
+              "invariance_error": 0.0,
+              "mean_reduction": 0.5702479338842975,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9480968858131488,
+              "noise_error_p95": 0.1628431834697571,
+              "program": {
+                "complexity": 3,
+                "left": "radial_turning_rate",
+                "name": "log_ratio(radial_turning_rate,recurrence_lambda2)",
+                "operation": "log_ratio",
+                "right": "recurrence_lambda2"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 0.972318339100346,
+                "lorenz": 0.9480968858131488
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.7162629757785467,
+                "lorenz": 0.1487889273356401
+              },
+              "utility": 0.5550918719930396,
+              "worst_domain_reduction": 0.2479338842975206
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 0.7768595041322314,
+                "lorenz": 0.1900826446280991
+              },
+              "invariance_error": 1.2131656468127572e-14,
+              "mean_reduction": 0.48347107438016523,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.06525758341867467,
+              "program": {
+                "complexity": 3,
+                "left": "increment_cv",
+                "name": "normalized_difference(increment_cv,radial_permutation_entropy)",
+                "operation": "normalized_difference",
+                "right": "radial_permutation_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "lorenz": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.5294117647058824,
+                "lorenz": 0.23529411764705876
+              },
+              "utility": 0.47658654112337306,
+              "worst_domain_reduction": 0.1900826446280991
+            }
+          ],
+          "winner": {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "lorenz": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 1.0,
+              "lorenz": 0.9090909090909091
+            },
+            "invariance_error": 2.1780017393139324e-14,
+            "mean_reduction": 0.9545454545454546,
+            "minimum_audit_auc": 1.0,
+            "minimum_selection_auc": 1.0,
+            "noise_error_p95": 0.1197245567716801,
+            "program": {
+              "complexity": 3,
+              "left": "increment_cv",
+              "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+              "operation": "log_ratio",
+              "right": "radial_permutation_entropy"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "lorenz": 1.0
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.9273356401384083,
+              "lorenz": 0.8823529411764706
+            },
+            "utility": 1.5227441218629387,
+            "worst_domain_reduction": 0.9090909090909091
+          }
+        }
+      ],
+      "selected": [
+        {
+          "complexity": 3,
+          "left": "increment_cv",
+          "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+          "operation": "log_ratio",
+          "right": "radial_permutation_entropy"
+        }
+      ],
+      "source_after": {
+        "kuramoto": {
+          "collisions": 2,
+          "program_auc": {
+            "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+          },
+          "risk": 0.07142857142857142,
+          "trials": 28,
+          "upper_95": 0.20820471317941197
+        },
+        "lorenz": {
+          "collisions": 0,
+          "program_auc": {
+            "log_ratio(increment_cv,radial_permutation_entropy)": 1.0
+          },
+          "risk": 0.0,
+          "trials": 28,
+          "upper_95": 0.10146573557272476
+        }
+      },
+      "source_before": {
+        "kuramoto": {
+          "collisions": 28,
+          "program_auc": {},
+          "risk": 1.0,
+          "trials": 28,
+          "upper_95": 1.0
+        },
+        "lorenz": {
+          "collisions": 24,
+          "program_auc": {},
+          "risk": 0.8571428571428571,
+          "trials": 28,
+          "upper_95": 0.9496918277791873
+        }
+      }
+    },
+    "lorenz": {
+      "base_names": [
+        "radial_lag1",
+        "path_tortuosity"
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "top_candidates": [
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 4.351869864599145e-14,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9705882352941176,
+              "noise_error_p95": 0.043347807331515824,
+              "program": {
+                "complexity": 3,
+                "left": "covariance_entropy",
+                "name": "log_ratio(covariance_entropy,h1_max_persistence)",
+                "operation": "log_ratio",
+                "right": "h1_max_persistence"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 0.9705882352941176
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.9653979238754326,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.6528416898550837,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 1.178173744694852e-15,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9411764705882353,
+              "noise_error_p95": 0.08572753273827048,
+              "program": {
+                "complexity": 3,
+                "left": "h1_total_persistence",
+                "name": "log_ratio(h1_total_persistence,recurrence_spectral_entropy)",
+                "operation": "log_ratio",
+                "right": "recurrence_spectral_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 0.9411764705882353
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.972318339100346,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.6486037173144081,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 3.366111371112451e-14,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9411764705882353,
+              "noise_error_p95": 0.08944060394468431,
+              "program": {
+                "complexity": 3,
+                "left": "h0_persistence_entropy",
+                "name": "log_ratio(h0_persistence_entropy,h1_total_persistence)",
+                "operation": "log_ratio",
+                "right": "h1_total_persistence"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 0.9411764705882353
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.9757785467128027,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.6482324101937669,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 1.1846595037118746e-15,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.08983237026009984,
+              "program": {
+                "complexity": 3,
+                "left": "h1_total_persistence",
+                "name": "log_ratio(h1_total_persistence,radial_permutation_entropy)",
+                "operation": "log_ratio",
+                "right": "radial_permutation_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.9896193771626297,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.6481932335622254,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 1.5039415711698338e-15,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9411764705882353,
+              "noise_error_p95": 0.0943099379160325,
+              "program": {
+                "complexity": 3,
+                "left": "h1_total_persistence",
+                "name": "log_ratio(h1_total_persistence,recurrence_transitivity)",
+                "operation": "log_ratio",
+                "right": "recurrence_transitivity"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 0.9411764705882353
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.9930795847750865,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.647745476796632,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 1.0208739856072826e-14,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.0947617459505587,
+              "program": {
+                "complexity": 3,
+                "left": "increment_cv",
+                "name": "log_ratio(increment_cv,radial_permutation_entropy)",
+                "operation": "log_ratio",
+                "right": "radial_permutation_entropy"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 0.9273356401384083,
+                "logistic": 0.9965397923875432
+              },
+              "utility": 1.6456241714257054,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 2.4096673957293445e-15,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 1.0,
+              "noise_error_p95": 0.12531826894017006,
+              "program": {
+                "complexity": 3,
+                "left": "h1_total_persistence",
+                "name": "log_ratio(h1_total_persistence,recurrence_degree_cv)",
+                "operation": "log_ratio",
+                "right": "recurrence_degree_cv"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.6446446436942181,
+              "worst_domain_reduction": 1.0
+            },
+            {
+              "audit_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "audit_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 1.0
+              },
+              "invariance_error": 3.060714276929278e-15,
+              "mean_reduction": 1.0,
+              "minimum_audit_auc": 1.0,
+              "minimum_selection_auc": 0.9411764705882353,
+              "noise_error_p95": 0.13456892002828585,
+              "program": {
+                "complexity": 3,
+                "left": "h1_total_persistence",
+                "name": "log_ratio(h1_total_persistence,increment_cv)",
+                "operation": "log_ratio",
+                "right": "increment_cv"
+              },
+              "selection_orientation_free_auc": {
+                "kuramoto": 1.0,
+                "logistic": 0.9411764705882353
+              },
+              "selection_risk_reduction": {
+                "kuramoto": 1.0,
+                "logistic": 0.9411764705882353
+              },
+              "utility": 1.6437195785854066,
+              "worst_domain_reduction": 1.0
+            }
+          ],
+          "winner": {
+            "audit_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 1.0
+            },
+            "audit_risk_reduction": {
+              "kuramoto": 1.0,
+              "logistic": 1.0
+            },
+            "invariance_error": 4.351869864599145e-14,
+            "mean_reduction": 1.0,
+            "minimum_audit_auc": 1.0,
+            "minimum_selection_auc": 0.9705882352941176,
+            "noise_error_p95": 0.043347807331515824,
+            "program": {
+              "complexity": 3,
+              "left": "covariance_entropy",
+              "name": "log_ratio(covariance_entropy,h1_max_persistence)",
+              "operation": "log_ratio",
+              "right": "h1_max_persistence"
+            },
+            "selection_orientation_free_auc": {
+              "kuramoto": 1.0,
+              "logistic": 0.9705882352941176
+            },
+            "selection_risk_reduction": {
+              "kuramoto": 0.9653979238754326,
+              "logistic": 0.9411764705882353
+            },
+            "utility": 1.6528416898550837,
+            "worst_domain_reduction": 1.0
+          }
+        }
+      ],
+      "selected": [
+        {
+          "complexity": 3,
+          "left": "covariance_entropy",
+          "name": "log_ratio(covariance_entropy,h1_max_persistence)",
+          "operation": "log_ratio",
+          "right": "h1_max_persistence"
+        }
+      ],
+      "source_after": {
+        "kuramoto": {
+          "collisions": 1,
+          "program_auc": {
+            "log_ratio(covariance_entropy,h1_max_persistence)": 1.0
+          },
+          "risk": 0.03571428571428571,
+          "trials": 28,
+          "upper_95": 0.15850717439163578
+        },
+        "logistic": {
+          "collisions": 1,
+          "program_auc": {
+            "log_ratio(covariance_entropy,h1_max_persistence)": 0.9821428571428571
+          },
+          "risk": 0.03571428571428571,
+          "trials": 28,
+          "upper_95": 0.15850717439163578
+        }
+      },
+      "source_before": {
+        "kuramoto": {
+          "collisions": 28,
+          "program_auc": {},
+          "risk": 1.0,
+          "trials": 28,
+          "upper_95": 1.0
+        },
+        "logistic": {
+          "collisions": 28,
+          "program_auc": {},
+          "risk": 1.0,
+          "trials": 28,
+          "upper_95": 1.0
+        }
+      }
+    }
+  },
+  "status": "frozen_before_audit_or_real-domain_loading_within_this_run"
+}

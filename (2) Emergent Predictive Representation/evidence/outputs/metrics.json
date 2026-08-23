@@ -1,0 +1,73 @@
+{
+  "evidence_status": {
+    "analytic_and_computational": true,
+    "laboratory_data": false,
+    "physical_deviation_confirmed": false
+  },
+  "hopf_projection": {
+    "court5_pair": "algebraically inserted opposite spinor phases have identical projected rho; no control-loop or memory carrier is simulated",
+    "global_phase_projection_error": 4.511490142055346e-16,
+    "opposite_pi_loop_density_error": 8.038206038713054e-34
+  },
+  "known_quantum_limits": {
+    "born_max_abs_error": 2.220446049250313e-16,
+    "chsh_abs": 2.8284271247461903,
+    "chsh_tsirelson_error": 0.0,
+    "dephasing_max_abs_error": 0.0,
+    "no_signalling_max_abs_error": 1.1102230246251565e-16,
+    "rabi_max_abs_error": 7.771561172376096e-16,
+    "unitary_max_invariant_error": 4.518280359883027e-16,
+    "zeno_survival_high_gamma": 0.9950621999100548,
+    "zeno_survival_low_gamma": 0.007792715350176227
+  },
+  "ordinary_quantum_memory_countermodel": {
+    "both_arms_photon_number": 0.09,
+    "coherent_amplitude_magnitude": 0.3,
+    "interpretation": "same reduced qubit state and cavity photon number do not imply the same enlarged quantum state",
+    "optimal_homodyne_total_variation": 0.4514937644998529
+  },
+  "random_seed": 20260821,
+  "scalar_selection": {
+    "detector_reference_dimension": 2,
+    "integer_solutions": [
+      2
+    ],
+    "qnd_stabilizer_dimensions": {
+      "1": 1,
+      "2": 2,
+      "4": 7,
+      "8": 29
+    },
+    "theorem_status": "conditional on rank>=2 irreducible EJA geometry and an accessible injective-surjective response onto an unnormalized filter algebra"
+  },
+  "symbolic_qnd": {
+    "invariant_drift_residual": "0",
+    "invariant_gradient": "tan(phi)/(z**2 - 1)",
+    "invariant_noise_residual": "0",
+    "quotient_diffusion_residual": "0",
+    "quotient_drift_residual": "0",
+    "quotient_gradient": "-1/(z**2 - 1)"
+  },
+  "tiny_target_synthetic_freeze_test": {
+    "analytic_rate_difference_at_pi": -0.04,
+    "brute_force_global_fibre_variation": 0.003568227870006435,
+    "brute_force_vs_analytic_variation_error": 8.468173939846224e-09,
+    "candidate_global_fibre_variation": 0.003568236338180375,
+    "epsilon_frozen": 0.019948116875242314,
+    "epsilon_frozen_standard_error": 0.0021821789023599237,
+    "epsilon_true": 0.02,
+    "heldout_log_likelihood_gain_vs_memoryless_reduced_qubit_null": 29.810003093349962,
+    "holdout_chi_square": 4.664749501103681,
+    "holdout_degrees_of_freedom": 3,
+    "holdout_goodness_p_value": 0.19805740750364198,
+    "measurement_scale": 1.0,
+    "probe_time": 0.05,
+    "quantum_null_global_fibre_variation": 0.0,
+    "rate_standard_error": 0.005773502691896258,
+    "sde_minus_short_probe_in_standard_errors": -0.7200194674140814,
+    "sde_rate_difference_at_pi": -0.05648697312716914,
+    "sde_rate_standard_error_at_pi": 0.02289795467111658,
+    "shots_per_orientation_per_angle": 1200000,
+    "synthetic_only": true
+  }
+}

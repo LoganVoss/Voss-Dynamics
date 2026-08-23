@@ -1,0 +1,207 @@
+\section{Information and finite access}
+\label{sec:information}
+
+\subsection{Distinctions, probability, and volume}
+
+For a finite set \(S\subset\X\), define its distinction information by
+\[
+I_{\rm dist}(S):=\log_2\abs S.
+\]
+Every injective map preserves \(I_{\rm dist}\) on finite subsets. This is the invariant used by the principle: distinct complete alternatives remain distinct.
+
+\begin{theorem}[Discrete entropy under a bijection]
+\label{thm:shannon}
+If \(X\) is a finite random state and \(Y=f(X)\) for a bijection \(f\), then
+\[
+H(Y)=H(X)
+\]
+for every probability distribution on \(X\).
+\end{theorem}
+
+\begin{proof}
+The output probabilities are a permutation of the input probabilities.
+\end{proof}
+
+The finite modular experiment verifies this identity for a nonuniform distribution to \(3.6\times10^{-15}\) bits. Under the \(g=0\) many-to-one map, a uniform \(M^2\)-state distribution becomes an \(M\)-image distribution and loses exactly \(\log_2M\) bits.
+
+Continuous differential entropy obeys a different law. Let \(X\) have an absolutely continuous distribution, let \(\Psi\) be a \(C^1\) diffeomorphism on its support, and assume \(h(X)\) and \(\E\abs{\log\abs{\det D\Psi(X)}}\) are finite. Then
+\begin{equation}
+h(\Psi(X))
+=
+h(X)
++\E\log\abs{\det D\Psi(X)}.
+\label{eq:differential-entropy}
+\end{equation}
+Thus a bijection may contract volume and change differential entropy while preserving every exact state distinction. Invertible dissipative maps provide established examples of this separation \citep{henon1976,hoover1996,gilbert1999,ruelle1999}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[>=Latex]
+\draw[fill=fipale,draw=fiink,line width=0.8pt]
+  (-4,-1.45) rectangle (-1,1.45);
+\node[font=\bfseries\color{fiink}] at (-2.5,1.9)
+  {region before};
+\foreach \x/\y in {
+  -3.6/1.0,-2.7/1.1,-1.5/0.9,
+  -3.3/0.1,-2.3/0.3,-1.4/-0.1,
+  -3.7/-1.0,-2.6/-0.8,-1.6/-1.1
+} \fill[fiblue] (\x,\y) circle (1.8pt);
+\draw[->,fiblue,line width=1.2pt] (-0.45,0) -- (1.0,0);
+\node[font=\large\bfseries\color{fiblue}] at (0.28,0.42) {\(\Psi\)};
+\node[font=\footnotesize\color{figray}] at (0.28,-0.42)
+  {\(\abs{\det D\Psi}<1\)};
+\draw[fill=white,draw=fiink,line width=0.8pt]
+  (1.45,-0.52) rectangle (5.25,0.52);
+\node[font=\bfseries\color{fiink}] at (3.35,1.9)
+  {contracted image};
+\foreach \x/\y in {
+  1.75/0.34,2.75/0.40,4.9/0.30,
+  2.15/0.02,3.3/0.11,4.75/-0.04,
+  1.65/-0.36,3.0/-0.28,4.55/-0.39
+} \fill[fiblue] (\x,\y) circle (1.8pt);
+\draw[decorate,decoration={brace,amplitude=5pt},fiorange]
+  (1.45,-0.78) -- (5.25,-0.78);
+\node[font=\footnotesize\color{fiorange},align=center] at (3.35,-1.24)
+  {less area; the same nine distinctions};
+\end{tikzpicture}
+\caption{Volume contraction and state identification answer different questions.}
+\label{fig:contraction}
+\end{figure}
+
+\subsection{A fixed observational partition}
+
+For a quantizer \(Q:\X\to\mathcal B\), the coarse entropy \(H(Q(X_t))\) depends on the chosen partition. The corrected ensemble diagnostic declares fixed position, velocity, and circular phase bins before evolution, retains overflow bins, and reports the sum of one-dimensional marginal entropies.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth,height=0.68\linewidth,
+  title={\(\gamma=1\)},
+  xlabel={steps},ylabel={marginal entropy sum (bits)},
+  xmin=0,xmax=150,ymin=0,ymax=125,
+  grid=major,major grid style={draw=firule},
+  tick label style={font=\scriptsize},
+  label style={font=\footnotesize},
+  title style={font=\small\bfseries\color{fiink}},
+  legend style={draw=none,fill=none,font=\scriptsize,at={(0.98,0.98)},anchor=north east}
+]
+\addplot[fiblue,line width=1.1pt,mark=*]
+  table[x=t,y=full_gamma1_bits,col sep=comma]
+  {evidence/quantized_entropy.csv};
+\addlegendentry{all coordinates}
+\addplot[fiorange,line width=1.1pt,mark=square*]
+  table[x=t,y=position_gamma1_bits,col sep=comma]
+  {evidence/quantized_entropy.csv};
+\addlegendentry{positions}
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth,height=0.68\linewidth,
+  title={\(\gamma=0.982\)},
+  xlabel={steps},ylabel={marginal entropy sum (bits)},
+  xmin=0,xmax=150,ymin=0,ymax=125,
+  grid=major,major grid style={draw=firule},
+  tick label style={font=\scriptsize},
+  label style={font=\footnotesize},
+  title style={font=\small\bfseries\color{fiink}},
+  legend style={draw=none,fill=none,font=\scriptsize,at={(0.98,0.98)},anchor=north east}
+]
+\addplot[fiblue,line width=1.1pt,mark=*]
+  table[x=t,y=full_gamma0982_bits,col sep=comma]
+  {evidence/quantized_entropy.csv};
+\addlegendentry{all coordinates}
+\addplot[fiorange,line width=1.1pt,mark=square*]
+  table[x=t,y=position_gamma0982_bits,col sep=comma]
+  {evidence/quantized_entropy.csv};
+\addlegendentry{positions}
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+\caption{A fixed observer partition evolves differently from exact distinction cardinality. The plotted quantity is a sum of marginals, not a joint state entropy.}
+\label{fig:fixed-entropy}
+\figsource{\sourcecode{evidence/thesis\_verification.json}, \texttt{fixed\_partition\_marginal\_entropy}.}
+\end{figure}
+
+The \(\gamma=1\) full marginal sum rises from \(84.62\) to \(110.40\) bits by \(t=150\). For \(\gamma=0.982\), it rises to \(103.31\) bits at \(t=30\) and settles at \(99.26\) bits by \(t=150\). These values describe the observer's fixed alphabet. They do not count exact-state collisions.
+
+\subsection{A state is not a snapshot}
+
+Projection onto position,
+\[
+\pi_r(x)=\bm r,
+\]
+removes velocity and phase coordinates required by the inverse. In a 10-token, 30-step probe, the complete final state returns to its origin with \(L^2=1.31\times10^{-10}\). Zeroing final velocities first gives \(L^2=15.35\); zeroing phases gives \(25.37\). The scale separation directly demonstrates state sufficiency: a visible configuration and a complete dynamical state are different objects.
+
+\subsection{Float64 round-trip access}
+
+On a trajectory for which every phase update satisfies \(q<1\), the exact branch is unique. Finite arithmetic introduces a second question: how accurately can that branch be recovered from the stored endpoint? Linearization gives the schematic amplification
+\begin{equation}
+\norm{\delta x_{t-T}}
+\lesssim
+\left(
+\prod_{s=0}^{T-1}
+\norm{D\Psi^{-1}(x_{t-s})}
+\right)
+\norm{\epsilon_t}
++\text{accumulated roundoff}.
+\label{eq:error-amplification}
+\end{equation}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.84\linewidth,
+  height=0.47\linewidth,
+  xlabel={forward steps before endpoint inversion},
+  ylabel={\(\log_{10} L^2\) round-trip error},
+  xmin=35,xmax=205,
+  ymin=-14.2,ymax=4.8,
+  grid=both,
+  major grid style={draw=firule},
+  minor grid style={draw=firule!45},
+  tick label style={font=\footnotesize},
+  label style={font=\small},
+  legend style={draw=none,fill=none,font=\footnotesize,
+                at={(0.02,0.97)},anchor=north west}
+]
+\addplot[draw=none,name path=g1low,forget plot]
+  table[x=steps,y=p10_log10_l2,col sep=comma]
+  {evidence/information_horizon_gamma1.csv};
+\addplot[draw=none,name path=g1high,forget plot]
+  table[x=steps,y=p90_log10_l2,col sep=comma]
+  {evidence/information_horizon_gamma1.csv};
+\addplot[fiblue!16,forget plot] fill between[of=g1low and g1high];
+\addplot[fiblue,line width=1.2pt,mark=*]
+  table[x=steps,y=median_log10_l2,col sep=comma]
+  {evidence/information_horizon_gamma1.csv};
+\addlegendentry{\(\gamma=1\), median and 10--90\% band}
+
+\addplot[draw=none,name path=gdlow,forget plot]
+  table[x=steps,y=p10_log10_l2,col sep=comma]
+  {evidence/information_horizon_gamma0982.csv};
+\addplot[draw=none,name path=gdhigh,forget plot]
+  table[x=steps,y=p90_log10_l2,col sep=comma]
+  {evidence/information_horizon_gamma0982.csv};
+\addplot[fiorange!18,forget plot] fill between[of=gdlow and gdhigh];
+\addplot[fiorange,line width=1.2pt,mark=square*]
+  table[x=steps,y=median_log10_l2,col sep=comma]
+  {evidence/information_horizon_gamma0982.csv};
+\addlegendentry{\(\gamma=0.982\), median and 10--90\% band}
+\addplot[figray,dashed,domain=35:205] {-6};
+\end{axis}
+\end{tikzpicture}
+\caption{Float64 round-trip recovery on trajectories certified by \(q<1\) and a converged wrapped phase residual.}
+\label{fig:roundtrip}
+\figsource{\sourcecode{evidence/thesis\_verification.json}; 144 endpoint inversions before certification filters.}
+\end{figure}
+
+At \(T=200\), the certified median error is \(3.02\times10^{-6}\) for \(\gamma=1\) over 12 seeds and \(3.04\times10^{-3}\) for \(\gamma=0.982\) over 8 seeds. The damped 10--90\% range spans \(2.86\times10^{-5}\) to \(1.69\). This trajectory- and precision-dependent access scale is an \emph{epistemic horizon}: the branch may remain mathematically unique after the stored endpoint ceases to recover it at the desired tolerance.

@@ -1,0 +1,96 @@
+\section{Result ledger}
+\label{app:ledger}
+
+\subsection{Proved results}
+
+\begin{enumerate}
+\item If \(\gamma\neq0\) and the phase map at the advanced position is bijective, the wall-free one-step map has the inverse in \cref{eq:inverse}.
+\item On smooth strata,
+\[
+\det D\Psi
+=
+\gamma^{2N}\det D_\phi G_{\bm r^+}.
+\]
+\item The mechanical block is bijective for every velocity-independent force when \(\gamma\neq0\).
+\item The phase inverse is contraction-certified when \(q(\bm r^+)<1\).
+\item The two-clock difference obeys \cref{eq:two-clock}; its map is a circle diffeomorphism for \(\abs a<1\) and folds for \(\abs a>1\).
+\item The finite modular map is bijective exactly when \(\gcd(g,M)=1\).
+\item A finite bijection preserves discrete Shannon entropy.
+\item Differential entropy transforms by the expected log-Jacobian on a smooth bijective stratum.
+\item The history-fibre cardinality equals the reachable observation-fibre cardinality under a bijective advance.
+\item A deterministic description-level map exists exactly under the fibre-compatibility condition \cref{eq:fibre-compatibility}.
+\item The wall clamp in \cref{prop:wall} is many-to-one.
+\end{enumerate}
+
+\subsection{Computed results}
+
+\begin{longtable}{@{}p{0.31\linewidth}p{0.15\linewidth}p{0.47\linewidth}@{}}
+\toprule
+Result & Status & Value\\
+\midrule
+\endhead
+Full determinant probe &
+\status{COMPUTED} &
+15 live-map probes; maximum relative discrepancy \(2.01\times10^{-8}\).\\
+Default phase multiroot &
+\status{COMPUTED} &
+Three complete pre-states; alternative distances \(7.386\), \(6.738\); forward residuals below \(1.6\times10^{-13}\).\\
+Finite permutation census &
+\status{COMPUTED} &
+\(63{,}001/63{,}001\) images for \((M,g)=(251,3)\); \(128/256\) for \((16,2)\).\\
+Phrase fibres &
+\status{COMPUTED} &
+160 states, 103 phrases, 31 repeated phrases, 68/68 checked shared-phrase pairs distinct.\\
+Complete versus partial state &
+\status{COMPUTED} &
+Complete 30-step recovery \(1.31\times10^{-10}\); zero-velocity \(15.35\); zero-phase \(25.37\).\\
+Float64 round trip at \(T=200\) &
+\status{COMPUTED} &
+Median \(3.02\times10^{-6}\) for \(\gamma=1\) (12 seeds); \(3.04\times10^{-3}\) for \(\gamma=0.982\) (8 certified seeds).\\
+Fixed-partition marginal entropy &
+\status{COMPUTED} &
+\(\gamma=1\): \(84.62\to110.40\) bits; \(\gamma=0.982\): \(84.62\to99.26\) bits at \(t=150\).\\
+Controlled reset response &
+\status{COMPUTED} &
+\(0.32266\) rad at \(D=0.3\), \(0.004047\) rad at \(D=24\), matching \(\widetilde D^{-1}\).\\
+Wall collision &
+\status{COMPUTED} &
+Pre-state distance \(0.2\), final distance \(0\).\\
+\bottomrule
+\end{longtable}
+
+\subsection{Open mathematical objects}
+
+\begin{enumerate}
+\item A nontrivial invariant domain on which the full phase-coupled map is globally bijective.
+\item A sharp spectral characterization of the phase-map bijectivity chamber.
+\item An invertible bounded realization with periodic or specular boundaries.
+\item A trajectory-level round-trip error bound with explicit force and phase condition factors.
+\item Delay-coordinate observability bounds for partial token measurements.
+\item A complete task-specific description code and its induced closure properties.
+\item A physical domain in which the declared complete state and parameters are independently calibrated.
+\end{enumerate}
+
+\subsection{Notation}
+
+\begin{longtable}{@{}p{0.20\linewidth}p{0.73\linewidth}@{}}
+\toprule
+Symbol & Meaning\\
+\midrule
+\endhead
+\(\X\) & Complete modeled state space.\\
+\(\A\) & Admissible domain on which a stated theorem or experiment is evaluated.\\
+\(x\) & One complete modeled state.\\
+\(\Psi\) & State-advance map.\\
+\(\Obs\) & Description or observation map.\\
+\(\Y\) & Description space.\\
+\(\Obs^{-1}(y)\) & Observation fibre of description \(y\).\\
+\(\bm r,\bm v\) & Token positions and velocities.\\
+\(\bm\theta,\bm\phi\) & Directional and phase coordinates.\\
+\(\gamma\) & Velocity multiplier.\\
+\(\beta\) & Phase-coupling strength.\\
+\(G_{\bm r}\) & Phase update at fixed advanced positions.\\
+\(q(\bm r)\) & Sufficient phase-inverse contraction certificate.\\
+\(\mathcal H_k(y)\) & Histories compatible with description \(y\).\\
+\bottomrule
+\end{longtable}

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Please cite the trilogy and the exact repository revision used."
+title: "Voss Dynamics: Information, Representation, and Discovery"
+type: software
+authors:
+  - family-names: "Voss"
+    given-names: "Logan"
+version: 1.0.0
+date-released: 2026-08-22
+repository-code: "https://github.com/LoganVoss/Voss-Dynamics"
+url: "https://github.com/LoganVoss/Voss-Dynamics"
+abstract: >-
+  Voss Dynamics studies how information-bearing distinctions are preserved by
+  dynamics, collapsed by representation, tested for predictive significance,
+  and recovered when the current representation proves insufficient. The
+  release contains three manuscripts, executable evidence, claim ledgers, and
+  a unified volume.
+keywords:
+  - information
+  - dynamical systems
+  - representation
+  - observability
+  - predictive sufficiency
+  - invariant synthesis
+preferred-citation:
+  type: unpublished
+  title: "Voss Dynamics: Information, Representation, and Discovery"
+  authors:
+    - family-names: "Voss"
+      given-names: "Logan"
+  year: 2026
+

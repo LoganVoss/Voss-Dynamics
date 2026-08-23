@@ -1,0 +1,172 @@
+\section{Supplementary proofs}
+\label{app:proofs}
+
+\subsection{Mechanical block determinant}
+
+Let \(d=2N\), \(F_r=D_{\bm r^+}\bm F\), and first take unit masses for notational clarity. From
+\[
+\bm r^+=\bm r+\dt\bm v,
+\qquad
+\bm v^+=\gamma\bm v+\dt\bm F(\bm r^+),
+\]
+the mechanical Jacobian is
+\[
+D\Psi_{rv}
+:=
+\begin{pmatrix}
+I_d & \dt I_d\\
+\dt F_r & \gamma I_d+\dt^2F_r
+\end{pmatrix}.
+\]
+The Schur complement of \(I_d\) is \(\gamma I_d\), hence
+\[
+\det D\Psi_{rv}=\gamma^d=\gamma^{2N}.
+\]
+For diagonal mass matrix \(M\), the two terms containing
+\(\dt^2M^{-1}F_r\) cancel identically.
+
+\subsection{Phase contraction proof}
+
+Write
+\[
+K_i(\bm\phi)
+:=
+\sum_{j\neq i}
+w_{ij}\sin(\phi_j-\phi_i),
+\qquad
+w_{ij}
+:=
+(\widetilde d_{ij}^+)^{-1}.
+\]
+Using \(\abs{\sin u-\sin v}\le\abs{u-v}\),
+\begin{align*}
+\abs{K_i(\bm\phi)-K_i(\bm\psi)}
+&\le
+\sum_{j\neq i}w_{ij}
+\abs{(\phi_j-\phi_i)-(\psi_j-\psi_i)}\\
+&\le
+2\left(\sum_{j\neq i}w_{ij}\right)
+\norm{\bm\phi-\bm\psi}_\infty.
+\end{align*}
+Therefore the inverse fixed-point map has Lipschitz constant at most
+\[
+q(\bm r^+)
+:=
+2\abs{\beta}\dt
+\max_i\sum_{j\neq i}w_{ij}.
+\]
+When \(q<1\), Banach's theorem gives a unique fixed point on the chosen lift and geometric convergence. The forward lift \(G(\phi)=\phi+h(\phi)\) obeys
+\[
+\norm{G(\phi)-G(\psi)}_\infty
+\ge
+(1-q)\norm{\phi-\psi}_\infty,
+\]
+which gives injectivity and the lower bi-Lipschitz bound.
+
+\subsection{Two-clock regime}
+
+For two clocks,
+\[
+\phi_1^+
+:=
+\phi_1+\omega_1\dt
++\frac{\beta\dt}{D}\sin(\phi_2-\phi_1),
+\]
+\[
+\phi_2^+
+:=
+\phi_2+\omega_2\dt
++\frac{\beta\dt}{D}\sin(\phi_1-\phi_2).
+\]
+Subtracting gives \cref{eq:two-clock}. For equal frequencies,
+\[
+f_a(\delta)=\delta-a\sin\delta,
+\qquad
+f_a'(\delta)=1-a\cos\delta.
+\]
+If \(\abs a<1\), then \(f_a'>0\) everywhere and the degree-one circle map is a diffeomorphism. If \(\abs a=1\), the derivative is nonnegative and vanishes only at isolated points, so the map remains a strictly monotone homeomorphism but its inverse derivative is singular: at \(\delta=0\pmod{2\pi}\) for \(a=1\), and at \(\delta=\pi\pmod{2\pi}\) for \(a=-1\). If \(\abs a>1\), the derivative changes sign: for \(a>1\), \(f_a'(0)<0<f_a'(\pi)\); for \(a<-1\), \(f_a'(\pi)<0<f_a'(0)\). In either case the lift has local extrema and is noninjective.
+
+Linearization at \(\delta=0\) gives
+\[
+\delta^+=(1-a)\delta+O(\delta^3).
+\]
+Thus synchronization is hyperbolically stable for \(0<a<2\). At \(a=2\),
+\[
+f_2^2(\delta)
+:=
+\delta-\frac23\delta^3
++\frac{11}{30}\delta^5
++O(\delta^7),
+\]
+so the fixed point remains locally asymptotically stable with algebraic convergence. For \(a>2\), it is unstable.
+
+\subsection{The \(\gamma=0\) collision}
+
+Choose \(\bm v_2\neq\bm v_1\) and
+\[
+\bm r_2
+:=
+\bm r_1-(\bm v_2-\bm v_1)\dt.
+\]
+Then
+\[
+\bm r_1+\bm v_1\dt
+=
+\bm r_2+\bm v_2\dt
+=
+\bm r^+.
+\]
+At \(\gamma=0\), both final velocities equal
+\(\dt M^{-1}\bm F(\bm r^+,\bm\theta,\bm\phi)\); the phase updates also agree. Distinct pre-states have one image.
+
+\subsection{Wall-clamp collision}
+
+Take two in-domain positions \(r_1\neq r_2<w\) and equal velocity \(v>0\) such that both drifts overshoot \(w\). A clamp sends both positions to \(w\) and applies the same bounce multiplier to both velocities. Every output coordinate then agrees. This proves \cref{prop:wall}.
+
+\subsection{Finite entropy identities}
+
+For a permutation \(f:S\to S\),
+\[
+p_{f(X)}(y)=p_X(f^{-1}(y)),
+\]
+so the output probability list is a rearrangement of the input list and \(H(f(X))=H(X)\).
+
+For a many-to-one map,
+\[
+p_Y(y)=\sum_{x\in f^{-1}(y)}p_X(x).
+\]
+In the uniform \(g=0\) modular system, \(M^2\) states map evenly to \(M\) images, giving
+\[
+H(X)=2\log_2M,
+\qquad
+H(Y)=\log_2M.
+\]
+
+\subsection{Differential entropy transformation}
+
+Under the regularity and integrability assumptions stated before \cref{eq:differential-entropy},
+\[
+\rho_Y(y)
+:=
+\frac{\rho_X(x)}
+{\abs{\det D\Psi(x)}},
+\qquad x=\Psi^{-1}(y).
+\]
+Changing variables in the differential entropy integral yields
+\[
+h(Y)
+:=
+h(X)
++\E_X\log\abs{\det D\Psi(X)},
+\]
+which is \cref{eq:differential-entropy}.
+
+\subsection{Forensic fibre cardinality}
+
+Under the assumptions of \cref{thm:forensic}, \(\Psi^{-k}\) is a bijection on \(\A\). Its restriction to
+\(\Obs^{-1}(y)\cap\A\) preserves cardinality, proving
+\[
+\abs{\mathcal H_k(y)}
+:=
+\abs{\Obs^{-1}(y)\cap\A}.
+\]

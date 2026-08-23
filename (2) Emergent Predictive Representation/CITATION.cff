@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "Emergent Predictive Representation"
+message: "Please cite the preferred manuscript citation and the exact repository revision used."
+type: software
+authors:
+  - family-names: Voss
+    given-names: Logan
+date-released: 2026-08-22
+version: 1.0.0
+abstract: >-
+  A conditional detector/filter dimension-matching characterization of
+  complex quantum structure, an exact redundant qubit Hopf lift, and a
+  one-parameter phenomenological closed-loop test of reduced-state
+  predictive sufficiency.
+keywords:
+  - quantum foundations
+  - quantum measurement
+  - Euclidean Jordan algebra
+  - Hopf fibration
+  - continuous measurement
+  - process tensor
+preferred-citation:
+  type: unpublished
+  title: "Emergent Predictive Representation"
+  authors:
+    - family-names: Voss
+      given-names: Logan
+  year: 2026

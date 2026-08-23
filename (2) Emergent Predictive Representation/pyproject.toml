@@ -1,0 +1,23 @@
+[project]
+name = "voss-dynamics-epr"
+version = "0.1.0"
+description = "Reproducible computations for Emergent Predictive Representation"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "sympy",
+]
+
+[dependency-groups]
+dev = [
+    "pymupdf>=1.28.2",
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["evidence/tests"]
+addopts = "-q"
+pythonpath = ["."]

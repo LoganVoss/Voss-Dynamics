@@ -1,0 +1,203 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{amsthm}
+\usepackage{newtxmath}
+\usepackage[letterpaper,top=0.72in,bottom=0.76in,left=0.78in,right=0.78in]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,mathtools,bm}
+\usepackage{booktabs,array,tabularx,longtable,multirow}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{caption,subcaption}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc,shapes.geometric,decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{eso-pic}
+
+\definecolor{fiink}{HTML}{17232D}
+\definecolor{fiblue}{HTML}{1D5F8A}
+\definecolor{fiorange}{HTML}{B95F2A}
+\definecolor{figreen}{HTML}{3F7356}
+\definecolor{fireddark}{HTML}{8F3840}
+\definecolor{figray}{HTML}{69747D}
+\definecolor{fipale}{HTML}{EEF2F4}
+\definecolor{fipaleorange}{HTML}{F8F1EB}
+\definecolor{firule}{HTML}{D5DDE1}
+
+\AddToShipoutPictureBG{%
+  \AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}%
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=fiblue,
+  citecolor=fiblue,
+  urlcolor=fiblue,
+  pdftitle={The Principle of Full Invertibility},
+  pdfauthor={Logan Voss},
+  pdfsubject={Distinction provenance in dynamical systems and finite descriptions},
+  pdfkeywords={invertibility, observability, information, distinction provenance, coarse-graining, inverse problems}
+}
+
+\setlength{\parindent}{1.15em}
+\setlength{\parskip}{0.12em}
+\setlength{\emergencystretch}{1em}
+\setlist{nosep,leftmargin=1.5em}
+\captionsetup{font=small,labelfont=bf}
+\titleformat{\section}{\Large\bfseries\color{fiink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\large\bfseries\color{fiink}}{\thesubsection}{0.55em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{fiink}}{\thesubsubsection}{0.5em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{The Principle of Full Invertibility}}
+\fancyhead[R]{\small\textsc{Distinction provenance}}
+\fancyfoot[C]{\small\thepage\ /\ \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0.35pt}
+\setlength{\headheight}{14pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{principle}[theorem]{Principle}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Torus}{\mathbb T}
+\newcommand{\Zmod}{\mathbb Z}
+\newcommand{\X}{\mathcal X}
+\newcommand{\Y}{\mathcal Y}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Obs}{\mathcal L}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dt}{\Delta t}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\status}[1]{\textsf{\small #1}}
+\newcommand{\sourcecode}[1]{\texttt{\small #1}}
+\newcommand{\figsource}[1]{\par\smallskip{\footnotesize\color{figray}\textit{Source: #1}}}
+
+\newcommand{\claimbox}[2]{%
+  \begin{center}
+  \fcolorbox{fiblue}{fipale}{%
+    \begin{minipage}{0.94\linewidth}
+    \textbf{\color{fiink}#1}\quad #2
+    \end{minipage}}
+  \end{center}}
+
+\begin{document}
+\pagecolor{white}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{0.55in}
+\noindent{\color{fiblue}\rule{\linewidth}{2.2pt}}
+\vspace{0.32in}
+
+{\fontsize{28}{33}\selectfont\bfseries\color{fiink}
+The Principle of Full Invertibility\par}
+\vspace{0.14in}
+{\fontsize{16}{21}\selectfont\color{figray}
+Distinction provenance in dynamical systems and finite descriptions\par}
+\vspace{0.35in}
+
+{\large Logan Voss\par}
+\vspace{0.08in}
+{\normalsize Voss Dynamics \textbar\ Working mathematical thesis and computational audit\par}
+\vspace{0.05in}
+{\normalsize 22 August 2026\par}
+
+\vfill
+\begin{center}
+\begin{tikzpicture}[
+  node distance=13mm and 19mm,
+  every node/.style={font=\small,align=center},
+  state/.style={draw=fiink,rounded corners=1.5pt,minimum height=11mm,minimum width=31mm,fill=white},
+  desc/.style={draw=fiorange,rounded corners=1.5pt,minimum height=10mm,minimum width=31mm,fill=white},
+  arrow/.style={-{Latex[length=2.2mm]},line width=0.9pt,color=fiblue},
+  obs/.style={-{Latex[length=2.2mm]},line width=0.9pt,color=fiorange}
+]
+\node[state] (x0) {complete state\\$x_t\in\A$};
+\node[state,right=of x0] (x1) {complete state\\$x_{t+1}=\Psi(x_t)$};
+\node[desc,below=of x0] (y0) {description\\$y_t=\Obs(x_t)$};
+\node[desc,below=of x1] (y1) {description\\$y_{t+1}=\Obs(x_{t+1})$};
+\draw[arrow] (x0) -- node[above] {$\Psi|_{\A}$} (x1);
+\draw[obs] (x0) -- node[left] {$\Obs$} (y0);
+\draw[obs] (x1) -- node[right] {$\Obs$} (y1);
+\coordinate (c0) at ([yshift=-7mm]y0.south);
+\coordinate (c1) at ([yshift=-7mm]y1.south);
+\draw[arrow,dashed] (y0.south) -- (c0) --
+  node[below,font=\scriptsize,fill=white,inner sep=1pt]{closure must be established}
+  (c1) -- (y1.south);
+\end{tikzpicture}
+\end{center}
+\vfill
+
+\fcolorbox{fiink}{fipale}{%
+\begin{minipage}{0.94\linewidth}
+\textbf{Evidence statement.}
+The inverse, determinant factorization, modular criterion, phase-contraction condition, closure criterion, and fibre-cardinality results are proved under their stated assumptions. Numerical experiments locate four distinct mechanisms of apparent loss: transition folding, many-to-one observation, finite-precision access, and explicit boundary clipping. All numerical results are internal model computations; no empirical physical measurement is reported. The paper develops a mathematical audit in which each mechanism receives its own type and provenance.
+\end{minipage}}
+
+\vspace{0.35in}
+\noindent{\color{fiblue}\rule{\linewidth}{0.8pt}}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\begin{abstract}
+The statement that information has been lost is incomplete until the relevant state, transition, description, inverse branch, and numerical representation are specified. This paper develops \emph{distinction provenance}: a calculus for locating the operation at which previously distinct possibilities become identical or inaccessible. A model instantiates the Principle of Full Invertibility on an admissible domain \(\A\) when its advance \(\Psi|_{\A}\) is bijective while a separate description map \(\Obs:\A\to\Y\) has nontrivial fibres.
+
+For a drift--kick system with velocity-independent force, nonzero multiplier \(\gamma\), and coupled phases, the translational inverse is algebraic and the full smooth-stratum Jacobian factors as
+\[
+\det D\Psi=\gamma^{2N}\det D_\phi G_{\bm r^+}.
+\]
+The force Jacobian cancels from the determinant. A configuration-dependent contraction bound certifies unique phase inversion, and a finite modular analogue is bijective exactly when its velocity multiplier is a unit. An explicit three-preimage target demonstrates the complementary global phenomenon: locally nonsingular phase branches can still fold onto one future.
+
+The same framework separates description and access from transition dynamics. In the finite phrase census, 160 complete states produce 103 descriptions, with every checked shared-description pair remaining distinct. A forensic fibre theorem characterizes when retained evidence identifies one history. Fixed-partition entropy and float64 round-trip experiments show that observational uncertainty and numerical access evolve independently of exact-state identity. Together these results turn ``where did the information go?'' into a finite audit of the core transition, boundary operation, observation map, and numerical record.
+\end{abstract}
+
+\claimbox{Primary result}{Distinguishability has provenance. Every information-loss claim should identify the complete state, the map that advanced it, the map that described it, the branch structure of the inverse, and the numerical channel through which it was retained.}
+
+{\small\tableofcontents}
+\clearpage
+
+\input{sections/01_distinction_provenance}
+\input{sections/02_dynamical_realization}
+\input{sections/03_invertibility_structure}
+\input{sections/04_description_fibres}
+\input{sections/05_access_and_entropy}
+\input{sections/06_provenance_demonstrations}
+\input{sections/07_implications}
+\input{sections/08_scope_and_open_problems}
+\input{sections/09_conclusion}
+
+\appendix
+\input{sections/A_proofs}
+\input{sections/B_methods}
+\input{sections/C_result_ledger}
+
+\clearpage
+\bibliographystyle{unsrtnat}
+{\small\bibliography{references}}
+
+\end{document}

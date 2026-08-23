@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Voss Dynamics trilogy map</title>
+  <desc id="desc">Three papers progress from preserving distinctions, to testing hidden distinctions, to repairing representations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#11202d"/>
+      <stop offset="1" stop-color="#203a4a"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#79b8dc"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="400" rx="22" fill="url(#bg)"/>
+  <path d="M70 52 H1130" stroke="#79b8dc" stroke-width="3"/>
+  <text x="70" y="112" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" letter-spacing="1">VOSS DYNAMICS</text>
+  <text x="72" y="152" fill="#c9d5dc" font-family="Arial, Helvetica, sans-serif" font-size="23">Information, Representation, and Discovery</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="70" y="198" width="286" height="118" rx="12" fill="#f6f8f9" stroke="#79b8dc" stroke-width="2"/>
+    <text x="94" y="233" fill="#1d5f8a" font-size="17" font-weight="700">PAPER I · PRESERVE</text>
+    <text x="94" y="268" fill="#17232d" font-size="24" font-weight="700">Where did the</text>
+    <text x="94" y="297" fill="#17232d" font-size="24" font-weight="700">distinction go?</text>
+
+    <rect x="457" y="198" width="286" height="118" rx="12" fill="#f6f8f9" stroke="#d88a55" stroke-width="2"/>
+    <text x="481" y="233" fill="#a55326" font-size="17" font-weight="700">PAPER II · TEST</text>
+    <text x="481" y="268" fill="#17232d" font-size="24" font-weight="700">Does the hidden</text>
+    <text x="481" y="297" fill="#17232d" font-size="24" font-weight="700">distinction matter?</text>
+
+    <rect x="844" y="198" width="286" height="118" rx="12" fill="#f6f8f9" stroke="#73a486" stroke-width="2"/>
+    <text x="868" y="233" fill="#3f7356" font-size="17" font-weight="700">PAPER III · REPAIR</text>
+    <text x="868" y="268" fill="#17232d" font-size="24" font-weight="700">How should the</text>
+    <text x="868" y="297" fill="#17232d" font-size="24" font-weight="700">map change?</text>
+
+    <path d="M366 257 H444" stroke="#79b8dc" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M753 257 H831" stroke="#79b8dc" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="70" y="363" fill="#c9d5dc" font-size="18" letter-spacing=".3">distinction → evolution → representation → predictive witness → synthesis</text>
+  </g>
+</svg>

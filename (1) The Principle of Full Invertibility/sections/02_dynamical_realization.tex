@@ -1,0 +1,146 @@
+\section{A structured dynamical realization}
+\label{sec:model}
+
+\subsection{State manifold}
+
+The motivating realization contains \(N\) moving tokens and \(M\) fixed anchors. Token \(i\) carries
+\begin{equation}
+  z_i=(\bm r_i,\bm v_i,\theta_i,\phi_i),
+  \qquad
+  \bm r_i,\bm v_i\in\R^2,
+  \quad
+  \theta_i,\phi_i\in\Torus:=\R/(2\pi\Zmod).
+  \label{eq:token-state}
+\end{equation}
+Here \(\bm r_i\) and \(\bm v_i\) are position and velocity, \(\theta_i\) is a directional bias, and \(\phi_i\) is an internal phase. Masses \(m_i\), intrinsic frequencies \(\omega_i\), timestep \(\dt\), anchor data, and force parameters are fixed and known. The dynamical state is
+\begin{equation}
+  x=(\bm r,\bm v,\bm\theta,\bm\phi)
+  \in
+  \X_N
+  :=
+  (\R^2\times\R^2\times\Torus\times\Torus)^N.
+  \label{eq:state-space}
+\end{equation}
+
+Each anchor \(a\) has position \(\bm p_a\), positive weight \(Q_a\), and preferred angles \((\theta_a,\phi_a)\). Anchors are parameters of the one-step map. Any protocol that changes them defines an enlarged or externally controlled system and is treated separately.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  anchorNode/.style={regular polygon,regular polygon sides=4,rotate=45,
+    draw=fiink,fill=fipale,minimum size=8mm,line width=0.8pt},
+  token/.style={circle,draw=fiblue,fill=white,minimum size=6mm,line width=0.8pt},
+  >=Latex
+]
+\draw[firule,line width=0.7pt] (-4.0,0) -- (4.0,0);
+\draw[firule,line width=0.7pt] (0,-2.9) -- (0,2.9);
+\node[anchorNode,label={[fiink]above:{\scriptsize \(a_1\)}}] (n) at (0,2.25) {};
+\node[anchorNode,label={[fiink]right:{\scriptsize \(a_2\)}}] (e) at (2.6,0) {};
+\node[anchorNode,label={[fiink]below:{\scriptsize \(a_3\)}}] (s) at (0,-2.25) {};
+\node[anchorNode,label={[fiink]left:{\scriptsize \(a_4\)}}] (w) at (-2.6,0) {};
+\node[anchorNode,label={[fiink]above right:{\scriptsize \(a_5\)}}] (ne) at (1.85,1.85) {};
+
+\node[token] (t1) at (-1.25,0.55) {};
+\draw[->,fiblue,line width=0.75pt] (t1.center) -- ++(20:0.62);
+\draw[fiorange,line width=1.1pt] (-1.25,0.55) ++(0.34,0)
+  arc[start angle=0,end angle=45,radius=0.34];
+\node[token] (t2) at (0.72,1.0) {};
+\draw[->,fiblue,line width=0.75pt] (t2.center) -- ++(115:0.62);
+\draw[fiorange,line width=1.1pt] (0.72,1.0) ++(0.34,0)
+  arc[start angle=0,end angle=150,radius=0.34];
+\node[token] (t3) at (1.35,-0.72) {};
+\draw[->,fiblue,line width=0.75pt] (t3.center) -- ++(210:0.62);
+\draw[fiorange,line width=1.1pt] (1.35,-0.72) ++(0.34,0)
+  arc[start angle=0,end angle=255,radius=0.34];
+\node[token] (t4) at (-0.7,-1.25) {};
+\draw[->,fiblue,line width=0.75pt] (t4.center) -- ++(305:0.62);
+\draw[fiorange,line width=1.1pt] (-0.7,-1.25) ++(0.34,0)
+  arc[start angle=0,end angle=325,radius=0.34];
+
+\draw[fiblue,dashed] (n) circle[radius=1.25];
+\draw[fiblue,dashed] (e) circle[radius=1.25];
+\draw[figreen!80,line width=0.65pt] (t1) -- (t2) -- (t3) -- (t4) -- cycle;
+
+\node[align=left,font=\footnotesize,text=figray] at (5.3,1.25)
+  {diamond: anchor \((\bm p,Q,\theta_a,\phi_a)\)\\[2pt]
+   circle: token \((\bm r,\bm v,\theta,\phi)\)\\[2pt]
+   arrow: directional coordinate \(\theta\)\\[2pt]
+   arc: phase coordinate \(\phi\)\\[2pt]
+   dashed shell: finite anchor reach};
+\end{tikzpicture}
+\caption{A structured field realization. Translational, directional, and phase coordinates coexist in one declared state.}
+\label{fig:field}
+\end{figure}
+
+\subsection{Ordered advance}
+
+The practical discrete realization is a drift, a force kick, and a phase update:
+\begin{subequations}
+\label{eq:advance}
+\begin{align}
+\bm r_i^+
+  &=\bm r_i+\bm v_i\dt,
+  \label{eq:drift}\\
+\bm v_i^+
+  &=\gamma\bm v_i
+  +\frac{\dt}{m_i}
+  \bm F_i(\bm r^+,\bm\theta,\bm\phi),
+  \label{eq:kick}\\
+\phi_i^+
+  &=
+  \left[
+  \phi_i+\omega_i\dt
+  +\beta\dt\sum_{j\neq i}
+  \frac{\sin(\phi_j-\phi_i)}
+       {\norm{\bm r_i^+-\bm r_j^+}+\varepsilon}
+  \right]_{2\pi},
+  \label{eq:phase}\\
+\theta_i^+&=\theta_i.
+\end{align}
+\end{subequations}
+The structural fact is the update order. The force is evaluated at the advanced position and old angles, and it does not depend on velocity. This triangular ordering controls both the inverse and the determinant.
+
+The force inventory is
+\begin{equation}
+  \bm F_i
+  =
+  \bm F_i^{\rm anchor}
+  +\bm F_i^{\rm wave}
+  +\bm F_i^{\rm pair}
+  +\bm F_i^{\rm control}.
+  \label{eq:force-inventory}
+\end{equation}
+The first term supplies finite-range directional bias, the second is a softened phase-bearing radial field, and the third combines short repulsion with intermediate attraction. A fixed external control field can be included without changing the translational inverse. The exact implementation is recorded in \cref{app:model-specification}; the inverse theorems require only velocity independence and fixed known parameters.
+
+\subsection{Phase map}
+
+At a known advanced position \(\bm r^+\), define
+\begin{equation}
+  G_{\bm r^+}(\bm\phi)
+  :=
+  \left[
+  \bm\phi+\bm\omega\dt
+  +\beta\dt\,\bm K(\bm\phi;\bm r^+)
+  \right]_{2\pi},
+  \label{eq:phase-map}
+\end{equation}
+where
+\begin{equation}
+  K_i(\bm\phi;\bm r^+)
+  =
+  \sum_{j\neq i}
+  \frac{\sin(\phi_j-\phi_i)}
+       {\norm{\bm r_i^+-\bm r_j^+}+\varepsilon}.
+  \label{eq:phase-coupling}
+\end{equation}
+The full advance is therefore the composition of an explicitly invertible mechanical block and an implicit phase block. This decomposition makes the source of every inverse branch visible.
+
+\subsection{Core and variants}
+
+Three operations are kept distinct:
+\begin{description}
+\item[Core advance:] \cref{eq:advance} with no clipping and fixed parameters.
+\item[Boundary variant:] an added wall rule, whose injectivity depends on how overshoot is represented.
+\item[Feedback variant:] a description-dependent controller, which becomes part of the complete state if it affects future dynamics.
+\end{description}
+The main theorems concern the core advance. Boundary and feedback operations are valuable because they show how additional maps alter distinction provenance.
