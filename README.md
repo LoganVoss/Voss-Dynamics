@@ -26,7 +26,7 @@ A representation does more than compress a system. It decides which possible his
 
 ## The progression
 
-Let a complete state or history be $x$, its dynamics be $\Psi$, and its representation be $\mathcal O$.
+Let a complete state or history be *x*, its dynamics be Ψ, and its representation be 𝒪.
 
 ~~~text
 Paper I                  Paper II                         Paper III
@@ -47,9 +47,11 @@ That sequence is the project’s core claim: **preservation must be located, ins
 ### I — a provenance calculus for information loss
 
 - For the drift–kick realization, the smooth-stratum Jacobian factors as
-  $$
-  \det D\Psi=\gamma^{2N}\det D_\phi G_{\mathbf r^+},
-  $$
+
+  ```math
+  \det D\Psi=\gamma^{2N}\det D_\phi G_{\mathbf r^+}
+  ```
+
   so the force Jacobian cancels from the determinant.
 - Local nonsingularity and global invertibility are separated: an explicit target has three phase preimages.
 - A finite census maps **160 complete states to 103 descriptions** while all checked shared-description states remain dynamically distinct.
@@ -59,17 +61,19 @@ That sequence is the project’s core claim: **preservation must be located, ins
 
 - A normalized nontrivial stationary real pointer has a two-dimensional irreducible cyclic span.
 - Under an explicit response-completeness axiom, matching that span to the binary QND-filter algebra forces
-  $$
-  2=1+\frac{d(d-1)}2 \quad\Longrightarrow\quad d=2,
-  $$
+
+  ```math
+  2=1+\frac{d(d-1)}{2}\quad\Longrightarrow\quad d=2
+  ```
+
   conditionally selecting the complex Hermitian family.
-- The pure-spinor map $\psi\mapsto\psi\psi^\dagger$ has a $U(1)$ fibre, while the ideal QND transverse invariant is already encoded in $\rho$.
-- VD-Hopf-1 is kept separate as a candidate closed-history memory law with an explicit $\varepsilon=0$ null. **No physical deviation from quantum mechanics is claimed.**
+- The pure-spinor map ψ ↦ ψψ† has a U(1) fibre, while the ideal QND transverse invariant is already encoded in ρ.
+- VD-Hopf-1 is kept separate as a candidate closed-history memory law with an explicit ε = 0 null. **No physical deviation from quantum mechanics is claimed.**
 
 ### III — the representation itself learns from failure
 
 - Append-only augmentation provably refines exact fibres; with a fixed max metric, threshold-collision sets are nested.
-- A separator-complete search reaches injectivity on a finite sample after at most $n-c_0$ successful splits—conditional, finite-sample, and not a population theorem.
+- A separator-complete search reaches injectivity on a finite sample after at most n − c₀ successful splits—conditional, finite-sample, and not a population theorem.
 - The released 271-program engine actually reinserts its selected unary observable and passes invariance, noise, source-audit, AUC, and complexity gates.
 - On independent synthetic audits, macro collision risk falls from **0.969 to 0.183** (absolute reduction **0.786**).
 - In every leave-one-system-out fold, a 99-repetition full-pipeline source-label null selects **0 programs in 99 runs**.
