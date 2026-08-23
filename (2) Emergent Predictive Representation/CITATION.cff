@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Voss
     given-names: Logan
-date-released: 2026-08-22
-version: 1.0.0
+date-released: 2026-08-23
+version: 1.1.0
 abstract: >-
   A conditional detector/filter dimension-matching characterization of
   complex quantum structure, an exact redundant qubit Hopf lift, and a

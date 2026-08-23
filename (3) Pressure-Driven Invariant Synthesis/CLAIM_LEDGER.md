@@ -1,11 +1,11 @@
 # Paper III claim ledger
 
-This ledger separates mathematical results, deterministic implementation checks, internal held-out evidence, and unresolved claims. The authoritative numerical record is `evidence/outputs/metrics.json`; dataset membership and hashes are in `evidence/outputs/declared_split_manifest.json`, `evidence/outputs/evaluated_split_manifest.json`, and `evidence/outputs/manifest.sha256`.
+This ledger separates mathematical results, deterministic implementation checks, internal held-out evidence, and unresolved claims. The authoritative numerical records are `evidence/outputs/metrics.json` and the explicitly post-hoc `evidence/outputs/kuramoto_posthoc.json`; dataset membership and hashes are in `evidence/outputs/declared_split_manifest.json`, `evidence/outputs/evaluated_split_manifest.json`, and `evidence/outputs/manifest.sha256`.
 
 ## Status vocabulary
 
 - **PROVED**: follows analytically under the stated assumptions; computation is only a check.
-- **COMPUTED**: deterministic result of the archived implementation and seed `20260822`.
+- **COMPUTED**: deterministic result of the archived implementation and declared seed. A computed result is not necessarily held out; post-hoc diagnostics are labeled explicitly.
 - **HELD-OUT**: measured on records unavailable to the corresponding synthesis step. These are internal frozen holdouts, not prospectively registered experiments.
 - **OPEN**: not established by this paper and prohibited as an affirmative conclusion.
 
@@ -51,6 +51,14 @@ This ledger separates mathematical results, deterministic implementation checks,
 
 **Executable witness.** `evidence/tests/test_pdis_core.py::test_zero_collision_bound_is_exact_rule_of_three_generalization` checks that 0/299 gives an upper 95% bound below 0.0101.
 
+### P3-P6 — Sine-channel / second-harmonic order identity
+
+**Claim.** For Kuramoto phases `theta_j` and `Z_2 = N^(-1) sum_j exp(2 i theta_j)`, the noiseless sine sensor vector satisfies `||sin(theta)||^2 = N/2 * (1 - Re Z_2)` exactly.
+
+**Boundary.** The audit adds Gaussian measurement noise after the sine transform; the exact identity therefore does not hold for the final noisy observed array. Paper III then centers every observed channel and applies a global RMS normalization, adding explicit channel-mean and noise terms. The identity supplies a mechanistic connection to generalized phase order; it does not make the frozen scalar equal to `Z_1`, `Z_2`, or a conserved quantity.
+
+**Executable witness.** `evidence/tests/test_pdis_core.py::test_sine_norm_equals_second_harmonic_order_identity`.
+
 ## Computed implementation facts
 
 ### P3-C1 — Frozen grammar and selected all-source program
@@ -92,6 +100,16 @@ For the all-source selected expression under the archived noise perturbation, re
 **Boundary.** This is one prescribed synthetic perturbation distribution. It does not establish general robustness, and its recorded 95th percentile exceeds `0.20` on the broader post-freeze check.
 
 **Evidence.** `metrics.json -> noise_robustness`.
+
+### P3-C6 — Post-hoc Kuramoto interpretation audit
+
+After the Kuramoto result was known, the exact 240-record audit was regenerated while retaining the simulator's latent phases. The observed noisy sine-channel arrays match the released generator bit-for-bit. The diagnostic fails closed unless the selected tuple contains exactly `log_ratio(increment_cv,radial_permutation_entropy)`; its independently computed scalar agrees with `Program.evaluate` to maximum absolute error `0.0`. The frozen scalar has orientation-free label AUC `0.997569`. Its Spearman correlation is `0.860826` with latent time-averaged first-harmonic order (10,000-repetition stratified record-bootstrap interval `[0.832641, 0.885370]`) and `0.906991` with latent time-averaged second-harmonic order (interval `[0.884555, 0.926683]`). Within the weak-coupling class, the second-harmonic correlation is `0.944031` (`[0.908270, 0.963261]`), compared with `0.887562` for increment CV and `-0.864086` for radial permutation entropy. A paired record bootstrap gives composite-minus-component correlation differences of `0.056469` (`[0.028756, 0.094744]`) and `0.079945` (`[0.042654, 0.127708]`) after orienting the entropy association.
+
+The signal depends on the multichannel relation. Recomputing canonicalization and the full scalar for every subset gives mean AUC `0.5216`, `0.9499`, `0.9915`, `0.9981`, and `0.9976` for one through five retained channels. All-pairs post-repair collision risk is `0.09090`; 20,000 random perfect matchings give a descriptive 95% risk range `[0.0750, 0.1083]`, containing the released `10/120` result.
+
+**Boundary.** This diagnostic reused an audit result after it had been seen. It is `COMPUTED; POST HOC`, not new held-out evidence. Increment CV alone has slightly higher coarse label AUC (`0.99917`) and slightly higher pooled correlation with first-harmonic order (`0.86666`), so the selected ratio is not a unique or necessary order estimator. The narrower permitted interpretation is that the ratio combines complementary temporal signals for second-harmonic coherence within the weak class of this named finite generator—not a conserved law, critical-coupling estimate, universal order axis, or result beyond conventional order summaries.
+
+**Evidence.** `evidence/outputs/kuramoto_posthoc.json`, `kuramoto_posthoc_records.csv`, `kuramoto_channel_subsets.csv`, and `thesis/figures/kuramoto_posthoc.pdf`.
 
 ## Internal held-out evidence
 

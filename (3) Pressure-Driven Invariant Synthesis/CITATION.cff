@@ -5,14 +5,15 @@ type: software
 authors:
   - family-names: "Voss"
     given-names: "Logan"
-version: 1.0.0
-date-released: 2026-08-22
+version: 1.1.0
+date-released: 2026-08-23
 abstract: >-
   A reproducible implementation of collision-guided, append-only observable
   synthesis for dynamic representations, with conditional finite-sample
   theorems, internally frozen synthetic audits, full-pipeline label-null
   diagnostics, and mixed or null real-domain transfer results. The release
-  makes no prospective-registration or population-injectivity claim.
+  includes an explicitly post-hoc Kuramoto coherence diagnostic, and makes no
+  prospective-registration, universal-order, or population-injectivity claim.
 keywords:
   - invariant synthesis
   - representation learning
@@ -28,4 +29,3 @@ preferred-citation:
     - family-names: "Voss"
       given-names: "Logan"
   year: 2026
-

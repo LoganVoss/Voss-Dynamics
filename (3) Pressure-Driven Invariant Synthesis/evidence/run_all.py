@@ -34,6 +34,7 @@ from pdis.datasets import (  # noqa: E402
     similarity_transform,
     synthetic_domains,
 )
+from pdis.kuramoto_posthoc import run_posthoc_diagnostic  # noqa: E402
 from pdis.programs import Program, build_grammar  # noqa: E402
 from pdis.statistics import collision_indicators, stable_seed  # noqa: E402
 from pdis.synthesis import (  # noqa: E402
@@ -542,6 +543,19 @@ def main() -> None:
         transfer_rows.append({"domain": holdout, "track": "independent-synthetic-audit", **reduction})
         print(f"independent audit {holdout}: {reduction}", flush=True)
 
+    # This interpretation audit occurs only after the source-selected program
+    # has been frozen and evaluated.  It cannot affect selection or upgrade the
+    # internally held-out result to prospective evidence.
+    kuramoto_posthoc = run_posthoc_diagnostic(
+        independent_audit["kuramoto"],
+        table,
+        fold_objects["kuramoto"].base_names,
+        fold_objects["kuramoto"].selected,
+        threshold=THRESHOLD,
+        output_dir=OUTPUT,
+        figure_dir=FIGURES,
+    )
+
     sealed_results: dict[str, dict[str, object]] = {}
     for name, records in sealed.items():
         reduction = paired_domain_reduction(
@@ -587,6 +601,7 @@ def main() -> None:
         "synthetic_leave_one_domain_out": folds,
         "synthesis_all_synthetic": synthesis_all.to_dict(),
         "sealed_real_domains": sealed_results,
+        "post_hoc_diagnostics": {"kuramoto": kuramoto_posthoc},
         "theorem_checks": checks,
         "noise_robustness": noise_errors,
         "legacy_seismic_status": "historical exploratory pilot only; excluded from confirmatory metrics",
@@ -611,7 +626,6 @@ def main() -> None:
         [path for path in OUTPUT.glob("*") if path.is_file() and path.name != "manifest.sha256"]
         + sorted(FIGURES.glob("*.pdf"))
         + sorted(FIGURES.glob("*.png"))
-        + list(archives.values())
     )
     manifest_lines = [f"{sha256(path)}  {path.relative_to(ROOT)}" for path in manifest_paths]
     (OUTPUT / "manifest.sha256").write_text("\n".join(manifest_lines) + "\n", encoding="utf-8")

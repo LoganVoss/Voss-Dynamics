@@ -121,7 +121,7 @@ Collision-guided observability refinement across dynamical systems\par}
 \vspace{0.08in}
 {\normalsize Voss Dynamics \textbar\ Working mathematical thesis and computational audit\par}
 \vspace{0.05in}
-{\normalsize 22 August 2026\par}
+{\normalsize 23 August 2026\par}
 
 \vfill
 \begin{center}
@@ -167,7 +167,7 @@ Papers I and II hold the representation fixed: the first asks when dynamics and 
 
 The mathematical core is simple but consequential. Exact append-only augmentation refines observation fibres; on a finite sample, a separator-complete search reaches injectivity in at most the number of unresolved class splits; and a fixed max-product metric makes threshold-collision sets nested. For trajectories transformed by translation, positive global scale, and orthogonal channel action, global RMS canonicalization and quantile recurrence preserve adjacency exactly outside deterministic tie pathologies. The resulting primitive library combines temporal, covariance, recurrence-network, and persistent-homology summaries. A depth-two typed grammar produces 271 auditable scalar programs.
 
-The executable audit uses logistic, Lorenz, and Kuramoto systems. Programs are selected on two source domains, frozen before independent audit trajectories are materialized, and evaluated on 120 disjoint cross-label pairs from the held-out system. Collision risk falls from $0.992$ to $0$ for logistic, $0.917$ to $0.467$ for Lorenz, and $1$ to $0.083$ for Kuramoto; the macro absolute reduction is $0.786$. A full-pipeline 99-permutation source-label null selects no program in every fold. Yet an admissible random-program comparator is beaten significantly only for Kuramoto, and the all-source expression fails to transfer significantly to ECGFiveDays or Earthquakes. The result is therefore a verified mechanism for constrained representation repair in controlled domains, not a universal invariant-discovery claim.
+The executable audit uses logistic, Lorenz, and Kuramoto systems. Programs are selected on two source domains, frozen before independent audit trajectories are materialized, and evaluated on 120 disjoint cross-label pairs from the held-out system. Collision risk falls from $0.992$ to $0$ for logistic, $0.917$ to $0.467$ for Lorenz, and $1$ to $0.083$ for Kuramoto; the macro absolute reduction is $0.786$. A full-pipeline 99-permutation source-label null selects no program in every fold. An explicitly post-hoc phase audit links the $N=5$ Kuramoto winner to latent second-harmonic coherence ($\rho_S=0.907$; $0.944$ within weak coupling) without upgrading the held-out claim. Yet an admissible random-program comparator is beaten significantly only for Kuramoto, and the all-source expression fails to transfer significantly to ECGFiveDays or Earthquakes. The result is therefore a verified mechanism for constrained representation repair in controlled domains, not a universal invariant-discovery claim.
 \end{abstract}
 
 \claimbox{Primary result}{Meaningful representation collisions can be converted into counterexamples for a typed, nuisance-invariant synthesis loop. In the released implementation, one scalar program is actually reinserted into the observation map and substantially reduces collision risk across three independent synthetic audits. The exact refinement guarantees are structural; empirical transfer beyond those controlled systems remains open.}
@@ -189,11 +189,16 @@ The relation to observability is direct. Classical nonlinear observability asks 
 \subsection{Claim discipline}
 
 Four statuses are used throughout:
-\begin{description}[style=nextline]
-\item[\status{PROVED}] A mathematical consequence of explicitly stated assumptions.
-\item[\status{COMPUTED}] A deterministic symbolic or numerical check reproduced by the evidence package.
-\item[\status{HELD-OUT}] A result on data not used by the final in-run selection step. This is internal freezing, not external preregistration or independent replication.
-\item[\status{OPEN}] A claim requiring new domains, prospective commitment, physical data, or stronger theory.
+\begin{description}[
+  style=multiline,
+  leftmargin=7.25em,
+  labelwidth=6.4em,
+  labelsep=0.55em
+]
+\item[\status{PROVED}:] A mathematical consequence of explicitly stated assumptions.
+\item[\status{COMPUTED}:] A deterministic symbolic or numerical check reproduced by the evidence package.
+\item[\status{HELD-OUT}:] A result on data not used by the final in-run selection step. This is internal freezing, not external preregistration or independent replication.
+\item[\status{OPEN}:] A claim requiring new domains, prospective commitment, physical data, or stronger theory.
 \end{description}
 The complete claim ledger is supplied beside the manuscript. The release also records an earlier development failure: a first version admitted programs under permuted source labels. Gates were then strengthened, final audit seeds were changed, and the final run was executed. That history makes the final audit useful but not prospective confirmation.
 
@@ -596,13 +601,47 @@ Kuramoto & 0.917 & 0.000 & 0.000 & 0.292\\
 \end{tabular}
 \end{table}
 
-No single family dominates every system. The symbolic composition is essential in logistic and Kuramoto under these gates, while a topology-only expression approaches the full Lorenz reduction. This supports a heterogeneous primitive library; it does not establish that these are optimal primitives.
+No single family dominates every system. Under these source-selection gates, the symbolic composition is essential to transfer into logistic and Kuramoto, while a topology-only expression approaches the full Lorenz reduction. This supports a heterogeneous primitive library; it does not establish that these are optimal primitives or that the selected composition is the only target-domain separator.
+
+\subsection{A post hoc mechanistic read of the Kuramoto fold}
+\label{sec:kuramoto-posthoc}
+
+\status{COMPUTED; POST HOC}. Kuramoto is the only fold in which the source-selected expression significantly exceeds the admissible random-program comparator. The winner was chosen from logistic and Lorenz records and frozen before any Kuramoto audit trajectory was generated. After that result was known, the exact 240-record audit was regenerated bit-for-bit---the maximum observed-channel discrepancy is zero---while retaining latent phases that were never exposed to synthesis.
+
+For the conventional generalized order parameters and their time averages, define \citep{Daido1992}
+\begin{equation}
+  Z_m(t)=\frac{1}{N}\sum_{j=1}^{N}e^{im\theta_j(t)},
+  \qquad
+  \overline R_m=\frac{1}{T}\sum_t |Z_m(t)|.
+  \label{eq:kuramoto-order}
+\end{equation}
+The noiseless sine sensor vector $s_j(t)=\sin\theta_j(t)$ obeys the exact identity
+\begin{equation}
+  \|s(t)\|_2^2=\frac{N}{2}\bigl[1-\Re Z_2(t)\bigr].
+  \label{eq:sine-order}
+\end{equation}
+The released observed array adds Gaussian measurement noise after this sine transform, so \cref{eq:sine-order} is not an exact identity for the array supplied to synthesis. Even without that noise, channel centering adds the explicit correction $-2\sum_j\bar s_j\sin\theta_j(t)+\sum_j\bar s_j^2$, after which the declared global RMS normalization is applied. The identity therefore supplies a mechanistic route by which radial permutation entropy can remain sensitive to generalized phase-order structure, while increment CV summarizes temporal heterogeneity of the multichannel motion. It does not identify the computed feature with $Z_1$ or $Z_2$.
+
+On the exact audit, the frozen scalar has orientation-free label AUC $0.9976$; latent $\overline R_1$ and $\overline R_2$ each have AUC $0.9989$. The scalar's pooled Spearman correlation is $0.861$ with $\overline R_1$ (stratified record-bootstrap 95\% interval $[0.833,0.885]$) and $0.907$ with $\overline R_2$ (interval $[0.885,0.927]$). The second-harmonic association sharpens within the weak-coupling class: $\rho_S=0.944$ (record-bootstrap interval $[0.908,0.963]$), versus $0.888$ for increment CV and $-0.864$ for radial permutation entropy. In a paired record bootstrap, the composite-minus-increment correlation difference is $0.056$ ($[0.029,0.095]$), and the composite-minus-oriented-entropy difference is $0.080$ ($[0.043,0.128]$). These intervals were designed after inspection and are descriptive, not confirmatory.
+
+This is a narrow within-regime gain, not evidence that symbolic composition is required for the coarse target contrast. Across the two widely separated coupling classes, increment CV alone has AUC $0.9992$, slightly above the composite. Its primitive-only ablation failed the \emph{source} gates; it was not intrinsically uninformative on Kuramoto. The multichannel relation is nevertheless essential to the released scalar: after recomputing canonicalization and both primitives for every one of the $\binom{5}{m}$ channel subsets, mean label AUC rises from $0.522$ for one channel to $0.950$, $0.992$, $0.998$, and $0.998$ for two through five channels.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\linewidth]{kuramoto_posthoc.pdf}
+\caption{Post-hoc interpretation of the frozen Kuramoto winner. Left: the source-selected scalar tracks latent second-harmonic coherence $\overline R_2$; rings mark the weak-coupling records in the ten residual released-match collisions. Right: every point is one of the $\binom{5}{m}$ channel subsets, with canonicalization and both primitives recomputed for that subset; blue points are subset-count means. These are descriptive diagnostics on a result already seen, not a new held-out test.}
+\label{fig:kuramoto-posthoc}
+\end{figure}
+
+The ten weak-coupling records in the residual released matching are unusually ordered within their declared class: mean $\overline R_1$ is $0.874$, versus $0.570$ for the other weak-coupling records, while mean $K$ is $0.346$ versus $0.237$. The conclusion is not an accident of one matching: all $14{,}400$ cross-label pairs have post-repair risk $0.091$, and 20,000 random perfect matchings give a descriptive 95\% risk range $[0.075,0.108]$; the released $10/120=0.083$ lies inside it.
+
+The bounded interpretation is therefore that a scalar selected without Kuramoto access transferred as an order-sensitive, sensor-basis-invariant surrogate inside this finite controlled generator. Its strongest post-hoc association is with generalized second-harmonic coherence, and the ratio combines complementary temporal signals for within-weak-class ranking. The analysis is post hoc, $N=5$, the coupling intervals are widely separated, the expression's orientation reverses across other systems, and a simpler target-domain primitive separates the coarse classes at least as well. It is not a conserved invariant, a critical-coupling estimate, a universal order coordinate, or evidence of information beyond conventional order summaries.
 
 \subsection{Invariance and robustness audits}
 
 The all-source expression in \cref{eq:selected} passes its source selection noise gate with 95th-percentile relative error $0.110<0.20$. Across synthetic audits and both real sets, however, the same statistic has median error $0.034$, 95th percentile $0.265$, and maximum $0.415$ under 2\% relative Gaussian perturbations. The source gate therefore does not guarantee unseen-domain robustness. Exact group invariance remains intact; off-group noise robustness is empirical and can fail.
 
-The recurrence adjacency check is exact in 24/24 similarity transforms, the selected expression's maximum relative transform error is $2.58\times10^{-14}$, and the graph-spectrum unit cases return the correct $\lambda_2$. All eight core tests pass.
+The recurrence adjacency check is exact in 24/24 similarity transforms, the selected expression's maximum relative transform error is $2.58\times10^{-14}$, and the graph-spectrum unit cases return the correct $\lambda_2$. All ten core tests pass.
 
 \subsection{Real stress tests do not confirm transfer}
 
@@ -671,7 +710,7 @@ Paper I identifies the obligation to preserve distinctions through dynamics and 
 
 The formal contribution is an append-only refinement calculus. Exact fibres refine, max-metric collision sets nest, and a separator-complete search terminates on a finite sample. The representational contribution is a global trajectory canonicalization whose recurrence geometry is exactly invariant to a declared similarity group, paired with an explicit proof that the resulting summaries are not complete. The computational contribution is an engine in which a typed unary program is selected under invariance, noise, source-audit, discrimination, and complexity gates and then genuinely reinserted.
 
-On independent synthetic audits, that mechanism reduces macro collision risk by $0.786$, with full-pipeline source-label nulls selecting nothing. The Lorenz residual risk, random-program results, off-group noise degradation, and null real transfer prevent an inflated conclusion. What has been shown is not universal invariant discovery. It is something narrower and, because it is falsifiable, more durable: a representation can be repaired by its own meaningful collisions, the repair can be made interpretable and group-aware, and the boundary between controlled success and unconfirmed transfer can be exposed by design.
+On independent synthetic audits, that mechanism reduces macro collision risk by $0.786$, with full-pipeline source-label nulls selecting nothing. A post-hoc dissection shows that the strongest search-specific result, Kuramoto, transfers an order-sensitive multichannel surrogate, while also showing that the composite is not unique on the target records. The Lorenz residual risk, random-program results, off-group noise degradation, and null real transfer prevent an inflated conclusion. What has been shown is not universal invariant discovery. It is something narrower and, because it is falsifiable, more durable: a representation can be repaired by its own meaningful collisions, the repair can be made interpretable and group-aware, and the boundary between controlled success and unconfirmed transfer can be exposed by design.
 
 \appendix
 
@@ -720,7 +759,7 @@ Covariance & eigenvalue entropy & Orthogonal-basis invariant; dimension can infl
 \end{tabularx}
 \end{table}
 
-The supported software contract is Python 3.11 or later with locked numerical dependencies; the canonical release run used Python 3.14.6. Feature extraction is deterministic. The evidence runner fails if either raw archive is absent, writes a grammar manifest and declared split manifest, freezes selected programs, then materializes the independent audit and real TEST records. Unit tests cover recurrence invariance, $\lambda_2$, reinsertion, threshold nesting, finite-sample splitting, the exact zero-collision bound, determinism, and TEST-only archive loading.
+The supported software contract is Python 3.11 or later with locked numerical dependencies; the canonical release run used Python 3.14.6. Feature extraction is deterministic. The evidence runner fails if either raw archive is absent, writes a grammar manifest and declared split manifest, freezes selected programs, then materializes the independent audit and real TEST records. Ten unit tests cover recurrence invariance, $\lambda_2$, reinsertion, threshold nesting, finite-sample splitting, the exact zero-collision bound, deterministic generation, TEST-only archive loading, exact Kuramoto regeneration, and the sine/order identity.
 
 \section{Result ledger}
 
@@ -738,6 +777,7 @@ Status & Claim & Primary artifact\\
 \status{COMPUTED} & 24/24 adjacency checks; correct graph $\lambda_2$; selected-program transform error $2.58\times10^{-14}$. & \texttt{evidence/outputs/metrics.json}.\\
 \status{HELD-OUT} & Synthetic reductions $0.992$, $0.450$, $0.917$ on 120 disjoint pairs per domain. & \texttt{transfer\_metrics.csv}; frozen and split manifests.\\
 \status{COMPUTED} & Full-pipeline source-label null selects a program in 0/99 repetitions per fold. & \texttt{metrics.json}; \texttt{DEVELOPMENT\_AUDIT.md}.\\
+\status{COMPUTED;}\newline\status{POST HOC} & The frozen Kuramoto scalar is an order-sensitive multichannel surrogate on the exact audit; no claim upgrade. & \texttt{kuramoto\_posthoc.json}; \cref{sec:kuramoto-posthoc}.\\
 \status{HELD-OUT} & ECG reduction $0$, Earthquakes reduction $0.25$ with $p=0.41$; transfer unconfirmed. & \texttt{metrics.json}; raw archive hashes.\\
 \status{OPEN} & Generalization to unseen physical domains, superiority to competitive optimizers, and recovery of physical laws. & Future externally committed study.\\
 \bottomrule
@@ -753,7 +793,7 @@ uv run pytest -q
 uv run python evidence/run_all.py
 shasum -a 256 -c evidence/outputs/manifest.sha256
 \end{verbatim}
-The runner regenerates JSON, CSV, and both paper figures. PDF creation metadata can vary across plotting backends; the manifest is a release-integrity record for the committed artifacts, not an external commitment. Raw data licenses and source terms remain those of the UCR archive and original contributors.
+The runner regenerates JSON, CSV, and all three paper figures. PDF creation metadata can vary across plotting backends; the manifest is a release-integrity record for the committed artifacts, not an external commitment. Raw data licenses and source terms remain those of the UCR archive and original contributors.
 
 {\small
 \bibliographystyle{plainnat}

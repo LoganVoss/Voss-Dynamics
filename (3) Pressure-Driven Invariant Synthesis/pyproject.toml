@@ -1,6 +1,6 @@
 [project]
 name = "pressure-driven-invariant-synthesis"
-version = "1.0.0"
+version = "1.1.0"
 description = "Reproducible engine and evidence for collision-guided observability refinement"
 requires-python = ">=3.11"
 dependencies = [

@@ -51,9 +51,13 @@ The final position is known. Bijectivity of \(G_{\bm r^+}\) determines the old p
 \draw[arr] (rn) -- (po);
 \draw[arr] (pn) -- (po);
 \draw[arr] (po) -- (vo);
-\draw[arr] (rn) -- (vo);
+\coordinate (voRoute) at ([xshift=4mm]vo.east);
+\coordinate (rnRoute) at ([yshift=4mm]rn.north);
+\draw[arr] (rn.north) -- (rnRoute) -- (voRoute |- rnRoute) -- (voRoute) -- (vo.east);
 \draw[arr] (vn) -- (vo);
-\draw[arr] (vo) -- (ro);
+\coordinate (voBottomRoute) at ([yshift=-4mm]vo.south);
+\coordinate (roBottomRoute) at ([yshift=-4mm]ro.south);
+\draw[arr] (vo.south) -- (voBottomRoute) -- (roBottomRoute) -- (ro.south);
 \draw[arr] (rn) -- (ro);
 \end{tikzpicture}
 \caption{The inverse is triangular: phase branch first, then force and velocity, then position.}
@@ -138,7 +142,7 @@ Force curvature cannot create a local singularity in this update ordering.
 \end{tikzpicture}
 \caption{Numerical audit of \cref{eq:determinant}. Maximum relative discrepancy is \(2.1\times10^{-8}\).}
 \label{fig:determinant}
-\figsource{\sourcecode{evidence/thesis\_verification.json}, \texttt{determinant\_factorization}.}
+\figsource{\sourcecode{evidence/thesis\_verification.json}, \sourcecode{determinant\_factorization}.}
 \end{figure}
 
 \subsection{Phase uniqueness}
@@ -249,7 +253,7 @@ forward residual\\
 2 & \( 0.4115\) & \(6.738\) & \(1.33\times10^{-13}\)\\
 \bottomrule
 \end{tabular}
-\figsource{\sourcecode{evidence/thesis\_verification.json}, \texttt{phase\_multiroot\_collision}.}
+\figsource{\sourcecode{evidence/thesis\_verification.json}, \sourcecode{phase\_multiroot\_collision}.}
 \end{table}
 
 This example demonstrates the value of the framework: a nonzero local Jacobian, a convergent inverse solver, and global branch uniqueness are separate questions.

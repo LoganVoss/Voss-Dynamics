@@ -39,6 +39,43 @@ PAPERS = (
 )
 
 
+def import_outline(
+    writer: PdfWriter,
+    reader: PdfReader,
+    items: list,
+    *,
+    page_offset: int,
+    parent,
+) -> None:
+    """Copy an outline while translating every destination into the volume."""
+
+    previous = None
+    for item in items:
+        if isinstance(item, list):
+            if previous is not None:
+                import_outline(
+                    writer,
+                    reader,
+                    item,
+                    page_offset=page_offset,
+                    parent=previous,
+                )
+            continue
+
+        source_page = reader.get_destination_page_number(item)
+        if source_page < 0:
+            previous = None
+            continue
+        previous = writer.add_outline_item(
+            item.title,
+            page_offset + source_page,
+            parent=parent,
+            color=getattr(item, "color", None),
+            bold=bool(getattr(item, "bold", False)),
+            italic=bool(getattr(item, "italic", False)),
+        )
+
+
 def assemble(front_matter: Path, output: Path) -> None:
     front = PdfReader(front_matter)
     if len(front.pages) != 2:
@@ -52,7 +89,17 @@ def assemble(front_matter: Path, output: Path) -> None:
     for title, paper in PAPERS:
         if not paper.is_file():
             raise FileNotFoundError(paper)
-        writer.append(paper, outline_item=title, import_outline=True)
+        reader = PdfReader(paper)
+        page_offset = len(writer.pages)
+        writer.append(reader, import_outline=False)
+        paper_outline = writer.add_outline_item(title, page_offset)
+        import_outline(
+            writer,
+            reader,
+            reader.outline,
+            page_offset=page_offset,
+            parent=paper_outline,
+        )
 
     writer.add_metadata(
         {

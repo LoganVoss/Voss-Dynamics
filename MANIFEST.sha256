@@ -1,13 +1,13 @@
-f5a8fdbc8fc8092b24733f175ef5a93f01dbe4acca4b167f6bc2d8c1250b4f0f  ./(1) The Principle of Full Invertibility/CITATION.cff
+dd5a98ee1bd58a91710a1dd1e0324d32e1a43a1e0f197c235cfabd4c5e46fd7c  ./(1) The Principle of Full Invertibility/CITATION.cff
 e139081303566b189b0faa561ac62de19092477058b41da8c5a4b263c94ecb92  ./(1) The Principle of Full Invertibility/README.md
-4ea9b398961e90ed90653b000cf11db9dbf108ce5e7fab73d255a9baede9fe77  ./(1) The Principle of Full Invertibility/The_Principle_of_Full_Invertibility.pdf
-51c1a528f5ad3137eb2b2ae78db976df06e60012f26a9d56d8efd1f2b95b4e7c  ./(1) The Principle of Full Invertibility/The_Principle_of_Full_Invertibility.tex
+15de9b1e550f18588e700adc86b50ec49cd4ed2a7da997631d3e3e6e21e8d823  ./(1) The Principle of Full Invertibility/The_Principle_of_Full_Invertibility.pdf
+b44518c873c1756f0f1eca6c56e2316366168c7da9640847093498acbd8dd2a9  ./(1) The Principle of Full Invertibility/The_Principle_of_Full_Invertibility.tex
 eed6c1158ada7cec75447d50c71ae17ac94021026d84a60c1b491ffc738b2a94  ./(1) The Principle of Full Invertibility/engine/__init__.py
 1a064bafb6a466b430ff7081ee8c88c5e23f3ffb3c1a53897efd8dc3b2c379bd  ./(1) The Principle of Full Invertibility/engine/discrete.py
 2d1452b91f36e64a3303efac73dea6cb0f6ea72dd4d6657756b2977194bf24f4  ./(1) The Principle of Full Invertibility/engine/observe.py
 7703509f1fcd01398859987e2bb99a3b01840a09c5e69f2da65d62f260be59ce  ./(1) The Principle of Full Invertibility/engine/psi.py
 6f3346bfa5970a56f102de0b438b4e6e5f371ba06006418e07e6af5f5753cc56  ./(1) The Principle of Full Invertibility/evidence/README.md
-ce02b6e1d928c2e120c07367e5c2e3a3ec18cdf540c04951038bb43d5e595a12  ./(1) The Principle of Full Invertibility/evidence/SHA256SUMS.txt
+924264b7b906a7623243f3ad9d5c2b8cdfeef17d9d26d983dcd3e71fc44d3a47  ./(1) The Principle of Full Invertibility/evidence/SHA256SUMS.txt
 afcf1e477cb950945b35d4bd09ca9e8916d1788a76235d50909fa35fe293d047  ./(1) The Principle of Full Invertibility/evidence/boundary_conditions.csv
 881cdb85aa80c3364ab495a58a8150c79b0146ab52aa295b6b97c0e769ff1886  ./(1) The Principle of Full Invertibility/evidence/clock_memory.csv
 e83a076050da5d23c125ab30b0b2fc7b1bdc48302a59ff39b5b4189798364bd3  ./(1) The Principle of Full Invertibility/evidence/clock_readout.csv
@@ -31,11 +31,11 @@ cc40edc62b34a29e6fcadc96e1b888c2c56001798c86619d85a957e68bf31ab5  ./(1) The Prin
 033525f1c745732b1443fc49db87dbcf99503574161e14be1a15a5d61cc5a5a1  ./(1) The Principle of Full Invertibility/results/deeper.json
 de76fe294e7729356293edcfca6231a28de34629f9ea87a1d12f0f8227a2c2be  ./(1) The Principle of Full Invertibility/results/omega.json
 cf1f4442a5bbef3ef5bdbcc29428e8e799d2469c2943e594ea271c8e142eb5ca  ./(1) The Principle of Full Invertibility/sections/01_distinction_provenance.tex
-0e05e938e102cff89eff15d304e7d977a9464f30061a3401bf35da5aa887d5c2  ./(1) The Principle of Full Invertibility/sections/02_dynamical_realization.tex
-4651988c24f79575869621d5af1b306214c6984cdd740b337912c37c1b284743  ./(1) The Principle of Full Invertibility/sections/03_invertibility_structure.tex
-f230bcb6af7cd32c07624745e195ca09e813b603a175852c253d7e8cee7a676d  ./(1) The Principle of Full Invertibility/sections/04_description_fibres.tex
-e7cedc46f6b8ddd9f914d65433684bb11bf98bcbe7c10dc6bef4e944054974a8  ./(1) The Principle of Full Invertibility/sections/05_access_and_entropy.tex
-3c26c96fedf2aa48cc6fb46dc4f5bff68a5a2d178c9e983713ef8eea2dbe36b2  ./(1) The Principle of Full Invertibility/sections/06_provenance_demonstrations.tex
+44b1e5d16a9345aeb668e09a4546e32c51920085b3c2d6a6ee8fd0441f4670fa  ./(1) The Principle of Full Invertibility/sections/02_dynamical_realization.tex
+7956ce7225d4f6aa987c1b8d3330e59237f6cf048605c60f601381c868832bb1  ./(1) The Principle of Full Invertibility/sections/03_invertibility_structure.tex
+d8ab25c653bdd890088c96e2a1ee6eb7c776271a39d56d2e611adca63fdaf843  ./(1) The Principle of Full Invertibility/sections/04_description_fibres.tex
+e0c060f0cb8f8af3f4c27ce5cd69faa186bcaa124c3842fd7c443510f481989d  ./(1) The Principle of Full Invertibility/sections/05_access_and_entropy.tex
+1abda17ac761b708398678aa57481365b6f7499ffea25fd06b962df969e01ec0  ./(1) The Principle of Full Invertibility/sections/06_provenance_demonstrations.tex
 7b707f95fc2dbbb7e86a3b8a660c616a482617fc0baa4039124b15233cf9b17f  ./(1) The Principle of Full Invertibility/sections/07_implications.tex
 c7bc42df79afae6967f72dff4481c5bac7ffa1519904b0e61096c4b0e4d67b0f  ./(1) The Principle of Full Invertibility/sections/08_scope_and_open_problems.tex
 7230c1191f34d63793820c85437d97a3fcc457ff9784969ac3841e107724e14d  ./(1) The Principle of Full Invertibility/sections/09_conclusion.tex
@@ -43,9 +43,9 @@ cd4dc4b0a815fb0f0dd983622f1dd84cfef6eb048f5d0e955cf93f2f8deccf92  ./(1) The Prin
 a3410bd9f850252c02995c000a053d82e81e7059a36ea46e90e3ceb7e851f5d1  ./(1) The Principle of Full Invertibility/sections/B_methods.tex
 f5211d8a314f8d3fc1c16dc8856329157e5a878a27997f59aed41c2e380a9fdd  ./(1) The Principle of Full Invertibility/sections/C_result_ledger.tex
 9681229c301fb41e268f929c77762a2147e0459d4062e891918e63efebe3ec05  ./(1) The Principle of Full Invertibility/uv.lock
-4963eab9cb86ba02fe8c9a34f4857f1b60ccba937b34f4573b25da26460216ca  ./(2) Emergent Predictive Representation/CITATION.cff
+b6749001fd22aa3b2340cbd369df8511a124ce7dca426c1c99276e17ea90e87b  ./(2) Emergent Predictive Representation/CITATION.cff
 cfb8bcdcf30da728022b29004d0229474a346bf6a5ad15f1a5d5ab1be1c8e3a5  ./(2) Emergent Predictive Representation/CLAIM_LEDGER.md
-1c9013a0c4a3a16883f2e861e9bb589c42e35004abcdaea10bcefb6de69a5edd  ./(2) Emergent Predictive Representation/Emergent-Predictive-Representation.pdf
+6ab4e05bb4de0cfb1966d0d7a43aabc4fc3b17edcbbc14b9eeb24bf30fc5b8b0  ./(2) Emergent Predictive Representation/Emergent-Predictive-Representation.pdf
 fbe33cac85c842f64920c355f3b9e0e456bdd38bd3504b16a0d80d18bb11f9d6  ./(2) Emergent Predictive Representation/README.md
 5e4c94903ccbcf0831b9b8c2255bcf48ef9bc16e53a7ab833970295485f7c6ae  ./(2) Emergent Predictive Representation/blind_qnd_research.py
 f95e6cedbc5e7424a57320e281bed8452d605d02c38952536949f43d4938a180  ./(2) Emergent Predictive Representation/evidence/README.md
@@ -53,10 +53,10 @@ f95e6cedbc5e7424a57320e281bed8452d605d02c38952536949f43d4938a180  ./(2) Emergent
 462ecd07a77f8b03c5418d3602c8e5d1cfb21a2d291a1270d9c3f8c2c9eaef60  ./(2) Emergent Predictive Representation/evidence/epr_core.py
 e169b116d56a3ca834c028f3cd42bb2b1c39c624b2ac5d0b4192185f9d3ad4a4  ./(2) Emergent Predictive Representation/evidence/outputs/frozen_prediction.json
 d8de4e986c8c1002aebff4459e9d5a0ef926d044f547f6e37ef2ec441f997d2b  ./(2) Emergent Predictive Representation/evidence/outputs/frozen_predictions.csv
-4b3bc5554c2e7e843d58ef151088a45b5d4dff632e4b746d713812195fd6abab  ./(2) Emergent Predictive Representation/evidence/outputs/manifest.sha256
+f68eb44c8352c0d7abcd1edf1bc92f9593ab5f37679d4bec231a703a4fb26e69  ./(2) Emergent Predictive Representation/evidence/outputs/manifest.sha256
 744e3f573b9fceefe44be0ec01cc514a217c3b9ccd7af6c927b6986a56ea795d  ./(2) Emergent Predictive Representation/evidence/outputs/metrics.json
 483dd0ac2342a8706b23be3ad553be615fa83cd8635be5709e8c65bd980568af  ./(2) Emergent Predictive Representation/evidence/outputs/power_table.csv
-7d98b8455ec2e300be766ff09c016bfb64e41bd330c5d99784413a0ca361343b  ./(2) Emergent Predictive Representation/evidence/run_all.py
+b43eb5e28acb5ae1ce23dc9283101d5ebff958a542b9a82e1eace8f7cf915123  ./(2) Emergent Predictive Representation/evidence/run_all.py
 a969ebaa796eea9594e6ba33f36b5a08901cd86243b16292433d6156af14cb72  ./(2) Emergent Predictive Representation/evidence/tests/test_epr_core.py
 6e16344114cf96bd9aea6142cea0e9c8a76e5dd8b7f40e0115b8647fa3ddc7b2  ./(2) Emergent Predictive Representation/experiment/PREREGISTRATION.md
 efc8705d13896b147b46f432de093adee55934b64b925626127b8a028440aa1c  ./(2) Emergent Predictive Representation/pyproject.toml
@@ -66,60 +66,66 @@ c30b20218c2de450ecc5aa864928ff60e52c02f8186264e13aedd5a6731c821b  ./(2) Emergent
 3e5fc887d2acd62fa9e05655723b87a2dabfd5463d50af7ef3292120f4021415  ./(2) Emergent Predictive Representation/thesis/figures/power_and_information.png
 4d2ef977bd99dc36fd498baed3f039e13c3edbb6e523c7e7df6b72f91a39a809  ./(2) Emergent Predictive Representation/thesis/figures/quantum_limits.pdf
 d3b50cd99638154439317437249a81477f89837663ea09be0b7af2a9cdab58f3  ./(2) Emergent Predictive Representation/thesis/figures/quantum_limits.png
-d2255ad5a456394bb2f9ee0b7300dd7cf53fcaef3c67d6bf76e7cca764a9958a  ./(2) Emergent Predictive Representation/thesis/figures/relational_geometry.pdf
-e362d5538b680b09ac5fe0889584a224443ee235b5073f23e279b588af3e5243  ./(2) Emergent Predictive Representation/thesis/figures/relational_geometry.png
-f7311b92860d4e59a22d493c131cb59ba388d435d9f844a08475ea6f28d245ad  ./(2) Emergent Predictive Representation/thesis/figures/scalar_selection.pdf
-30aeccc09e8370b8237f9ac07a799952381b03df8bb56381b9cdc72bfd3e4f2f  ./(2) Emergent Predictive Representation/thesis/figures/scalar_selection.png
+4321c32057125d22e99f59fdc625db1d7c0b020922104bc6c7e7d7bacceeef57  ./(2) Emergent Predictive Representation/thesis/figures/relational_geometry.pdf
+ffba420b5238705d488745c32608e0f5d7df13ab83c793711aecb015d73c7ea1  ./(2) Emergent Predictive Representation/thesis/figures/relational_geometry.png
+9a7353558a96e6f8be4227ee42f209a05a0c5cbf4f2cd8f035f6eee17dc5d41b  ./(2) Emergent Predictive Representation/thesis/figures/scalar_selection.pdf
+d1aaa9cf38d96698c4e261660297001842e1cc9567d5bd947101f92851c97f82  ./(2) Emergent Predictive Representation/thesis/figures/scalar_selection.png
 4d179f10489f04c02f1a18c523dfc0a6705913106445903f07a24e132f9925a8  ./(2) Emergent Predictive Representation/thesis/figures/tiny_target.pdf
 de85fb9fa807c93e99b8cf5e900559815a18512a8c58a548bbe7045bb508bc4e  ./(2) Emergent Predictive Representation/thesis/figures/tiny_target.png
 f6671f347ed1069c9f8d925bd79111e9f97e5e3bdebe63e890154b3c24b7ea03  ./(2) Emergent Predictive Representation/thesis/main.tex
 4b8efebb01699608bf1507d592ff16a951f790739f138e09a453e014d0d769ec  ./(2) Emergent Predictive Representation/thesis/references.bib
 925a49830f37a8f4dd6abe1dfab71d8571f5b161cf2f379f9989f9a9bbcb9c7f  ./(2) Emergent Predictive Representation/uv.lock
-80d2a990b3ea0578cd24d0cc4362b18e66671f478655c8cfdd9f4722d3c0f0fc  ./(3) Pressure-Driven Invariant Synthesis/CITATION.cff
-fa630539189ca7ac68abd6301be7ede1daae82c0c26eae614674f793c94c2513  ./(3) Pressure-Driven Invariant Synthesis/CLAIM_LEDGER.md
-5fa1db750a31c0f10dd668a2ac50851b2709aa4558af3a2b1eafdee8d5e17529  ./(3) Pressure-Driven Invariant Synthesis/Pressure-Driven-Invariant-Synthesis.pdf
-de5f603e6b4e27ebfdbd4cb174695768a1d3a4663444322d02ff434fbb1182c9  ./(3) Pressure-Driven Invariant Synthesis/README.md
-ea01f115cf60bd25e00ce13a4ef9484f53f7c8ed43a099e0a34a73ff4c13b77e  ./(3) Pressure-Driven Invariant Synthesis/REPRODUCIBILITY.md
-db23224da2d8ed2a07f73c4a4b32a95c04b7ec368e5d5d702343ce2348f76141  ./(3) Pressure-Driven Invariant Synthesis/evidence/DEVELOPMENT_AUDIT.md
+40023eb17aab67258830c2f61e51ad86f0635a61dc4820e407efb228798bfdd8  ./(3) Pressure-Driven Invariant Synthesis/CITATION.cff
+2550f2502e5810587b329eb528508664a328c86990b6d8ad49cc8b6c9540c836  ./(3) Pressure-Driven Invariant Synthesis/CLAIM_LEDGER.md
+de5d9e22db1cc600ccaacb872534196b66d9d5974258fb57a85663d7b4edfc05  ./(3) Pressure-Driven Invariant Synthesis/Pressure-Driven-Invariant-Synthesis.pdf
+79d291da0a167fcd64e989e4272b339ed57c9df7717cb6fb700b7b36ed0eab32  ./(3) Pressure-Driven Invariant Synthesis/README.md
+f433d2d19c2d693b7c1e77e8160a32205d719ce357f1e8b04c57f3af9b8e769a  ./(3) Pressure-Driven Invariant Synthesis/REPRODUCIBILITY.md
+b3ea861e0f53b7d9cb6dce7ac1efa4de687b42870987889f6424171748321e94  ./(3) Pressure-Driven Invariant Synthesis/evidence/DEVELOPMENT_AUDIT.md
 1d1223cbb91f0af4492083fb70111c0124aaa230ae43d047c0c42d8cc0969d17  ./(3) Pressure-Driven Invariant Synthesis/evidence/LEGACY_ENGINE_AUDIT.md
 86509144c3e61c0d9b64e5edd5e107a095b5a0b8a7fc2ab7de21d5fcf08bd976  ./(3) Pressure-Driven Invariant Synthesis/evidence/__init__.py
-58ebcaed3785077b46c43d59ca4a653dd84e76c7833948f0ad7d0f69bece2290  ./(3) Pressure-Driven Invariant Synthesis/evidence/data/README.md
+4a0cd2df82b2c0464974d7725f181529538c2e87f45d2cbd9db5563ef3476ad0  ./(3) Pressure-Driven Invariant Synthesis/evidence/data/README.md
 c541581b972d9aebe79eedde0ea5543ec0542bbe90fbbc075097b8306f61ae83  ./(3) Pressure-Driven Invariant Synthesis/evidence/data/download_ucr.sh
 6fbdd95995c5c8f0e12b8e5f59cbf4cb464c6928981910ddc39eb0e758346352  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/declared_split_manifest.json
 890eed1e319436e79ea2b99f196864a958e0a24811c64a80528d7b01e87cecb7  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/evaluated_split_manifest.json
 eaa7bb650838115831a8ef352720077243006929f0aa90e1cbd106ffcaa3795d  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/frozen_programs.json
 f569a8e557b6aae147c1323cdef4550635f394739428ca0b3173932ea516b86c  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/grammar_manifest.json
-4808263fef263bd2c4ba55fc51e034c0059cf91a8eac97b4ab211d88a2fe42ee  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/manifest.sha256
-331516062988c4043c25509566ae9c051318a59b7fa2149d34a68d0780ed630c  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/metrics.json
+30d1a4aa56beb37aa90bffa42afac86329ceb235a2b8f65876069932206930bc  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/kuramoto_channel_subsets.csv
+a260f491bc20a9de47eb8d3fad3bcca46fa03c1f7f33b53bea77e026286d6433  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/kuramoto_posthoc.json
+1247ce8430f29c8e1ea1acf1ab15f1818c6b9572e1da32e26f485e21d5795d08  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/kuramoto_posthoc_records.csv
+2a13383bcfa765acf9386355db6ef63fa1487b1908e633f03b2522ee121b91e7  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/manifest.sha256
+9408907d336c189be8e027b9e24d420aaac6876255a447fc5d1a2f0cfd7525b8  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/metrics.json
 86cfdd38780e4c222d7ac949814a0718775f628688c5177050cd3e1f82270441  ./(3) Pressure-Driven Invariant Synthesis/evidence/outputs/transfer_metrics.csv
-182a994c98d700b419332dbbc38242d8b64cc8fb840bf5de7ab2a0d312c66245  ./(3) Pressure-Driven Invariant Synthesis/evidence/run_all.py
-922704e97673ca52864f8b7ffaa40be47708505a69a4c900471f30f567d08b59  ./(3) Pressure-Driven Invariant Synthesis/evidence/tests/test_pdis_core.py
-5c4295dad53c4fb3bd1bae11be9a242c2bfa0a915a1d1fb8aa4216e7a457cd76  ./(3) Pressure-Driven Invariant Synthesis/pyproject.toml
+a9edd088f3f2927fbb749ec88849e655ab15021334142761f939ab3ae2bdbeb4  ./(3) Pressure-Driven Invariant Synthesis/evidence/run_all.py
+ce60627721cbc107bd453e94607e0cac2901f851db38fa7487060e9a262d29af  ./(3) Pressure-Driven Invariant Synthesis/evidence/tests/test_pdis_core.py
+918d95c26b75a759ecc34b39dd8136dd7f1d43e35799444681eb8dec79ea884a  ./(3) Pressure-Driven Invariant Synthesis/pyproject.toml
 99bcd95b15f10c00bb2883b98e8a0e2c89fb662066d4e8a7481ccde189f8724c  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/__init__.py
 eaff2d63916f9b4ba7c3053a8baa8aed5132ef744040cd6241c20f3374189984  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/canonical.py
 71f25acd39bf0c0b6dff6ab39e8c8d12e1b4149f2f459cad3531c66fe27d6f14  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/datasets.py
+4335ba704ca6f5544e2359e4dcd2f369349e552c346d3ad31e6511e4b21a5c9d  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/kuramoto_posthoc.py
 5c8cd8f2cc036f1b604c718f4ad10317f6cdc5380f69d77f4e796286ab7449ed  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/programs.py
 0acc3b56fd68c20bfd5b035e74252c4d407238909aeaf1f40a5635f0943ed042  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/statistics.py
 ff58e92043da937af7629a30f85135caacc5dc71f1a60135bfffd275b54c658f  ./(3) Pressure-Driven Invariant Synthesis/src/pdis/synthesis.py
-f1ab6ee5227a1eb172584953e82817f522736f271bc1c06ccb18696a644e02d1  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/frozen_transfer.pdf
+291b0f9b24e78fd00e010fcaf76b67a1590bff34ddc969cd2134858fa139ffef  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/frozen_transfer.pdf
 76cac015533c7151ab8664012fe566889738dcb913bfc6c8ad62f62c7536401b  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/frozen_transfer.png
-cc20db6cfc80d2a9f30d42e4b082d8c437c972fedc98e18a72821f11e682b3f0  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/program_auc.pdf
+83fb0b41b5d2bf4243736992e7eda61c1d0111df9d8d81edcb522f04f177b1d4  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/kuramoto_posthoc.pdf
+ce1ba2015194f38fede36c447335eaa4cbf842da1c20d11d0297768bfb8c0311  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/kuramoto_posthoc.png
+791568669affb3cf16c134d3b8d3fba6f91aabfbed94eca77f12ad5198261c0c  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/program_auc.pdf
 066d8797d8b568e47736d8d539055db263c80878bb50c1ae309f87e0a98a70c6  ./(3) Pressure-Driven Invariant Synthesis/thesis/figures/program_auc.png
-4eef6e1c02c9292e0dc77a0e4e78c4f59673d4896c479f5b7c4573c2fb7c1e76  ./(3) Pressure-Driven Invariant Synthesis/thesis/main.tex
-2310f4bfb3ba2939c0a162d48fc7bac834eaa99845104b8267cd2c30e3c7ebda  ./(3) Pressure-Driven Invariant Synthesis/thesis/references.bib
-c48557910d57d94d8335229b791d6eb25b7e50ec5e4a38fcd7855dc91d745f62  ./(3) Pressure-Driven Invariant Synthesis/uv.lock
+0f9b8105c639ef269abb11a0dd25c8d86cdf226a99451aaaa57c864c79b58f32  ./(3) Pressure-Driven Invariant Synthesis/thesis/main.tex
+e1f6a99719a025330c231ae86eb3319cbebb61aac81cd076fc8812993cb96b32  ./(3) Pressure-Driven Invariant Synthesis/thesis/references.bib
+ef100a23d0696711e8234cc2975f633ac5830606d67a2d3caf9322442150625e  ./(3) Pressure-Driven Invariant Synthesis/uv.lock
 f5c9ea4adb30ec3e4667d97bb5a1134f06601747e7289fb773abb57056db455b  ./.gitattributes
 eae27e46f552500aa33c0923cb6c663fcd9ae2925e737337af588a19628fb2db  ./.github/workflows/verify.yml
-4f64b8bbde826c893cab7cb1236fb1f830e5e19f021b9939d697c717c00727c0  ./.gitignore
-2db29f3818d755549fa5c353f2892105be1f0ab2a21bd3238cc6efcf520d6a00  ./CHANGELOG.md
-b884c43489c3f064f6956880fb2430720aaf46ea0f4880baefd9f3f53bec3afd  ./CITATION.cff
-af1d71b6a762d7c0bc7654e1a2b9b1cba522973fb6754a5ec208b3097cbbf7f6  ./CLAIM_MAP.md
+1176509da0ff9ebbe57457a23408c4769266a8a0b132dbd08df9e6ca56215760  ./.gitignore
+0aa5f74649b947e77b43d055a56176a67f08922fa3c3889aa4275a93186c79f5  ./CHANGELOG.md
+039ee0ae152362b276c809de4e293754f58dc39b41cca2e7ea7bcc2c7969d79e  ./CITATION.cff
+cac2a1d96a7399537bd75bf58d5238f9e4fc264672ef6b6b72aabfd3f78b3857  ./CLAIM_MAP.md
 e577c3662ecc87d5f57a8fdfe15ebc80a8ee3bf7f34449f3fd9daaef6360a24a  ./CONTRIBUTING.md
 807ac88e2cbf90ee861be4d743d0f0d4dc4aec3b5fed7fbe7d073b7eff3b4824  ./LICENSE
-e99dfd0e6237974faca6055ed604a9109064384ac58db913a5be190dc720e164  ./README.md
-78f6a8eeb556d8251ad8da4adbe79362a24ead5da29cc619c45b6c8acaf3f008  ./REPRODUCIBILITY.md
+d7a338eaf781b4a82ceb07612bfbaa6a9d9cbcb6c8321e7fc1a7dac6c91a4da7  ./README.md
+f199d63185ca97a1f9b3d76e1463acd78d84493613677dafe7f238ac1699ddd4  ./REPRODUCIBILITY.md
 17c320d438a674e473e731b23c9b2f7ca10fc05b173f451840a1b91f1d07be89  ./assets/voss-dynamics-map.svg
 0ddb94918cceaf04467baf9d5520dc60b233048daf28e9c2aa068d608945ffc4  ./series/README.md
-24fb65d166f9744a28666f5ea911697979ee787bfaa042558bd431e386282f1f  ./series/Voss-Dynamics-Information-Representation-and-Discovery.pdf
-cd44cb8175061bfcda37266b88b6f2b7b8f2c5b1fd593794b89b73369de47167  ./series/build_volume.py
+0b7fff95fbbb6bcbefb6fd2e9e3198abe54a2a357f5f403e2858e74c0ab4d737  ./series/Voss-Dynamics-Information-Representation-and-Discovery.pdf
+9b01ace700221359adb650c5f37e07725d7581b9781b7fa3c8f153836e222dd3  ./series/build_volume.py
 867a59544484a94c15e54a3fc56766d1decf90cb1187e0d93653271b596de870  ./series/main.tex

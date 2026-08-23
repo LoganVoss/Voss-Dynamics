@@ -64,7 +64,7 @@ cd ..
 
 Expected manuscript filename: Pressure-Driven-Invariant-Synthesis.pdf.
 
-The evidence suite should pass 8 tests. The full run is deterministic under the pinned environment and declared seed, but it is substantially slower than the unit suite because it computes recurrence and persistent-homology features across source, audit, and real records.
+The evidence suite should pass 10 tests. The full run is deterministic under the pinned environment and declared seed, but it is substantially slower than the unit suite because it computes recurrence and persistent-homology features across source, audit, and real records. After the frozen Kuramoto result is evaluated, the runner also regenerates the exact audit with latent phases retained and writes an explicitly post-hoc mechanistic diagnostic; that step does not participate in program selection.
 
 ### Paper III freeze semantics
 

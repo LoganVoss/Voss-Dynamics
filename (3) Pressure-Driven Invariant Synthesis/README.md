@@ -18,6 +18,7 @@ The package contains conditional finite-sample theorems, an executable synthesis
 | Collision statistics | [`src/pdis/statistics.py`](src/pdis/statistics.py) |
 | Complete evidence runner | [`evidence/run_all.py`](evidence/run_all.py) |
 | Machine-readable final metrics | [`evidence/outputs/metrics.json`](evidence/outputs/metrics.json) |
+| Post-hoc Kuramoto interpretation | [`evidence/outputs/kuramoto_posthoc.json`](evidence/outputs/kuramoto_posthoc.json) · [record table](evidence/outputs/kuramoto_posthoc_records.csv) · [channel-subset table](evidence/outputs/kuramoto_channel_subsets.csv) |
 | Frozen programs and source audits | [`evidence/outputs/frozen_programs.json`](evidence/outputs/frozen_programs.json) |
 | Declared and evaluated splits | [`evidence/outputs/declared_split_manifest.json`](evidence/outputs/declared_split_manifest.json), [`evidence/outputs/evaluated_split_manifest.json`](evidence/outputs/evaluated_split_manifest.json) |
 | Development chronology, including the failed null | [`evidence/DEVELOPMENT_AUDIT.md`](evidence/DEVELOPMENT_AUDIT.md) |
@@ -43,6 +44,22 @@ The final seed is `20260822`, and the fixed collision threshold is `0.22`. Each 
 | Lorenz | `log_ratio(covariance_entropy,h1_max_persistence)` | 0.4500 | [0.3583, 0.5333] | 0.8278 | 0/99 selections; p = 0.01 | 0.166 |
 
 The repaired selection pipeline passes the full-pipeline label-null diagnostic. Superiority to the narrower admissible random-program comparator reaches `p < 0.05` for Kuramoto only.
+
+### Post-hoc Kuramoto interpretation
+
+Because Kuramoto is the only fold that beats the admissible random-program comparator, the exact audit was regenerated after the result was known while retaining the simulator’s latent phases. The observed sine-channel arrays match the released audit bit-for-bit. This is an explicitly **computed, post-hoc diagnostic**; it does not upgrade the internally held-out claim.
+
+| Diagnostic | Result |
+|---|---:|
+| Frozen scalar label AUC | 0.997569 |
+| Latent mean first- / second-harmonic order label AUC | 0.998889 / 0.998889 |
+| Spearman: frozen scalar vs mean first- / second-harmonic order | 0.860826 / 0.906991 |
+| Stratified record-bootstrap 95% intervals | [0.832641, 0.885370] / [0.884555, 0.926683] |
+| Weak-class Spearman: scalar vs mean second-harmonic order | 0.944031 [0.908270, 0.963261] |
+| Mean subset AUC, 1 / 2 / 3 / 4 / 5 channels | 0.522 / 0.950 / 0.992 / 0.998 / 0.998 |
+| All-pairs post-repair collision risk | 0.09090 |
+
+The key interpretation is relational: a single sine channel is null on average, while recomputing subset-specific canonicalization and the full scalar on two or more channels rapidly restores separation. For the noiseless sensor vector, the exact identity ‖sin θ‖² = N/2 · (1 − Re Z₂) connects radial trajectory structure to generalized phase order. The released array adds Gaussian measurement noise and is then centered and globally scaled, so the identity does not hold exactly for the computed feature. Within the weak-coupling class, the ratio correlates more strongly with mean |Z₂| than either component alone (0.944 versus 0.888 for increment CV and −0.864 for radial permutation entropy); paired record-bootstrap intervals for both improvements exclude zero. This is a post-hoc within-regime pattern, not confirmation. Across the coarse, widely separated labels, increment CV alone has slightly higher AUC than the ratio. The frozen scalar is therefore an **order-sensitive multichannel surrogate inside this generator**—not the Kuramoto order parameter itself, a conserved law, a critical-coupling estimator, a universal order coordinate, or a uniquely necessary separator.
 
 ### Frozen real TEST audits
 
@@ -71,7 +88,7 @@ uv run python evidence/run_all.py
 shasum -a 256 -c evidence/outputs/manifest.sha256
 ```
 
-Use `sha256sum -c evidence/outputs/manifest.sha256` instead of `shasum` on systems with GNU Coreutils. The evidence run regenerates JSON, CSV, and the four figure files covered by the manifest. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for environment details, expected values, integrity hashes, and failure handling.
+Use `sha256sum -c evidence/outputs/manifest.sha256` instead of `shasum` on systems with GNU Coreutils. The evidence run regenerates JSON, CSV, and the six figure files covered by the manifest. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for environment details, expected values, integrity hashes, and failure handling.
 
 ## Data and license provenance
 

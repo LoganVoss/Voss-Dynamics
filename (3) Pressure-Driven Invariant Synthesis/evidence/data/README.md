@@ -33,7 +33,7 @@ On systems with GNU Coreutils:
 sha256sum evidence/data/raw/ECGFiveDays.zip evidence/data/raw/Earthquakes.zip
 ```
 
-The expected hashes are also recorded in `evidence/outputs/declared_split_manifest.json` and covered by `evidence/outputs/manifest.sha256`.
+The expected hashes are also recorded in `evidence/outputs/declared_split_manifest.json`. That provenance record is covered by `evidence/outputs/manifest.sha256`; the downloaded third-party archives themselves are deliberately excluded from the public generated-artifact manifest.
 
 ## Evaluation boundary
 

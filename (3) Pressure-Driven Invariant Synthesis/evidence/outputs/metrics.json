@@ -9,6 +9,188 @@
       "p95": 0.26508470554041247
     }
   },
+  "post_hoc_diagnostics": {
+    "kuramoto": {
+      "audit_seed": 20261015,
+      "channel_subset_auc": {
+        "1": {
+          "maximum_auc": 0.536875,
+          "mean_auc": 0.5215555555555556,
+          "minimum_auc": 0.5009722222222222,
+          "subset_count": 5
+        },
+        "2": {
+          "maximum_auc": 0.9754166666666667,
+          "mean_auc": 0.9498749999999999,
+          "minimum_auc": 0.9285416666666667,
+          "subset_count": 10
+        },
+        "3": {
+          "maximum_auc": 0.9972222222222222,
+          "mean_auc": 0.9915069444444443,
+          "minimum_auc": 0.9827083333333333,
+          "subset_count": 10
+        },
+        "4": {
+          "maximum_auc": 0.9993055555555556,
+          "mean_auc": 0.9981388888888889,
+          "minimum_auc": 0.9967361111111112,
+          "subset_count": 5
+        },
+        "5": {
+          "maximum_auc": 0.9975694444444444,
+          "mean_auc": 0.9975694444444444,
+          "minimum_auc": 0.9975694444444444,
+          "subset_count": 1
+        }
+      },
+      "channel_subset_protocol": {
+        "recomputation": "for every subset, rerun centering and global RMS canonicalization before recomputing both primitives and the frozen ratio",
+        "subset_counts_by_size": {
+          "1": 5,
+          "2": 10,
+          "3": 10,
+          "4": 5,
+          "5": 1
+        },
+        "subsets": "all 31 nonempty subsets of the five observed sine channels"
+      },
+      "component_diagnostics": {
+        "increment_cv": {
+          "orientation_free_auc": 0.9991666666666666,
+          "spearman_vs_mean_abs_z1_pooled": 0.8666591433879058,
+          "spearman_vs_mean_abs_z2_weak_class": 0.8875616362247376
+        },
+        "radial_permutation_entropy": {
+          "orientation_free_auc": 0.9623958333333333,
+          "spearman_vs_mean_abs_z1_pooled": -0.7854778746082285,
+          "spearman_vs_mean_abs_z2_weak_class": -0.8640858116649798
+        },
+        "weak_class_dependent_correlation_bootstrap": {
+          "repetitions": 10000,
+          "resampling": "sample 120 weak-coupling records with replacement; recompute dependent Spearman correlations on the same resample",
+          "sampling_unit": "weak-coupling audit record",
+          "seed": 9924,
+          "selected_minus_increment_cv": {
+            "95_interval": [
+              0.02875610044030231,
+              0.09474399507318937
+            ],
+            "point_difference": 0.05646919924994798
+          },
+          "selected_minus_oriented_radial_permutation_entropy": {
+            "95_interval": [
+              0.04265381941992707,
+              0.1277082419217529
+            ],
+            "orientation": "negative radial permutation entropy, chosen to align its observed association with mean |Z_2|",
+            "point_difference": 0.0799450238097058
+          }
+        }
+      },
+      "exact_regeneration_max_abs_difference": 0.0,
+      "interpretation": "post-hoc order-sensitive multichannel surrogate within the named Kuramoto generator",
+      "latent_order_diagnostics": {
+        "first_harmonic_mean_abs_z1": {
+          "orientation_free_auc": 0.9988888888888889,
+          "selected_scalar_spearman_pooled": 0.8608257087796661,
+          "selected_scalar_spearman_strong_class": 0.32440447253281474,
+          "selected_scalar_spearman_weak_class": 0.5745746232377248,
+          "stratified_record_bootstrap": {
+            "pooled_spearman_95_interval": [
+              0.8326410433488256,
+              0.8853701389395927
+            ],
+            "repetitions": 10000,
+            "sampling": "resample 120 records with replacement within each label stratum",
+            "seed": 9922
+          }
+        },
+        "second_harmonic_mean_abs_z2": {
+          "orientation_free_auc": 0.9988888888888889,
+          "record_bootstrap": {
+            "pooled_sampling": "resample 120 records with replacement within each label stratum",
+            "pooled_spearman_95_interval": [
+              0.8845547142876973,
+              0.9266828182742299
+            ],
+            "repetitions": 10000,
+            "seed": 9923,
+            "weak_class_sampling": "resample the 120 weak-coupling records with replacement",
+            "weak_class_spearman_95_interval": [
+              0.9082697875779473,
+              0.9632605254900406
+            ]
+          },
+          "selected_scalar_spearman_pooled": 0.9069905727529989,
+          "selected_scalar_spearman_strong_class": 0.3242864087783874,
+          "selected_scalar_spearman_weak_class": 0.9440308354746856
+        },
+        "std_real_z2": {
+          "selected_scalar_spearman_pooled": 0.8998862827479642,
+          "selected_scalar_spearman_weak_class": 0.9487394957983192
+        }
+      },
+      "pairing_sensitivity": {
+        "all_cross_label_pairs": {
+          "absolute_reduction": 0.9090972222222222,
+          "pairs": 14400,
+          "risk_after": 0.09090277777777778,
+          "risk_before": 1.0
+        },
+        "random_perfect_matchings": {
+          "interpretation": "pairing-sensitivity range, not a confidence interval",
+          "post_risk_95_range": [
+            0.075,
+            0.10833333333333334
+          ],
+          "reduction_95_range": [
+            0.8916666666666666,
+            0.925
+          ],
+          "repetitions": 20000,
+          "seed": 555
+        },
+        "released_matching": {
+          "post_collisions": 10,
+          "seed": 4186146588,
+          "trials": 120
+        }
+      },
+      "prohibited_interpretations": [
+        "a conserved quantity",
+        "the Kuramoto order parameter itself",
+        "a critical-coupling estimate",
+        "a universal order coordinate",
+        "evidence beyond the named controlled generator"
+      ],
+      "records": 240,
+      "released_residual_pairs": {
+        "mean_coupling_other_weak": 0.23737581040317926,
+        "mean_coupling_residual": 0.3462567682615253,
+        "mean_first_order_other_weak": 0.5704235647445163,
+        "mean_first_order_residual": 0.8743373819301776,
+        "mean_second_order_other_weak": 0.43660289163493726,
+        "mean_second_order_residual": 0.7831072811337618,
+        "weak_records_in_released_residual_pairs": 10
+      },
+      "selected_program_verification": {
+        "expected_program": "log_ratio(increment_cv,radial_permutation_entropy)",
+        "failure_tolerance": 1e-12,
+        "manual_vs_program_evaluate_max_abs_difference": 0.0,
+        "selected_programs": [
+          "log_ratio(increment_cv,radial_permutation_entropy)"
+        ]
+      },
+      "selected_scalar_orientation_free_auc": 0.9975694444444444,
+      "sine_channel_identity": {
+        "boundary": "the identity precedes added Gaussian measurement noise; the released noisy array then undergoes channel centering and global RMS normalization, and the frozen ratio is not Z_1, Z_2, or a conserved quantity",
+        "noiseless_centered_sensor": "||sin(theta)-mean_t sin(theta)||^2 = N/2*(1-Re Z_2) - 2*sum_j(mean_t sin(theta_j))*sin(theta_j) + sum_j(mean_t sin(theta_j))^2",
+        "noiseless_raw_sensor": "||sin(theta)||^2 = N/2 * (1 - Re Z_2)"
+      },
+      "status": "COMPUTED_POST_HOC_NO_CLAIM_UPGRADE"
+    }
+  },
   "sealed_real_domains": {
     "earthquakes": {
       "absolute_reduction": 0.25,

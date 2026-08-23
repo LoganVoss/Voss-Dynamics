@@ -459,7 +459,7 @@ def figure_scalar_selection() -> None:
         1: (r"$\mathbb{R}$", 3.2),
         2: (r"$\mathbb{C}$", 6.2),
         4: (r"$\mathbb{H}$", 8.2),
-        8: (r"$\mathbb{O}$", 30.2),
+        8: (r"$\mathbb{O}$", 29.25),
     }
     for degree, (label, y_position) in family_labels.items():
         ax.text(
@@ -477,10 +477,11 @@ def figure_scalar_selection() -> None:
     ax.set_ylim(0.0, 33.0)
     ax.legend(frameon=False, loc="upper left")
     ax.text(
-        2,
-        3.65,
-        "unique dimensional match",
-        ha="center",
+        8.65,
+        32.8,
+        r"unique dimensional match: $d=2$",
+        ha="right",
+        va="top",
         color=COLORS["orange"],
         fontsize=8,
     )
@@ -522,8 +523,32 @@ def figure_relational_geometry() -> None:
         color=COLORS["green"],
         length_includes_head=True,
     )
-    ax1.text(*(1.2 * direction), r"$x_\varphi$ (record-driven)", color=COLORS["orange"])
-    ax1.text(*(1.25 * transverse), r"$c_\varphi$ (invariant)", color=COLORS["green"])
+    label_box = {
+        "facecolor": "white",
+        "edgecolor": "none",
+        "pad": 1.0,
+        "alpha": 0.92,
+    }
+    ax1.annotate(
+        r"$x_\varphi$ (record-driven)",
+        xy=direction,
+        xytext=(8, -15),
+        textcoords="offset points",
+        ha="left",
+        va="top",
+        color=COLORS["orange"],
+        bbox=label_box,
+    )
+    ax1.annotate(
+        r"$c_\varphi$ (invariant)",
+        xy=transverse,
+        xytext=(-10, 17),
+        textcoords="offset points",
+        ha="right",
+        va="bottom",
+        color=COLORS["green"],
+        bbox=label_box,
+    )
     ax1.set_xlabel(r"$s=\operatorname{artanh}z$")
     ax1.set_ylabel(r"relative phase $\vartheta$")
     ax1.set_title("QND trajectories are translations")

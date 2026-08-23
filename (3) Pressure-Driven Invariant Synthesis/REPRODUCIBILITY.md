@@ -20,7 +20,7 @@ The final committed evidence was generated with:
 `pyproject.toml` declares Python 3.11 or newer. `uv.lock` is the authoritative numerical dependency lock and contains platform/Python markers. The exact release lock has SHA-256:
 
 ```text
-c48557910d57d94d8335229b791d6eb25b7e50ec5e4a38fcd7855dc91d745f62  uv.lock
+ef100a23d0696711e8234cc2975f633ac5830606d67a2d3caf9322442150625e  uv.lock
 ```
 
 For the closest replication, use Python 3.14 on a 64-bit platform and do not update the lock before running the audit.
@@ -64,15 +64,16 @@ sha256sum -c evidence/outputs/manifest.sha256
 Expected test result:
 
 ```text
-........                                                                 [100%]
+..........                                                               [100%]
 ```
 
 The evidence runner is intentionally a write-producing command. It regenerates:
 
 - `evidence/outputs/*.json`;
-- `evidence/outputs/transfer_metrics.csv`;
+- `evidence/outputs/*.csv`;
 - `thesis/figures/frozen_transfer.{pdf,png}`;
 - `thesis/figures/program_auc.{pdf,png}`;
+- `thesis/figures/kuramoto_posthoc.{pdf,png}`;
 - `evidence/outputs/manifest.sha256`.
 
 Do not hand-edit a generated artifact to make a checksum pass. A missing or mismatched manifest entry means the evidence bundle must be regenerated or the release packaging corrected before citation.
@@ -98,8 +99,9 @@ The final runner enforces this chronology:
 5. Serialize `evidence/outputs/frozen_programs.json`.
 6. Generate the independent synthetic audit records with different seeds.
 7. Load and featurize the real UCR TEST cases.
-8. Evaluate fixed programs, nulls, ablations, theorem checks, and figures.
-9. Write the evaluated split manifest and release-integrity manifest.
+8. Evaluate fixed programs, nulls, ablations, theorem checks, and primary figures.
+9. Only after the Kuramoto result is fixed, regenerate that exact audit with latent phases and write the explicitly post-hoc interpretation diagnostic.
+10. Write the evaluated split manifest and release-integrity manifest.
 
 The freeze is an in-process ordering guarantee. `frozen_programs.json` records `external_timestamp: null`; it is not evidence of an external registration or prospective commitment.
 
@@ -124,6 +126,25 @@ The first development version failed the full-pipeline source-label null by sele
 
 These values are mixed/null evidence. They do not confirm transfer to real domains.
 
+### Post-hoc Kuramoto interpretation
+
+The runner then reproduces a diagnostic that was designed after the Kuramoto result was known. The observed audit arrays must regenerate with maximum absolute discrepancy `0.0`. Expected values are:
+
+| Diagnostic | Expected value |
+|---|---:|
+| Frozen scalar label AUC | 0.997569 |
+| Manual scalar vs frozen `Program.evaluate` maximum error | 0.0 |
+| Latent mean first- / second-harmonic order label AUC | 0.998889 / 0.998889 |
+| Spearman correlation with mean first- / second-harmonic order | 0.860826 / 0.906991 |
+| Stratified record-bootstrap 95% intervals | [0.832641, 0.885370] / [0.884555, 0.926683] |
+| Weak-class correlation with mean second-harmonic order | 0.944031 [0.908270, 0.963261] |
+| Mean channel-subset AUC, 1 / 2 / 3 / 4 / 5 channels | 0.5216 / 0.9499 / 0.9915 / 0.9981 / 0.9976 |
+| All-pairs post-repair collision risk | 0.090903 |
+
+For the first-harmonic interval, seed `9922` independently resamples 120 records with replacement inside each label stratum for 10,000 repetitions. The corresponding second-harmonic pooled and weak-class intervals each reset an independent generator to seed `9923`; the weak interval resamples only the 120 weak-coupling records. A dependent-correlation bootstrap independently resets to seed `9924`, resamples the same weak records for all three correlations in each of 10,000 repetitions, and gives scalar-minus-increment and scalar-minus-oriented-entropy differences `0.056469 [0.028756, 0.094744]` and `0.079945 [0.042654, 0.127708]`. Pairing sensitivity uses seed `555` and 20,000 random perfect cross-label matchings; its reported range is descriptive, not a confidence interval. All seeds, methods, and unrounded values are serialized in `kuramoto_posthoc.json`.
+
+Every channel-count mean averages all `C(5,m)` subsets. For each subset the runner starts from the corresponding raw observed columns, reruns centering and global RMS canonicalization, then recomputes both primitives and the frozen ratio. This output is `COMPUTED_POST_HOC_NO_CLAIM_UPGRADE`: an interpretation audit on the same synthetic records, not an additional held-out experiment.
+
 ### Deterministic theorem and implementation checks
 
 The final metrics record:
@@ -140,10 +161,10 @@ The final evidence artifacts before repository packaging have these SHA-256 anch
 
 | Artifact | SHA-256 |
 |---|---|
-| `evidence/outputs/metrics.json` | `331516062988c4043c25509566ae9c051318a59b7fa2149d34a68d0780ed630c` |
+| `evidence/outputs/metrics.json` | `9408907d336c189be8e027b9e24d420aaac6876255a447fc5d1a2f0cfd7525b8` |
 | `evidence/outputs/frozen_programs.json` | `eaa7bb650838115831a8ef352720077243006929f0aa90e1cbd106ffcaa3795d` |
 | `evidence/outputs/grammar_manifest.json` | `f569a8e557b6aae147c1323cdef4550635f394739428ca0b3173932ea516b86c` |
-| `evidence/outputs/manifest.sha256` | `4808263fef263bd2c4ba55fc51e034c0059cf91a8eac97b4ab211d88a2fe42ee` |
+| `evidence/outputs/manifest.sha256` | `2a13383bcfa765acf9386355db6ef63fa1487b1908e633f03b2522ee121b91e7` |
 
 The manifest is an integrity record for the generated bundle, not an external timestamp. Repository metadata files are outside that generated-artifact manifest.
 
@@ -155,6 +176,7 @@ The manifest is an integrity record for the generated bundle, not an external ti
 - Only Kuramoto exceeds the admissible random-program comparator at `p < 0.05`.
 - The all-record 95th-percentile relative noise diagnostic is approximately `0.265`, so the source-domain noise gate is not evidence of universal noise robustness.
 - Neither real archive provides confirmatory transfer evidence.
+- The Kuramoto interpretation diagnostic was designed after the result was seen. Its permitted reading is an order-sensitive multichannel surrogate inside the named generator, with a descriptive second-harmonic association inside the weak class—not a new conserved quantity, universal order parameter, or claim that composition is required for the coarse target separation.
 
 ## License and legacy boundary
 

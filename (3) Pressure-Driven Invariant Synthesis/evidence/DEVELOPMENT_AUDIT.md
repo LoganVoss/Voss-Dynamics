@@ -84,18 +84,28 @@ The all-synthetic program was frozen before loading the real TEST cases. Each ar
 
 These real-domain results do not confirm transfer. Earthquakes has a positive point estimate but does not beat its label-permutation null, and ECGFiveDays shows no reduction. They are reported as mixed or null transfer evidence, not as validation across real domains.
 
+## Stage 5: post-hoc Kuramoto interpretation after release inspection
+
+After the final Kuramoto result was known, an interpretation diagnostic was added without changing the grammar, gates, selected program, audit seed, collision threshold, or primary result. The diagnostic mirrors the released generator while retaining its latent oscillator phases and fails unless the observed noisy sine-channel arrays reproduce bit-for-bit. It also fails unless the selected tuple contains exactly the archived Kuramoto winner and the independently computed scalar agrees with `Program.evaluate`; the released maximum absolute discrepancy is `0.0`.
+
+The frozen scalar has orientation-free label AUC `0.997569`. Its Spearman correlation is `0.860826` with the simulator's time-averaged first-harmonic order and `0.906991` with time-averaged second-harmonic order. Independently reset 10,000-repetition stratified record bootstraps use seeds `9922` and `9923` and give `[0.832641, 0.885370]` and `[0.884555, 0.926683]`. Within the weak-coupling class, the second-harmonic correlation is `0.944031` (`[0.908270, 0.963261]`), versus `0.887562` for increment CV and `-0.864086` for radial permutation entropy. A same-resample dependent-correlation bootstrap (seed `9924`, 10,000 repetitions) gives improvements `0.056469 [0.028756, 0.094744]` and `0.079945 [0.042654, 0.127708]` after orienting the entropy association.
+
+Recomputing canonicalization and both primitives for all `C(5,m)` channel subsets gives mean AUC `0.5216`, `0.9499`, `0.9915`, `0.9981`, and `0.9976` for one through five channels. All-pairs post-repair risk is `0.09090`; 20,000 random perfect matchings (seed `555`) give a descriptive 95% risk range `[0.0750, 0.1083]`, containing the released `0.0833`.
+
+This analysis is recorded as `COMPUTED_POST_HOC_NO_CLAIM_UPGRADE`. It supports the narrow interpretation of an order-sensitive multichannel surrogate within the named generator, with a stronger second-harmonic association inside the weak class than either component. It is not a new held-out result, conserved-law discovery, critical-coupling estimate, or universal order coordinate. Increment CV alone slightly exceeds the composite on the coarse target AUC, so the selected ratio is not claimed as unique or necessary.
+
 ### Verification state
 
 The completed final rerun produced the following SHA-256 values:
 
 | Artifact | SHA-256 |
 |---|---|
-| `evidence/outputs/metrics.json` | `331516062988c4043c25509566ae9c051318a59b7fa2149d34a68d0780ed630c` |
+| `evidence/outputs/metrics.json` | `9408907d336c189be8e027b9e24d420aaac6876255a447fc5d1a2f0cfd7525b8` |
 | `evidence/outputs/frozen_programs.json` | `eaa7bb650838115831a8ef352720077243006929f0aa90e1cbd106ffcaa3795d` |
 | `evidence/outputs/grammar_manifest.json` | `f569a8e557b6aae147c1323cdef4550635f394739428ca0b3173932ea516b86c` |
-| `evidence/outputs/manifest.sha256` | `4808263fef263bd2c4ba55fc51e034c0059cf91a8eac97b4ab211d88a2fe42ee` |
+| `evidence/outputs/manifest.sha256` | `2a13383bcfa765acf9386355db6ef63fa1487b1908e633f03b2522ee121b91e7` |
 
-Every entry in `manifest.sha256` verified after the final run, including the split manifest that records both raw-archive hashes, every JSON/CSV output, and all generated PDF/PNG figures. The core test suite passed 8/8 tests. The third-party archives themselves are acquired through the checksum-enforcing downloader and are not redistributed in the public repository.
+Every entry in `manifest.sha256` verified after the final run, including the split provenance records, every JSON/CSV output, and all generated PDF/PNG figures. The core test suite passed 10/10 tests. The third-party archives themselves are acquired through the checksum-enforcing downloader, verified against the hashes in `evidence/data/README.md` and the declared split manifest, and are not redistributed or listed as public artifacts.
 
 Reproduction and verification commands from the Paper III directory are:
 

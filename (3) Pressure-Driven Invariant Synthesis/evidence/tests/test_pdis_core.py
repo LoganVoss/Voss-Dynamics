@@ -15,6 +15,14 @@ from pdis.datasets import Trajectory, sealed_ucr_domain, similarity_transform
 from pdis.programs import Program
 from pdis.statistics import collision_indicators, one_sided_binomial_upper
 from pdis.synthesis import representation, synthesize
+from pdis.kuramoto_posthoc import (
+    centered_sine_norm_from_second_order,
+    exact_regeneration_error,
+    kuramoto_with_hidden_order,
+    selected_scalar,
+    sine_norm_from_second_order,
+    verify_frozen_program,
+)
 
 
 def toy_records() -> list[Trajectory]:
@@ -32,6 +40,45 @@ def test_quantile_recurrence_similarity_invariance() -> None:
     a, _, _ = recurrence_adjacency(values)
     b, _, _ = recurrence_adjacency(transformed)
     assert np.array_equal(a, b)
+
+
+def test_kuramoto_posthoc_exactly_regenerates_observed_audit() -> None:
+    records = kuramoto_with_hidden_order(n_per_class=2)
+    assert exact_regeneration_error(records) == 0.0
+    audit_records = [item.trajectory for item in records]
+    table = {
+        item.identifier: canonical_features(item.values) for item in audit_records
+    }
+    selected = (
+        Program(
+            "log_ratio",
+            "increment_cv",
+            "radial_permutation_entropy",
+            complexity=3,
+        ),
+    )
+    manual = np.asarray([selected_scalar(item.values)[0] for item in audit_records])
+    assert verify_frozen_program(selected, audit_records, table, manual) == 0.0
+    try:
+        verify_frozen_program(
+            (Program("primitive", "increment_cv"),),
+            audit_records,
+            table,
+            manual,
+        )
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("post-hoc verification accepted the wrong frozen program")
+
+
+def test_sine_norm_equals_second_harmonic_order_identity() -> None:
+    theta = np.asarray([-2.1, -0.4, 0.7, 1.3, 2.8])
+    left, right = sine_norm_from_second_order(theta)
+    assert np.isclose(left, right, rtol=0.0, atol=1.0e-14)
+    means = np.asarray([0.1, -0.2, 0.05, 0.3, -0.15])
+    centered_left, centered_right = centered_sine_norm_from_second_order(theta, means)
+    assert np.isclose(centered_left, centered_right, rtol=0.0, atol=1.0e-14)
 
 
 def test_lambda2_uses_second_smallest_including_zero_multiplicity() -> None:

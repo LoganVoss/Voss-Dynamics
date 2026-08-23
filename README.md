@@ -77,6 +77,7 @@ That sequence is the project’s core claim: **preservation must be located, ins
 - The released 271-program engine actually reinserts its selected unary observable and passes invariance, noise, source-audit, AUC, and complexity gates.
 - On independent synthetic audits, macro collision risk falls from **0.969 to 0.183** (absolute reduction **0.786**).
 - In every leave-one-system-out fold, a 99-repetition full-pipeline source-label null selects **0 programs in 99 runs**.
+- In a post-hoc dissection of the strongest fold, the frozen Kuramoto scalar tracks latent second-harmonic coherence with **Spearman ρ = 0.907** overall and **ρ = 0.944** within the heterogeneous weak-coupling class; this is a mechanistic diagnostic, not a new held-out result or a universal order parameter.
 - The boundary matters: the admissible random-program comparator is beaten significantly in only one of three systems, and the frozen expression does **not** transfer significantly to ECGFiveDays or Earthquakes.
 
 The strongest result is not “universal invariant discovery.” It is a disciplined mechanism: a meaningful collision can become a counterexample, a counterexample can generate an interpretable repair, and an honest outer audit can say where that repair stops working.

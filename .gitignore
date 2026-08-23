@@ -24,6 +24,14 @@ dist/
 
 # Local scratch and archives
 work/
+tmp/
 *.tar.gz
 *.part
 
+# Downloaded third-party inputs (retrieved by the checksum-enforcing helper)
+(3) Pressure-Driven Invariant Synthesis/evidence/data/raw/
+
+# Local LaTeX entry-point PDFs; canonical release PDFs use descriptive names
+(2) Emergent Predictive Representation/thesis/main.pdf
+(3) Pressure-Driven Invariant Synthesis/thesis/main.pdf
+series/main.pdf
