@@ -2,12 +2,6 @@
   <img src="assets/voss-dynamics-map.svg" alt="Voss Dynamics: preserve, test, repair" width="100%">
 </p>
 
-<p align="center">
-  <a href="https://github.com/LoganVoss/Voss-Dynamics/actions/workflows/verify.yml"><img alt="Verification" src="https://github.com/LoganVoss/Voss-Dynamics/actions/workflows/verify.yml/badge.svg"></a>
-  <a href="CITATION.cff"><img alt="Cite this repository" src="https://img.shields.io/badge/citation-CFF-1d5f8a"></a>
-  <a href="LICENSE"><img alt="Dual license" src="https://img.shields.io/badge/code-MIT%20%7C%20papers-CC%20BY%204.0-3f7356"></a>
-</p>
-
 > **The three studies address one problem from successive directions: how differences between possible states are preserved by dynamics, collapsed by representation, tested for predictive significance, and recovered when the current representation proves insufficient.**
 
 A representation does more than compress a system. It decides which possible histories count as the same.
